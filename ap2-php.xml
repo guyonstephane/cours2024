@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?asciidoc-toc?>
+<?asciidoc-numbered?>
+<article xmlns="http://docbook.org/ns/docbook" xmlns:xl="http://www.w3.org/1999/xlink" version="5.0" xml:lang="en">
+<info>
+<title>PHP : Activité 2  PHP-MYSQL </title>
+<subtitle>Organisation du code</subtitle>
+<date>2024-01-23</date>
+</info>
+<section xml:id="_introduction">
+<title>Introduction</title>
+<simpara>Lorsque votre site prend de l&#8217;importance, le code devient vite illisible et incompréhensible si vous ne pensez pas à l&#8217;organiser . Mais comment organiser son code de manière à être le plus clair possible ? Il existe de nombreuses solutions, chacune ayant ses avantages et ses inconvénients.
+L&#8217;une des solutions fréquemment retenue est de dissocier la vue c&#8217;est à dire le code xHTML visible, du traitement des données c&#8217;est à dire de l&#8217;accès aux bases de données et le contrôle des résultats. On parle alors de modèles MVC : Modèle Vue Contrôleurs .</simpara>
+</section>
+<section xml:id="_présentation_succincte_du_modèle_mvc_modèle_vue_contrôleur">
+<title>Présentation succincte du modèle MVC :  Modèle Vue Contrôleur</title>
+<simpara>Au lieu de tout mettre dans un seul fichier et ainsi de rendre votre code peu clair, le modèle MVC divisera le tout en trois fichiers.</simpara>
+<orderedlist numeration="arabic">
+<listitem>
+<simpara><emphasis role="strong">Le modèle</emphasis><?asciidoc-br?>
+Ce fichier ne contiendra que des fonctions. Le modèle a pour but de gérer l&#8217;organisation des données. Vous ne pourrez effectuer des requêtes SQL que dans ces fonctions ! Le contrôleur et la vue ne devront contenir aucun appel à la base de données.</simpara>
+</listitem>
+<listitem>
+<simpara><emphasis role="strong">La vue</emphasis><?asciidoc-br?>
+La vue contient le code xHTML. C&#8217;est la seule partie qui doit en contenir. Les requêtes SQL étant effectuées dans le modèle et le contrôle des données dans le contrôleur, le code PHP devra se contenter d&#8217;afficher les résultats.</simpara>
+</listitem>
+<listitem>
+<simpara><emphasis role="strong">Le contrôleur</emphasis><?asciidoc-br?>
+C&#8217;est le fichier qui contient toute la logique du code. Vous commencerez généralement par y inclure votre modèle . Vous procéderez à des vérifications d&#8217;ordre général (comme les autorisations), puis vous pourrez appeler des fonctions avant d&#8217;envoyer les résultats à la vue.</simpara>
+</listitem>
+</orderedlist>
+<simpara>Le modèle MVC sera abordé par la suite, notamment le rôle des modèles et des contrôleurs, mais nous pouvons déjà organiser notre code pour éviter à la vue d&#8217;avoir à gérer toutes les requêtes SQL.</simpara>
+</section>
+<section xml:id="_exemple_dorganisation_de_votre_code">
+<title>Exemple d&#8217;organisation de votre code</title>
+<simpara>Dans votre base de données <emphasis role="strong">ac2fl</emphasis>, exécuter le script <phrase role="red">salaries.sql</phrase> ( annexe 1 ) :</simpara>
+<simpara>À partir de la table salariés, on souhaite obtenir la vue suivante :</simpara>
+<informalfigure>
+<mediaobject>
+<imageobject>
+<imagedata fileref="images/sal3.png"/>
+</imageobject>
+<textobject><phrase>sal3</phrase></textobject>
+</mediaobject>
+</informalfigure>
+<simpara>Nous allons utiliser Boostrap sarter example pour présenter cette vue. À partir de cet example, nous allons créer un ficher header.html et footer.html :</simpara>
+<formalpara>
+<title>header.html</title>
+<para>
+<programlisting language="html" linenumbering="unnumbered">&lt;!doctype html&gt;
+&lt;html lang="en"&gt;
+  &lt;head&gt;
+    &lt;meta charset="utf-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
+    &lt;title&gt;Bootstrap demo&lt;/title&gt;
+    &lt;link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous"&gt;
+    &lt;link rel="stylesheet" href="styles.css"&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;nav class="navbar navbar-expand-lg navbar-dark bg-dark"&gt;
+      &lt;div class="container"&gt;
+        &lt;a class="navbar-brand" href="#"&gt;Navbar&lt;/a&gt;
+        &lt;button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"&gt;
+          &lt;span class="navbar-toggler-icon"&gt;&lt;/span&gt;
+        &lt;/button&gt;
+        &lt;div class="collapse navbar-collapse" id="navbarSupportedContent"&gt;
+          &lt;ul class="navbar-nav me-auto mb-2 mb-lg-0"&gt;
+            &lt;li class="nav-item"&gt;
+              &lt;a class="nav-link active" aria-current="page" href="#"&gt;Home&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li class="nav-item"&gt;
+              &lt;a class="nav-link" href="#"&gt;Link&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li class="nav-item dropdown"&gt;
+              &lt;a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"&gt;
+                Dropdown
+              &lt;/a&gt;
+              &lt;ul class="dropdown-menu" aria-labelledby="navbarDropdown"&gt;
+                &lt;li&gt;&lt;a class="dropdown-item" href="#"&gt;Action&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a class="dropdown-item" href="#"&gt;Another action&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;hr class="dropdown-divider"&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a class="dropdown-item" href="#"&gt;Something else here&lt;/a&gt;&lt;/li&gt;
+              &lt;/ul&gt;
+            &lt;/li&gt;
+            &lt;li class="nav-item"&gt;
+              &lt;a class="nav-link disabled"&gt;Disabled&lt;/a&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+          &lt;form class="d-flex" role="search"&gt;
+            &lt;input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"&gt;
+            &lt;button class="btn btn-outline-success" type="submit"&gt;Search&lt;/button&gt;
+          &lt;/form&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/nav&gt;</programlisting>
+</para>
+</formalpara>
+<formalpara>
+<title>footer.html</title>
+<para>
+<programlisting language="html" linenumbering="unnumbered">&lt;div class="container my-5"&gt;
+      &lt;p&gt;Copyright &amp;copy; Mon application 2024&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"&gt;&lt;/script&gt;
+    &lt;script src="main.js"&gt;&lt;/script&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</programlisting>
+</para>
+</formalpara>
+<simpara>Ensuite la vue peut être obtenue avec le code suivant :</simpara>
+<formalpara>
+<title>listeSalaries.php</title>
+<para>
+<programlisting language="php" linenumbering="unnumbered">&lt;?php
+  require_once('header.html'); <co xml:id="CO1-1"/>
+
+  $conn = mysqli_connect('localhost','root','sio','salaries');
+  if ($conn-&gt;connect_error) {
+	die("Connection failed: " . $conn-&gt;connect_error); } <co xml:id="CO1-2"/>
+
+
+  $req1 = "SELECT * FROM salaries ;"; <co xml:id="CO1-3"/>
+  $result1 = mysqli_query($conn,$req1) or die (mysqli_error($conn));
+?&gt;
+&lt;div class="container my-5"&gt;
+&lt;table class="table table-hover"&gt;
+  &lt;th&gt;id&lt;/th&gt;&lt;th&gt;nom&lt;/th&gt;&lt;th&gt;prenom&lt;/th&gt;&lt;th&gt;date-naissance&lt;/th&gt;
+  &lt;th&gt;date-embauche&lt;/th&gt;&lt;th&gt;salaire&lt;/th&gt;&lt;th&gt;service&lt;/th&gt;
+&lt;?php
+  echo "&lt;tr&gt;";
+  while ( $ligne=mysqli_fetch_array($result1)){
+     echo "&lt;tr&gt;";
+        echo "&lt;td&gt;".$ligne['idsalaries']."&lt;/td&gt;";
+        echo "&lt;td&gt;".$ligne['nom']."&lt;/td&gt;";
+        echo "&lt;td&gt;".$ligne['prenom']."&lt;/td&gt;";
+	      echo "&lt;td&gt;".$ligne['date_naissance']."&lt;/td&gt;";
+        echo "&lt;td&gt;".$ligne['date_embauche']."&lt;/td&gt;";
+        echo "&lt;td&gt;".$ligne['salaire']."&lt;/td&gt;";
+	      echo "&lt;td&gt;".$ligne['service']."&lt;/td&gt;";
+     echo "&lt;/tr&gt;";
+  }
+?&gt;
+&lt;/table&gt;
+&lt;?php
+  $req2 = "SELECT count(*) as nb FROM salaries ;"; <co xml:id="CO1-4"/>
+  $result2 = mysqli_query($conn,$req2) or die (mysqli_error($conn));
+  $ligne=mysqli_fetch_assoc($result2);
+  echo "&lt;p&gt;nombre de salariés : ".$ligne['nb']."&lt;/p&gt;";
+
+  $req3 = "SELECT avg(salaire) as moyenne FROM salaries ;"; <co xml:id="CO1-5"/>
+  $result3 = mysqli_query($conn,$req3) or die (mysqli_error($conn));
+  $ligne=mysqli_fetch_assoc($result3);
+  echo "&lt;p&gt;salaire moyen : ".round($ligne['moyenne'])."&lt;/p&gt;";
+
+?&gt;
+&lt;/div&gt;
+&lt;?php
+  require_once('footer.html');
+?&gt;</programlisting>
+</para>
+</formalpara>
+<simpara>Ce code fonctionne mais il est difficile à maintenir et il peut vite devenir incompréhensible, si on souhaite par exemple afficher en plus du nombre de salariés, le salaire minimum, maximum etc..
+Il faut donc essayer de le réorganiser.</simpara>
+</section>
+<section xml:id="_organisation_du_code">
+<title>Organisation du code</title>
+<simpara>Dans un premier temps, la vue n&#8217;a pas à gérer l&#8217;accès à la base de données. Si votre site comporte plusieurs vues, vous allez devoir intervenir dans chaque vue en cas de modification des paramètres de connexion. Il est préférable de créer un fichier contenant les paramètres de connexion que l&#8217;on va inclure dans chaque vue avec un un require_once : require_once('connexion.php')</simpara>
+<formalpara>
+<title>connexionBase.php</title>
+<para>
+<programlisting language="php" linenumbering="unnumbered">&lt;?php
+    $conn = mysqli_connect('localhost','root','sio','salaries');
+    if ($conn-&gt;connect_error) {
+	die("Connection failed: " . $conn-&gt;connect_error); }
+
+	global $conn ; <co xml:id="CO1-6"/>
+?&gt;</programlisting>
+</para>
+</formalpara>
+<calloutlist>
+<callout arearefs="CO1-1 CO1-6">
+<para>Une variable n’est utilisable que dans le « bloc » où elle est définie et ne peut pas être utilisée ailleurs. Par « bloc » on entend : le fichier, une fonction, une classe. Pour pouvoir utiliser la variable $conn dans un autre fichier, on utilise le mot clé global $conn et pour l’appeler depuis un autre fichier, on fait de même.</para>
+</callout>
+</calloutlist>
+<simpara>La vue contient le code xHTML. C&#8217;est la seule partie qui doit en contenir. Les requêtes SQL doivent être effectuées ailleurs, la vue doit se contenter d&#8217;afficher les résultats.
+Il faut don créer un  nouveau fichier qui va contenir toutes les fonctions qui se chargeront des requêtes SQL.
+Par exemple, si on souhaite afficher le nombre de salariés, on va définir une fonction que le nommera getNbSalaries qui retournera le résultat de la requête suivante :</simpara>
+<formalpara>
+<title>fonctions.php</title>
+<para>
+<programlisting language="php" linenumbering="unnumbered">&lt;?php
+  require_once("connection.php");
+
+  function getNbSalaries(){
+     global $conn ;
+     $req = "SELECT count(*) as nb FROM salaries ;"; <co xml:id="CO2-1"/>
+     $result = mysqli_query($conn,$req) or die (mysqli_error($conn));
+     $ligne=mysqli_fetch_assoc($result);
+     return $ligne['nb'];
+ }
+?&gt;</programlisting>
+</para>
+</formalpara>
+<calloutlist>
+<callout arearefs="CO2-1">
+<para>l&#8217;utilisation d&#8217;un alias <emphasis role="strong">as nb</emphasis> permet de rendre le code plus lisible, ainsi la clé <emphasis role="strong">count()</emphasis> est remplacée par la clé <emphasis role="strong">nb</emphasis></para>
+</callout>
+</calloutlist>
+<simpara>Lorsque la requête SQL retourne plusieurs lignes, la fonction devra retourner un tableau contenant toutes les lignes. Par exemple si l&#8217;on souhaite afficher la liste et les attributs de tous les salariés</simpara>
+<programlisting language="php" linenumbering="unnumbered">function getAllSalaries(){
+    global $conn;
+    $listeSalaries = array(); <co xml:id="CO3-1"/>
+    $req = 'SELECT * FROM salaries';
+
+    $result = mysqli_query($conn,$req) or die (mysqli_error($conn));
+    while($ligne = mysqli_fetch_assoc($result)) { <co xml:id="CO3-2"/>
+	 $listeSalaries[]=$ligne; <co xml:id="CO3-3"/>
+    }
+    return $listeSalaries;
+  }</programlisting>
+<calloutlist>
+<callout arearefs="CO3-1">
+<para>On initialise un tableau : <phrase role="red">$listeSalaries = array() ;</phrase></para>
+</callout>
+<callout arearefs="CO3-2">
+<para>On parcourt chaque ligne du résultat de la requête :
+<phrase role="red">$while($ligne = mysqli_fetch_assoc($result))</phrase></para>
+</callout>
+<callout arearefs="CO3-3">
+<para>On ajoute au tableau chaque ligne : <phrase role="red">$listeSalaries[]=$ligne ;</phrase></para>
+</callout>
+</calloutlist>
+<simpara>le fichier <phrase role="red">listeSalaries.php</phrase> se présentera ainsi :</simpara>
+<programlisting language="php" linenumbering="unnumbered">&lt;?php
+     require_once("header.html");
+     require_once("fonctions.php");
+
+     $nbSalaries = getNbSalaries();
+     $listeSalaries = getAllSalaries();
+
+?&gt;
+
+  &lt;div class="container my-5"&gt;
+  &lt;table class="table table-hover"&gt;
+    &lt;th&gt;id&lt;/th&gt;
+    &lt;th&gt;nom&lt;/th&gt;
+    &lt;th&gt;prenom&lt;/th&gt;
+    &lt;th&gt;date-naissance&lt;/th&gt;
+    &lt;th&gt;date-embauche&lt;/th&gt;
+    &lt;th&gt;salaire&lt;/th&gt;
+    &lt;th&gt;service&lt;/th&gt;
+
+&lt;?php foreach ($listeSalaries as $leSalarie): ?&gt;
+  &lt;tr&gt;
+    &lt;td&gt;&lt;?php echo $leSalarie['idsalaries']; ?&gt;&lt;/td&gt;
+    &lt;td&gt;&lt;?php echo $leSalarie['nom']; ?&gt;&lt;/td&gt;
+    &lt;td&gt;&lt;?php echo $leSalarie['prenom']; ?&gt;&lt;/td&gt;
+    &lt;td&gt;&lt;?php echo $leSalarie['date_naissance']; ?&gt;&lt;/td&gt;
+    &lt;td&gt;&lt;?php echo $leSalarie['date_embauche']; ?&gt;&lt;/td&gt;
+    &lt;td&gt;&lt;?php echo $leSalarie['salaire']; ?&gt;&lt;/td&gt;
+    &lt;td&gt;&lt;?php echo $leSalarie['service']; ?&gt;&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;?php endforeach; ?&gt;
+&lt;/table&gt;
+
+  &lt;p&gt;nombre de salariés :&lt;?php echo $nbSalaries ; ?&gt;&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;?php require_once('footer.html'); ?&gt;</programlisting>
+<simpara>Cette organisation permet d&#8217;éviter les problèmes de concaténation et logiquement c&#8217;est au code HTML d&#8217;inclure du PHP et non l&#8217;inverse.</simpara>
+<simpara>Notez que pour le foreach , il n&#8217;y a pas d&#8217;accolades :</simpara>
+<orderedlist numeration="arabic">
+<listitem>
+<simpara>l&#8217;accolade de début est remplacée par <emphasis role="strong">:</emphasis></simpara>
+</listitem>
+<listitem>
+<simpara>l&#8217;accolade de fin est remplacée par un <emphasis role="strong">endforeach ;</emphasis>.</simpara>
+</listitem>
+<listitem>
+<simpara>Toutes les structures de contrôles listées ci-dessus ont des syntaxes de fermetures similaires : endif, endfor, endforeach et endwhile</simpara>
+</listitem>
+</orderedlist>
+</section>
+<section xml:id="_travail_à_faire">
+<title>travail à faire :</title>
+<simpara>Dans votre répertoire public_html, vous devez avoir un dossier <emphasis role="strong">acf2l</emphasis> ( activité précédente )</simpara>
+<orderedlist numeration="arabic">
+<listitem>
+<simpara>Télécharger l&#8217;archive mvc.zip et l&#8217;extraire dans votre répertoire <emphasis role="strong">acf2l</emphasis>. Cette archive contient plusieurs fichiers notamment le script listeSalaries.php et salaries.sql.</simpara>
+</listitem>
+<listitem>
+<simpara>Avec phpMyAdmin, exécuter le script salaries.sql dans votre base de données <emphasis role="strong">acf2l</emphasis>. Vous pouvez ensuite tester le script listeSalaries.php en modifiant éventuellement les données de connexion ( login et mot de passe).</simpara>
+</listitem>
+<listitem>
+<simpara>Modifier le script listeSalaries.php pour séparer la vue du traitement des données. Vous allez devoir créer un fichier connexion.php et un ficher fonctions.php qui contiendra toutes les fonctions utiles à la vue.</simpara>
+</listitem>
+<listitem>
+<simpara>Écrire les fonctions qui vont vous permettre d&#8217;ajouter à la vue :</simpara>
+<orderedlist numeration="arabic">
+<listitem>
+<simpara>le salaire moyen</simpara>
+</listitem>
+<listitem>
+<simpara>le salaire maximum et minimum</simpara>
+</listitem>
+<listitem>
+<simpara>le nombre de salariés par service</simpara>
+</listitem>
+</orderedlist>
+</listitem>
+</orderedlist>
+<informalfigure>
+<mediaobject>
+<imageobject>
+<imagedata fileref="images/sal4.png"/>
+</imageobject>
+<textobject><phrase>sal4</phrase></textobject>
+</mediaobject>
+</informalfigure>
+<orderedlist numeration="arabic">
+<listitem>
+<simpara>en vous aidant de l&#8217;activité 1, proposez une vue permettant de réaliser toutes les opérations CRUD ( ajout d&#8217;un salarié, suppression et mise à jour )</simpara>
+</listitem>
+</orderedlist>
+<informalfigure>
+<mediaobject>
+<imageobject>
+<imagedata fileref="images/sal5.png"/>
+</imageobject>
+<textobject><phrase>sal5</phrase></textobject>
+</mediaobject>
+</informalfigure>
+</section>
+</article>

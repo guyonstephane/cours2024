@@ -1,0 +1,266 @@
+= PHP : Activité   PHP-MYSQL -PDO
+
+:sectnums:
+:toc: left
+:toclevels: 4
+:toc-title: Sommaire
+:description: Exemple en Python
+:keywords: AsciiDoc Python
+:imagesdir: images
+:sourcedir: ./src/
+:source-highlighter: rouge 
+
+ 
+
+
+
+ifdef::backend-html5[]  
+++++
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+++++
+:html:
+endif::[]
+
+ifndef::html[]
+:source-highlighter: pygments
+:pygments-style: xcode
+endif::[] 
+
+:icons: font
+
+
+== PDO : PHP Data Object
+
+PDO est une classe PHP déstinée à permettre à PHP de communiquer avec un serveur de données. +
+PDO est ce qu'on appel une couche d'abstraction, c'est à dire qu'il va permettre de communiquer avec la plupart des serveurs de base de données : MySQL, Oracle, Postgresql, etc... (En tout cas sur des requêtes simples). +
+PDO va permettre (c'est son intérêt majeur) de sécuriser les requêtes et de favoriser la réutilisation du code grâce aux requêtes préparées. +
+mysql_connect(), mysql_query(), mysql_result(), mysql_fetch_array() etc... toutes ces fonctions que vous utilisez sont spécifiques au  SGBD : Mysql, vous allez devoir modifier votre code si vous souhaitez déployer votre application sur un autre serveur, ou alors mettre en place une structure de programmation du type : 
+
+[,php]
+.connexionBase.php
+----
+switch($typeDb)
+{
+    case 'mysql':
+        mysql_query($query);
+        break;
+    case 'sqlite':
+         sqlite_query($query);
+         break;
+    case 'mssql':
+         mssql_query($query);
+         break;
+    //etc...
+}
+----
+
+== Connexion PDO
+
+[,php]
+.connexionBase.php
+----
+<?php
+  $host='localhost';
+  $bd='acf2l';
+  $login='root';
+  $password='sio';
+  try
+  {
+    $pdo = new PDO('mysql:host='.$host.';dbname='.$bd, $login, $password);
+    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    $pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_OBJ);
+  }
+  catch (Exception $e) //Le catch est chargé d’intercepter une éventuelle erreur
+  {
+    die ($e->getMessage());
+  }
+  global $pdo;
+?>
+----
+
+La variable *$host*, représente le point d'entrée pour accéder à notre base de données, il débute par le code du moteur de base de données, dans notre cas : *mysql* 
+
+    1. Ensuite on trouve l'adresse du serveur : *host = localhost*
+    2. Puis le nom de la base de données : *dbname = acf2l*
+    3. PDO étant orienté objet, il lève des exceptions en cas de problème. Le bloc try / catch est très pratique pour intercepter ce type d'erreur (on appelle ce genre d'erreur des Exception). 
+    4. PDO étant orienté objet, on va lui demander de retourner des objets *$pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_OBJ);* ( FETCH_NUM, retourne un tableau classique et FETCH_ASSOC, un tableau associatif)
+
+
+== EFFECTUER DES REQUÊTES
+
+Une fois connecté au serveur MySQL avec notre objet PDO, nous allons pouvoir commencer à envoyer des requêtes SQL au serveur. 
+
+PDO distingue 2 types de requêtes : 
+
+    1.  les requêtes de sélection : SELECT *->query($requete)*
+    2. les requêtes de modification - insertion : UPDATE – INSERT – DELETE *->exec($requete)*
+    
+La différence entre ces deux méthodes est que *query()* retournera un jeu de résultats sous la forme d'un objet PDOStatement, alors que *exec()* retournera uniquement le nombre de lignes affectées. En d'autres termes, vous utiliserez query() pour des requêtes de sélection (SELECT) et exec() pour des requêtes d'insertion (INSERT), de modification (UPDATE) ou de suppression (DELETE). 
+( ref : http://fmaz.developpez.com/tutoriels/php/comprendre-pdo/)
+
+
+* Requête SQL ne retournant qu'une seule ligne :  [red]#fetch()#
+
+[,php]
+----
+$query = 'SELECT * FROM salaries WHERE id=1;';
+$ligne = $pdo->query($query)->fetch(); 
+----
+
+* Requête SQL retournant plusieurs lignes : [red]#fetchAll()#
+
+[,php]
+----
+$query = 'SELECT * FROM salaries ;';
+$ligne = $pdo->query($query)->fetchAll(); 
+----
+
+
+== LES REQUÊTES PRÉPARÉES
+
+Le principe est de préparer un « moule » de requête et de placer des place holders aux endroits où l'on voudra insérer nos valeurs dynamiques.
+Vous avez une requête avec des place holders (les points d'interrogation) : +
+	*$requete ='DELETE FROM salaries WHERE idsalaries = ?';*
+	
+Le SGBD va préparer (interpréter, compiler et stocker temporairement son "plan d'exécution logique" ) la requête. +
+	*$prep = $pdo->prepare($requete) ;*
+	
+Il faudra ensuite associer des valeurs aux place holders, qui agissent un peu comme des variables . Par exemple si vous souhaitez associer la valeur de 10 au premier place holder +
+	*$prep->bindValue(1, 10, PDO::PARAM_INT);*
+	
+* (1) : pour le premier place holder rencontré
+	(10) : pour la valeur associée
+* (PDO::PARAM_INT) : Par défaut, si le 3e paramètre de la méthode bindValue() est ignoré, le type utilisé sera PDO::PARAM_STR. Ce qui signifie que les valeurs auront des guillemets de part et d'autre pour les délimiteurs.
+
+Ensuite on exécute la requête préparée : +
+	*$prep->execute() ;*
+	
+* *Nommage des place holders*
+
+Un autre avantage de PDO est qu'il permet l'utilisation de place holders nommés, c'est-à-dire d'attribuer un nom au place holder, plutôt que d'utiliser des points d'interrogation et un indicateur de position numérique. L'exemple précédent devient :
+
+[,php]
+----
+$requete ='DELETE FROM salaries WHERE idsalaries =:id';
+$prep = $pdo->prepare($requete) ;
+$prep->bindValue(':id', 10, PDO::PARAM_INT);
+$prep->exec() ; 
+----
+
+* Avantages et inconvénients des requêtes préparées :
+
+Le principe des requêtes préparées est, comme son nom l’indique, de préparer les requêtes pour ensuite les utiliser. Ainsi, au lieu de recalculer la requête à chaque fois qu’on lui envoi, la base de données va la calculer une seule fois. Les fois suivantes, la base de données n’aura qu’à les exécuter. +
+Le second principe des requêtes préparées c’est de ne plus traiter les données comme faisant partie de la requête mais vraiment comme des données. Lors de la préparation d’une requête la base de données crée en réalité des cases dans lesquelles elle va vérifier les valeurs qu’on lui donne. Ce qui limite les possibilités d'injection SQL c'est à dire l'envoi de données frauduleuses.
+
+
+== Synthèse
+
+[,php]
+.connexionPdo.php
+----
+<?php
+  $host='localhost';
+  $bd='acf2l';
+  $login='root';
+  $password='sio';
+  try
+  {
+    $pdo = new PDO('mysql:host='.$host.';dbname='.$bd, $login, $password);
+    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    $pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_OBJ);
+  }
+  catch (Exception $e) //Le catch est chargé d’intercepter une éventuelle erreur
+  {
+    die ($e->getMessage());
+  }
+  global $pdo;
+?>
+----
+
+[,php]
+.fonctionsPdo.php
+----
+<?php
+  require_once('connexionPdo.php') ;
+
+function getNbSalaries(){
+  global $pdo;
+  $query = "SELECT count(*) as nb FROM salaries ;";
+  try {
+    $result = $pdo->query($query)->fetch();
+    return $result->nb ;
+  }
+  catch ( Exception $e ) {
+    die ("erreur dans la requete ".$e->getMessage());
+  }  
+}
+
+function getAllSalaries(){
+    global $pdo;
+    $query = 'SELECT * FROM salaries ';
+
+    try { 
+      $result = $pdo->query($query)->fetchAll(); 
+      return $result;
+    }
+    catch ( Exception $e ) {
+      die ("erreur dans la requete ".$e->getMessage());
+    }
+}
+?>
+----
+
+[,php]
+.listeSalariesPdo.php
+----
+<?php
+  require_once('header.html') ;
+  require_once('fonctionsPdo.php') ;
+  
+  $nbSalaries = getNbSalaries();
+  $listeSalaries = getAllSalaries($pdo);
+?>
+
+<div class="container my-5">
+  <table class="table table-hover">
+    <th>id</th> 
+    <th>nom</th>
+    <th>prenom</th>
+    <th>date-naissance</th>
+    <th>date-embauche</th>
+    <th>salaire</th>
+    <th>service</th>
+<?php foreach ($listeSalaries as $leSalarie ) :?>
+  <tr>
+    <td><?php echo $leSalarie->idsalaries; ?></td>
+    <td><?php echo $leSalarie->nom; ?></td>
+    <td><?php echo $leSalarie->prenom; ?></td>
+    <td><?php echo $leSalarie->date_naissance; ?></td>
+    <td><?php echo $leSalarie->date_embauche; ?></td>
+    <td><?php echo $leSalarie->salaire; ?></td>
+    <td><?php echo $leSalarie->service; ?></td>
+  </tr>
+<?php endforeach; ?>
+</table>
+
+<p>Nombre de salariés : <?php echo $nbSalaries ; ?> </p>
+
+<div>
+
+<?php require_once('footer.html') ; ?>
+----
+
+
+== Travail à faire
+
+1. Dans votre répertoire *public_html* créer un nouveau dossier *salariesPdo* et y recopier les finchiers de votre répertoire *acf2l-salaries* ( header, footer, connexion, fonctions, listeSalaries )
+
+2. Modifier votre code pour utiliser la technologie PDO
+
+3. Présenter un formulaire permettant d'ajouter un salarié ( voir activité 1 ) 
+
+4. Sur le modèle de la gestion des messages ( activité 1 ) proposer une interface permettant de supprimer et mettre à jour les salariés.
+
+image::salPdo.png[]
+
+

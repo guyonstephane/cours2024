@@ -1,0 +1,1882 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+	<!--Titre du QCM-->
+	<question type="category">
+		<category>
+			<text><![CDATA[<infos><name>PHP - banque de questions</name><answernumbering>123</answernumbering><niveau>BTS1</niveau><matiere>D1-PROGRAM.LOGICIELLE</matiere></infos>]]></text>
+		</category>
+	</question>
+	<question type="multichoice">
+		<name>
+			<text><![CDATA[variable]]></text>
+		</name>
+		<questiontext format="html">
+			<text><![CDATA[<div style="font-family: Arial; font-size: 13px;"><p><span style="color: #000000;"><span style="font-size: small;"><strong>Que vaut $resultat ?</strong></span></span></p><p><span style="color: #000000;"><span style="font-size: small;">&lt;?php<br>&nbsp; &nbsp; $nombre1 = 2 + 6 ;<br>&nbsp; &nbsp; $nombre2 = $nombre1 / 2 ;<br>&nbsp; &nbsp; $resultat = $nombre1 - (2 * $nombre2) ;<br>?&gt;</span></span></p></div>]]></text>
+		</questiontext>
+		<externallink/>
+		<usecase>1</usecase>
+		<defaultgrade>1</defaultgrade>
+		<editeur>0</editeur>
+		<single>true</single>
+		<answer fraction="-50" format="plain_text">
+			<text><![CDATA[4]]></text>
+			<feedback>
+				<text><![CDATA[]]></text>
+			</feedback>
+		</answer>
+		<answer fraction="100" format="plain_text">
+			<text><![CDATA[0]]></text>
+			<feedback>
+				<text><![CDATA[]]></text>
+			</feedback>
+		</answer>
+		<answer fraction="-50" format="plain_text">
+			<text><![CDATA[-4]]></text>
+			<feedback>
+				<text><![CDATA[]]></text>
+			</feedback>
+		</answer>
+		<answer fraction="-50" format="plain_text">
+			<text><![CDATA[erreur]]></text>
+			<feedback>
+				<text><![CDATA[]]></text>
+			</feedback>
+		</answer>
+	</question>
+	<question type="multichoice">
+		<name>
+			<text><![CDATA[]]></text>
+		</name>
+		<questiontext format="html">
+			<text><![CDATA[<div style="font-family: Arial; font-size: 13px;"><p><span style="color: #000000;"><span style="font-size: small;"><strong>Que vaut $animal à la fin de ce code ?</strong></span></span></p><p><span style="color: #000000;"><span style="font-size: small;">&lt;?php<br>&nbsp; &nbsp; $longueur = 145;<br>&nbsp; &nbsp; $largeur = 73;<br>&nbsp; &nbsp; if ($longueur &gt; $largeur &amp;&amp; $largeur &gt; 100)<br>&nbsp; &nbsp; &nbsp; &nbsp; $animal = "Perroquet";<br>&nbsp; &nbsp; elseif ($longueur &gt; $largeur || $largeur != 73)<br>&nbsp; &nbsp; &nbsp; &nbsp; $animal = "Serpent";<br>&nbsp; &nbsp; else<br>&nbsp; &nbsp; &nbsp; &nbsp; $animal = "Renard";<br>?&gt;</span></span></p></div>]]></text>
+		</questiontext>
+		<externallink/>
+		<usecase>1</usecase>
+		<defaultgrade>1</defaultgrade>
+		<editeur>0</editeur>
+		<single>true</single>
+		<answer fraction="100" format="plain_text">
+			<text><![CDATA[Serpent]]></text>
+			<feedback>
+				<text><![CDATA[]]></text>
+			</feedback>
+		</answer>
+		<answer fraction="-50" format="plain_text">
+			<text><![CDATA[Renard]]></text>
+			<feedback>
+				<text><![CDATA[]]></text>
+			</feedback>
+		</answer>
+		<answer fraction="-50" format="plain_text">
+			<text><![CDATA[Perroquet]]></text>
+			<feedback>
+				<text><![CDATA[]]></text>
+			</feedback>
+		</answer>
+		<answer fraction="-50" format="plain_text">
+			<text><![CDATA[erreur]]></text>
+			<feedback>
+				<text><![CDATA[]]></text>
+			</feedback>
+		</answer>
+	</question>
+	<question type="multichoice">
+		<name>
+			<text><![CDATA[conditions]]></text>
+		</name>
+		<questiontext format="html">
+			<text><![CDATA[<div style="font-family: Arial; font-size: 13px;"><strong>Que va afficher ce code ?</strong></div><div style="font-family: Arial; font-size: 13px;">&nbsp;</div><div style="font-family: Arial; font-size: 13px;"><div>&lt;?php</div><div>$age = 12 ;&nbsp;</div><div>if ($age &lt; 18 and $age &gt; 65)</div><div>&nbsp; &nbsp; echo('tarif réduit');</div><div>else&nbsp;</div><div>&nbsp; &nbsp; echo('plein tarif');</div><div>?&gt;</div></div>]]></text>
+		</questiontext>
+		<externallink/>
+		<usecase>1</usecase>
+		<defaultgrade>1</defaultgrade>
+		<editeur>0</editeur>
+		<single>false</single>
+		<answer fraction="75" format="plain_text">
+			<text><![CDATA[plein tarif]]></text>
+			<feedback>
+				<text><![CDATA[]]></text>
+			</feedback>
+		</answer>
+		<answer fraction="-30" format="plain_text">
+			<text><![CDATA[tarif reduit]]></text>
+			<feedback>
+				<text><![CDATA[]]></text>
+			</feedback>
+		</answer>
+		<answer fraction="-30" format="plain_text">
+			<text><![CDATA[erreur]]></text>
+			<feedback>
+				<text><![CDATA[]]></text>
+			</feedback>
+		</answer>
+		<answer fraction="25" format="plain_text">
+			<text><![CDATA[Ce code n'affichera jamais 'tarif réduit']]></text>
+			<feedback>
+				<text><![CDATA[]]></text>
+			</feedback>
+		</answer>
+	</question>
+	<question type="multichoice">
+		<name>
+			<text><![CDATA[variable]]></text>
+		</name>
+		<questiontext format="html">
+			<text><![CDATA[<div style="font-family: Arial; font-size: 13px;"><strong><span class="police">Qu'affiche le script ?</span></strong></div><div style="font-family: Arial; font-size: 13px;">&nbsp;</div><div style="font-family: Arial; font-size: 13px;"><span class="police">&lt;?php<br>$a = 6;<br>$b = 15;<br>$c = $a;<br>$a = $b;<br>$b = $c;<br>print "$a $b";<br>?&gt;</span><br><br></div>]]></text>
+		</questiontext>
+		<externallink/>
+		<usecase>1</usecase>
+		<defaultgrade>1</defaultgrade>
+		<editeur>0</editeur>
+		<single>true</single>
+		<answer fraction="-50" format="plain_text">
+			<text><![CDATA[6 6]]></text>
+			<feedback>
+				<text><![CDATA[]]></text>
+			</feedback>
+		</answer>
+		<answer fraction="-50" format="plain_text">
+			<text><![CDATA[6 15]]></text>
+			<feedback>
+				<text><![CDATA[]]></text>
+			</feedback>
+		</answer>
+		<answer fraction="100" format="plain_text">
+			<text><![CDATA[15 6]]></text>
+			<feedback>
+				<text><![CDATA[]]></text>
+			</feedback>
+		</answer>
+		<answer fraction="-50" format="plain_text">
+			<text><![CDATA[15 15]]></text>
+			<feedback>
+				<text><![CDATA[]]></text>
+			</feedback>
+		</answer>
+	</question>
+	<question type="multichoice">
+		<name>
+			<text><![CDATA[]]></text>
+		</name>
+		<questiontext format="html">
+			<text><![CDATA[<div style="font-family: Arial; font-size: 13px;"><strong><span class="police">Qu'affiche le script ?</span></strong></div><div style="font-family: Arial; font-size: 13px;">&nbsp;</div><div style="font-family: Arial; font-size: 13px;"><span class="police">&lt;?php<br>&nbsp; &nbsp; $a = "3*7";<br>&nbsp; &nbsp; print $a;<br>?&gt;</span><br><br><br></div>]]></text>
+		</questiontext>
+		<externallink/>
+		<usecase>1</usecase>
+		<defaultgrade>1</defaultgrade>
+		<editeur>0</editeur>
+		<single>true</single>
+		<answer fraction="-50" format="plain_text">
+			<text><![CDATA[21]]></text>
+			<feedback>
+				<text><![CDATA[]]></text>
+			</feedback>
+		</answer>
+		<answer fraction="100" format="plain_text">
+			<text><![CDATA[3*7]]></text>
+			<feedback>
+				<text><![CDATA[]]></text>
+			</feedback>
+		</answer>
+		<answer fraction="-50" format="plain_text">
+			<text><![CDATA[21.0]]></text>
+			<feedback>
+				<text><![CDATA[]]></text>
+			</feedback>
+		</answer>
+		<answer fraction="-50" format="plain_text">
+			<text><![CDATA[erreur]]></text>
+			<feedback>
+				<text><![CDATA[]]></text>
+			</feedback>
+		</answer>
+	</question>
+	<question type="multichoice">
+		<name>
+			<text><![CDATA[]]></text>
+		</name>
+		<questiontext format="html">
+			<text><![CDATA[<div style="font-family: Arial; font-size: 13px;"><strong><span class="police">Qu'affiche le script ?</span></strong></div><div style="font-family: Arial; font-size: 13px;"><span class="police">&lt;?php<br>&nbsp; &nbsp; $a = "4";<br>&nbsp; &nbsp; $b = "2";<br>&nbsp; &nbsp; $c = $a.$b;<br>&nbsp; &nbsp; print $c;<br>?&gt;</span><br><br><br></div>]]></text>
+		</questiontext>
+		<externallink/>
+		<usecase>1</usecase>
+		<defaultgrade>1</defaultgrade>
+		<editeur>0</editeur>
+		<single>true</single>
+		<answer fraction="-50" format="plain_text">
+			<text><![CDATA[8]]></text>
+			<feedback>
+				<text><![CDATA[]]></text>
+			</feedback>
+		</answer>
+		<answer fraction="-50" format="plain_text">
+			<text><![CDATA[24]]></text>
+			<feedback>
+				<text><![CDATA[]]></text>
+			</feedback>
+		</answer>
+		<answer fraction="100" format="plain_text">
+			<text><![CDATA[42]]></text>
+			<feedback>
+				<text><![CDATA[]]></text>
+			</feedback>
+		</answer>
+		<answer fraction="-50" format="plain_text">
+			<text><![CDATA[4.2]]></text>
+			<feedback>
+				<text><![CDATA[]]></text>
+			</feedback>
+		</answer>
+	</question>
+	<question type="multichoice">
+		<name>
+			<text><![CDATA[conditions]]></text>
+		</name>
+		<questiontext format="html">
+			<text><![CDATA[<div style="font-family: Arial; font-size: 13px;"><strong>Qu'affiche ce script ?</strong></div><div style="font-family: Arial; font-size: 13px;">&lt;?php<br>$a=3;<br>$b=6;<br>if ($a&gt;5 || $b!=3) {<br>&nbsp; &nbsp; $b=4;<br>} else {<br>&nbsp; &nbsp; $b=2;<br>}<br>print $b;<br>?&gt;</div>]]></text>
+		</questiontext>
+		<externallink/>
+		<usecase>1</usecase>
+		<defaultgrade>1</defaultgrade>
+		<editeur>0</editeur>
+		<single>true</single>
+		<answer fraction="-50" format="plain_text">
+			<text><![CDATA[2]]></text>
+			<feedback>
+				<text><![CDATA[]]></text>
+			</feedback>
+		</answer>
+		<answer fraction="100" format="plain_text">
+			<text><![CDATA[4]]></text>
+			<feedback>
+				<text><![CDATA[]]></text>
+			</feedback>
+		</answer>
+		<answer fraction="-50" format="plain_text">
+			<text><![CDATA[6]]></text>
+			<feedback>
+				<text><![CDATA[]]></text>
+			</feedback>
+		</answer>
+		<answer fraction="-50" format="plain_text">
+			<text><![CDATA[erreur]]></text>
+			<feedback>
+				<text><![CDATA[]]></text>
+			</feedback>
+		</answer>
+	</question>
+	<question type="multichoice">
+		<name>
+			<text><![CDATA[Conditions]]></text>
+		</name>
+		<questiontext format="html">
+			<text><![CDATA[<div style="font-family: Arial; font-size: 13px;"><strong>Qu'affiche ce script ?</strong></div><div style="font-family: Arial; font-size: 13px;">&lt;?php<br>&nbsp; $a=2;<br>&nbsp; $b=0;<br>&nbsp; if ($a&lt;0) {<br>&nbsp; &nbsp; &nbsp; $b=1;<br>&nbsp; } elseif ($a&gt;0 &amp;&amp; $a&lt;5) {<br>&nbsp; &nbsp; &nbsp; $b=2;<br>&nbsp; } else {<br>&nbsp; &nbsp; &nbsp; $b=3;<br>&nbsp; }<br>&nbsp; print $b;</div><div style="font-family: Arial; font-size: 13px;">?&gt;</div><div style="font-family: Arial; font-size: 13px;">&nbsp;</div><div style="font-family: Arial; font-size: 13px;">&nbsp;</div><div style="font-family: Arial; font-size: 13px;">&nbsp;</div>]]></text>
+		</questiontext>
+		<externallink/>
+		<usecase>1</usecase>
+		<defaultgrade>1</defaultgrade>
+		<editeur>0</editeur>
+		<single>true</single>
+		<answer fraction="-50" format="plain_text">
+			<text><![CDATA[3]]></text>
+			<feedback>
+				<text><![CDATA[]]></text>
+			</feedback>
+		</answer>
+		<answer fraction="-50" format="plain_text">
+			<text><![CDATA[0]]></text>
+			<feedback>
+				<text><![CDATA[]]></text>
+			</feedback>
+		</answer>
+		<answer fraction="100" format="plain_text">
+			<text><![CDATA[2]]></text>
+			<feedback>
+				<text><![CDATA[]]></text>
+			</feedback>
+		</answer>
+		<answer fraction="-50" format="plain_text">
+			<text><![CDATA[1]]></text>
+			<feedback>
+				<text><![CDATA[]]></text>
+			</feedback>
+		</answer>
+	</question>
+	<question type="multichoice">
+		<name>
+			<text><![CDATA[variable]]></text>
+		</name>
+		<questiontext format="html">
+			<text><![CDATA[<div style="font-family: Arial; font-size: 13px;"><strong>Déterminez parmi les propositions ci-dessous, celles qui sont vraies :</strong></div><div style="font-family: Arial; font-size: 13px;">Soit le code suivant :<br><span style="font-family: courier new,courier,monospace;">&lt;?php<br>&nbsp; $x = 7;<br>&nbsp; $y = 2;<br>&nbsp; $y = ($x += $y);<br>&nbsp; echo $y;<br>?&gt;</span><br><br></div>]]></text>
+		</questiontext>
+		<externallink/>
+		<usecase>1</usecase>
+		<defaultgrade>1</defaultgrade>
+		<editeur>0</editeur>
+		<single>false</single>
+		<answer fraction="-20" format="plain_text">
+			<text><![CDATA[Ce code génère une erreur à l'exécution ]]></text>
+			<feedback>
+				<text><![CDATA[]]></text>
+			</feedback>
+		</answer>
+		<answer fraction="-20" format="plain_text">
+			<text><![CDATA[le code affiche : TRUE]]></text>
+			<feedback>
+				<text><![CDATA[]]></text>
+			</feedback>
+		</answer>
+		<answer fraction="50" format="plain_text">
+			<text><![CDATA[le code affiche : 9]]></text>
+			<feedback>
+				<text><![CDATA[]]></text>
+			</feedback>
+		</answer>
+		<answer fraction="-10" format="plain_text">
+			<text><![CDATA[le code affiche : 7]]></text>
+			<feedback>
+				<text><![CDATA[]]></text>
+			</feedback>
+		</answer>
+		<answer fraction="50" format="plain_text">
+			<text><![CDATA[Suite à l'intruction $y = ($x +=$y), $x vaut 9]]></text>
+			<feedback>
+				<text><![CDATA[]]></text>
+			</feedback>
+		</answer>
+	</question>
+	<question type="multichoice">
+		<name>
+			<text><![CDATA[]]></text>
+		</name>
+		<questiontext format="html">
+			<text><![CDATA[<div style="font-family: Arial; font-size: 13px;"><strong>Déterminez parmi les propositions ci-dessous, celles qui sont vraies :</strong></div><div style="font-family: Arial; font-size: 13px;">Soit le code suivant :<br><span style="font-family: courier new,courier,monospace;">&lt;?php</span><br style="font-family: courier new,courier,monospace;"><span style="font-family: courier new,courier,monospace;">&nbsp; $x = 4;</span><br style="font-family: courier new,courier,monospace;"><span style="font-family: courier new,courier,monospace;">&nbsp; $y = 3;</span><br style="font-family: courier new,courier,monospace;"><span style="font-family: courier new,courier,monospace;">&nbsp; $x = $y++;</span><br style="font-family: courier new,courier,monospace;"><span style="font-family: courier new,courier,monospace;">&nbsp; echo ($x + $y);</span><br style="font-family: courier new,courier,monospace;"><span style="font-family: courier new,courier,monospace;">?&gt;</span><br><br></div>]]></text>
+		</questiontext>
+		<externallink/>
+		<usecase>1</usecase>
+		<defaultgrade>1</defaultgrade>
+		<editeur>0</editeur>
+		<single>false</single>
+		<answer fraction="-20" format="plain_text">
+			<text><![CDATA[Suite à l'instruction ($x = $y++;) $x vaut 4.]]></text>
+			<feedback>
+				<text><![CDATA[Non, l'incrémentation de $y se fait après l'affectation.]]></text>
+			</feedback>
+		</answer>
+		<answer fraction="50" format="plain_text">
+			<text><![CDATA[le code affiche : 7]]></text>
+			<feedback>
+				<text><![CDATA[]]></text>
+			</feedback>
+		</answer>
+		<answer fraction="50" format="plain_text">
+			<text><![CDATA[Suite à l'instruction ($x = $y++;) $y vaut 4.]]></text>
+			<feedback>
+				<text><![CDATA[Oui, la variable $y est incrémenté de 1 et $x prend la valeur de $y avant l'incrémentation de 1 soit 3]]></text>
+			</feedback>
+		</answer>
+		<answer fraction="-30" format="plain_text">
+			<text><![CDATA[le code affiche : 8]]></text>
+			<feedback>
+				<text><![CDATA[]]></text>
+			</feedback>
+		</answer>
+	</question>
+	<question type="multichoice">
+		<name>
+			<text><![CDATA[]]></text>
+		</name>
+		<questiontext format="html">
+			<text><![CDATA[<div style="font-family: Arial; font-size: 13px;"><strong>Que permet cet opérateur != :</strong></div>]]></text>
+		</questiontext>
+		<externallink/>
+		<usecase>1</usecase>
+		<defaultgrade>1</defaultgrade>
+		<editeur>0</editeur>
+		<single>true</single>
+		<answer fraction="-50" format="plain_text">
+			<text><![CDATA[de tester l'égalité entre 2 variables ]]></text>
+			<feedback>
+				<text><![CDATA[]]></text>
+			</feedback>
+		</answer>
+		<answer fraction="-50" format="plain_text">
+			<text><![CDATA[d'affecter une valeur à une variable ]]></text>
+			<feedback>
+				<text><![CDATA[]]></text>
+			</feedback>
+		</answer>
+		<answer fraction="-50" format="plain_text">
+			<text><![CDATA[de tester le type d'une variable]]></text>
+			<feedback>
+				<text><![CDATA[]]></text>
+			</feedback>
+		</answer>
+		<answer fraction="100" format="plain_text">
+			<text><![CDATA[de tester la différence entre 2 variables]]></text>
+			<feedback>
+				<text><![CDATA[]]></text>
+			</feedback>
+		</answer>
+	</question>
+	<question type="multichoice">
+		<name>
+			<text><![CDATA[]]></text>
+		</name>
+		<questiontext format="html">
+			<text><![CDATA[<div style="font-family: Arial; font-size: 13px;"><strong>Déterminez parmi les propositions ci-dessous, celles qui sont vraies :</strong></div><div style="font-family: Arial; font-size: 13px;">Soit le code suivant :<br>&lt;?php<br>$age = 35;<br>if ($age = 26)<br>&nbsp; &nbsp; echo 'tarif réduit';<br>elseif ($age &gt; 30)<br>&nbsp; &nbsp; echo 'plein tarif';<br>else</div><div style="font-family: Arial; font-size: 13px;">&nbsp; &nbsp; echo '5€';<br>?&gt;<br><br></div>]]></text>
+		</questiontext>
+		<externallink/>
+		<usecase>1</usecase>
+		<defaultgrade>1</defaultgrade>
+		<editeur>0</editeur>
+		<single>false</single>
+		<answer fraction="50" format="plain_text">
+			<text><![CDATA[le code affiche : tarif réduit ]]></text>
+			<feedback>
+				<text><![CDATA[Oui,  dans l'expressio if ( $age = 26), on ne teste pas si la variable $age est égale à 26 mais on afecte la valeur de 26 à cette variable, le teste renvoi TRUE]]></text>
+			</feedback>
+		</answer>
+		<answer fraction="-50" format="plain_text">
+			<text><![CDATA[le code affiche : plein tarif]]></text>
+			<feedback>
+				<text><![CDATA[]]></text>
+			</feedback>
+		</answer>
+		<answer fraction="-50" format="plain_text">
+			<text><![CDATA[le code affiche : 5€]]></text>
+			<feedback>
+				<text><![CDATA[]]></text>
+			</feedback>
+		</answer>
+		<answer fraction="25" format="plain_text">
+			<text><![CDATA[Pour tester une égalité on utilise l'opérateur ==]]></text>
+			<feedback>
+				<text><![CDATA[]]></text>
+			</feedback>
+		</answer>
+		<answer fraction="25" format="plain_text">
+			<text><![CDATA[Suite à l'exécution du code la variable $age est égale à 26]]></text>
+			<feedback>
+				<text><![CDATA[]]></text>
+			</feedback>
+		</answer>
+	</question>
+	<question type="multichoice">
+		<name>
+			<text><![CDATA[]]></text>
+		</name>
+		<questiontext format="html">
+			<text><![CDATA[<div style="font-family: Arial; font-size: 13px;"><strong>Voici un bloc d'instructions contenant 3 instructions :</strong><br>&lt;?php<br>&nbsp; $x = TRUE; // instruction 1<br>&nbsp; $y = FALSE; // instruction 2<br>&nbsp; $z = TRUE || $y ; // instruction 3<br>?&gt;<br>Déterminer quelles sont les affirmations justes énumérées ci-dessous :</div>]]></text>
+		</questiontext>
+		<externallink/>
+		<usecase>1</usecase>
+		<defaultgrade>1</defaultgrade>
+		<editeur>0</editeur>
+		<single>false</single>
+		<answer fraction="-50" format="plain_text">
+			<text><![CDATA[la variable $z est de type string ]]></text>
+			<feedback>
+				<text><![CDATA[Généralement, en php, le type d'une variable n'est pas déclaré par le programmeur. Il est décidé au moment de l'exécution par PHP, en fonction du contexte dans lequel la variable est utilisée. La réponse est donc non, le type de la variable $z est booléen car il résulte de l'évaluation de l'expression booléenne à droite de l'opérateur d'affectation.]]></text>
+			</feedback>
+		</answer>
+		<answer fraction="-50" format="plain_text">
+			<text><![CDATA[Une fois l'instruction 3 exécutée, $z vaut la chaîne de caractères: 'TRUE || $y']]></text>
+			<feedback>
+				<text><![CDATA[Non, l'expression est booléenne, le résultat de son évaluation est booléen.]]></text>
+			</feedback>
+		</answer>
+		<answer fraction="50" format="plain_text">
+			<text><![CDATA[Une fois la troisième instruction exécutée, $z vaut TRUE]]></text>
+			<feedback>
+				<text><![CDATA[l'évaluation de l'expression booléenne (TRUE ou FALSE) vaut TRUE.]]></text>
+			</feedback>
+		</answer>
+		<answer fraction="50" format="plain_text">
+			<text><![CDATA[la variable $z est de type booléen ]]></text>
+			<feedback>
+				<text><![CDATA[]]></text>
+			</feedback>
+		</answer>
+	</question>
+	<question type="multichoice">
+		<name>
+			<text><![CDATA[]]></text>
+		</name>
+		<questiontext format="html">
+			<text><![CDATA[<div style="font-family: Arial; font-size: 13px;"><strong><span class="police">Soit le code suivant :</span></strong></div><div style="font-family: Arial; font-size: 13px;"><span class="police">&lt;?php<br>&nbsp; $res = 15;<br>&nbsp; $Res = 10<br>&nbsp; $Res = $Res -7;<br>&nbsp; print $res;<br>?&gt;</span></div><div style="font-family: Arial; font-size: 13px;"><span class="police">Parmi les affirmations suivantes, déterminez celles qui sont vraies :&nbsp;</span></div>]]></text>
+		</questiontext>
+		<externallink/>
+		<usecase>1</usecase>
+		<defaultgrade>1</defaultgrade>
+		<editeur>0</editeur>
+		<single>false</single>
+		<answer fraction="50" format="plain_text">
+			<text><![CDATA[En PHP chaque instruction doit se terminer par un ;]]></text>
+			<feedback>
+				<text><![CDATA[]]></text>
+			</feedback>
+		</answer>
+		<answer fraction="50" format="plain_text">
+			<text><![CDATA[Le code génère une erreur]]></text>
+			<feedback>
+				<text><![CDATA[]]></text>
+			</feedback>
+		</answer>
+		<answer fraction="-50" format="plain_text">
+			<text><![CDATA[le code affiche : 15]]></text>
+			<feedback>
+				<text><![CDATA[]]></text>
+			</feedback>
+		</answer>
+		<answer fraction="-50" format="plain_text">
+			<text><![CDATA[le code affiche :  3]]></text>
+			<feedback>
+				<text><![CDATA[]]></text>
+			</feedback>
+		</answer>
+	</question>
+	<question type="multichoice">
+		<name>
+			<text><![CDATA[]]></text>
+		</name>
+		<questiontext format="html">
+			<text><![CDATA[<div style="font-family: Arial; font-size: 13px;"><p class="rvps13"><span class="rvts48">Qu'affiche ce code :</span></p><p class="rvps13"><span class="rvts48">&lt;?php</span></p><p class="rvps13"><span class="rvts76">$pays</span><span class="rvts41">&nbsp;</span><span class="rvts75">=</span><span class="rvts41">&nbsp;</span><span class="rvts51">"Espagne"</span><span class="rvts41">;</span></p><p class="rvps13"><span class="rvts46">switch</span><span class="rvts41">&nbsp;(</span><span class="rvts76">$pays</span><span class="rvts41">)</span></p><p class="rvps13"><span class="rvts41">{</span></p><p class="rvps13"><span class="rvts41">&nbsp; &nbsp;&nbsp;</span><span class="rvts46">case</span><span class="rvts41">&nbsp;</span><span class="rvts51">"France"</span><span class="rvts75">:</span></p><p class="rvps13"><span class="rvts41">&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span><span class="rvts46">echo</span><span class="rvts41">&nbsp;</span><span class="rvts51">"Salut"</span><span class="rvts41">;</span></p><p class="rvps13"><span class="rvts41">&nbsp; &nbsp;&nbsp;</span><span class="rvts46">break</span><span class="rvts41">;</span></p><p class="rvps13"><span class="rvts41">&nbsp; &nbsp;&nbsp;</span><span class="rvts46">case</span><span class="rvts41">&nbsp;</span><span class="rvts51">"Royaume-Uni"</span><span class="rvts75">:</span></p><p class="rvps13"><span class="rvts41">&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span><span class="rvts46">echo</span><span class="rvts41">&nbsp;</span><span class="rvts51">"Hello"</span><span class="rvts41">;</span></p><p class="rvps13"><span class="rvts41">&nbsp; &nbsp;&nbsp;</span><span class="rvts46">break</span><span class="rvts41">;</span></p><p class="rvps13"><span class="rvts41">&nbsp; &nbsp;&nbsp;</span><span class="rvts46">case</span><span class="rvts41">&nbsp;</span><span class="rvts51">"Espagne"</span><span class="rvts75">:</span></p><p class="rvps13"><span class="rvts41">&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span><span class="rvts46">echo</span><span class="rvts41">&nbsp;</span><span class="rvts51">"Hola"</span><span class="rvts41">;</span></p><p class="rvps13"><span class="rvts41">&nbsp; &nbsp;</span><span class="rvts46">break</span><span class="rvts41">;</span></p><p class="rvps13"><span class="rvts41">}</span></p><p class="rvps13"><span class="rvts48">?&gt;</span></p></div>]]></text>
+		</questiontext>
+		<externallink/>
+		<usecase>1</usecase>
+		<defaultgrade>1</defaultgrade>
+		<editeur>0</editeur>
+		<single>true</single>
+		<answer fraction="100" format="plain_text">
+			<text><![CDATA[Hola]]></text>
+			<feedback>
+				<text><![CDATA[]]></text>
+			</feedback>
+		</answer>
+		<answer fraction="-50" format="plain_text">
+			<text><![CDATA[Salut]]></text>
+			<feedback>
+				<text><![CDATA[]]></text>
+			</feedback>
+		</answer>
+		<answer fraction="-50" format="plain_text">
+			<text><![CDATA[Hello]]></text>
+			<feedback>
+				<text><![CDATA[]]></text>
+			</feedback>
+		</answer>
+		<answer fraction="-50" format="plain_text">
+			<text><![CDATA[ce code n'affiche rien]]></text>
+			<feedback>
+				<text><![CDATA[]]></text>
+			</feedback>
+		</answer>
+	</question>
+	<question type="multichoice">
+		<name>
+			<text><![CDATA[]]></text>
+		</name>
+		<questiontext format="html">
+			<text><![CDATA[<div style="font-family: Arial; font-size: 13px;">Que va afficher ce code :</div><div style="font-family: Arial; font-size: 13px;">&lt;?php<br>&nbsp; $a = 6;<br>&nbsp; $a += 4;<br>&nbsp; $a -= 2;<br>&nbsp; print $a;<br>?&gt;</div>]]></text>
+		</questiontext>
+		<externallink/>
+		<usecase>1</usecase>
+		<defaultgrade>1</defaultgrade>
+		<editeur>0</editeur>
+		<single>true</single>
+		<answer fraction="-50" format="plain_text">
+			<text><![CDATA[4]]></text>
+			<feedback>
+				<text><![CDATA[]]></text>
+			</feedback>
+		</answer>
+		<answer fraction="-50" format="plain_text">
+			<text><![CDATA[6]]></text>
+			<feedback>
+				<text><![CDATA[]]></text>
+			</feedback>
+		</answer>
+		<answer fraction="100" format="plain_text">
+			<text><![CDATA[8]]></text>
+			<feedback>
+				<text><![CDATA[]]></text>
+			</feedback>
+		</answer>
+		<answer fraction="-50" format="plain_text">
+			<text><![CDATA[10]]></text>
+			<feedback>
+				<text><![CDATA[]]></text>
+			</feedback>
+		</answer>
+	</question>
+	<question type="multichoice">
+		<name>
+			<text><![CDATA[]]></text>
+		</name>
+		<questiontext format="html">
+			<text><![CDATA[<div style="font-family: Arial; font-size: 13px;">Que va afficher ce code :</div><div style="font-family: Arial; font-size: 13px;">&lt;?php<br>&nbsp; $a = 3 ;<br>&nbsp; $b = 7 ;<br>&nbsp; $a = 2 * $a + 6 ;<br>&nbsp; print($a) ;<br>&nbsp; $a = 2 * $b + 1 ;<br>&nbsp; print($a) ;<br>?&gt;</div>]]></text>
+		</questiontext>
+		<externallink/>
+		<usecase>1</usecase>
+		<defaultgrade>1</defaultgrade>
+		<editeur>0</editeur>
+		<single>true</single>
+		<answer fraction="-50" format="plain_text">
+			<text><![CDATA[1212]]></text>
+			<feedback>
+				<text><![CDATA[]]></text>
+			</feedback>
+		</answer>
+		<answer fraction="-50" format="plain_text">
+			<text><![CDATA[33]]></text>
+			<feedback>
+				<text><![CDATA[]]></text>
+			</feedback>
+		</answer>
+		<answer fraction="100" format="plain_text">
+			<text><![CDATA[1215]]></text>
+			<feedback>
+				<text><![CDATA[]]></text>
+			</feedback>
+		</answer>
+		<answer fraction="-50" format="plain_text">
+			<text><![CDATA[315]]></text>
+			<feedback>
+				<text><![CDATA[]]></text>
+			</feedback>
+		</answer>
+	</question>
+	<question type="multichoice">
+		<name>
+			<text><![CDATA[]]></text>
+		</name>
+		<questiontext format="html">
+			<text><![CDATA[<div style="font-family: Arial; font-size: 13px;">Que va afficher ce code :</div><div style="font-family: Arial; font-size: 13px;">&lt;?php<br>&nbsp; $age = 16 ;<br>&nbsp; if ($age &gt;= 18)<br>&nbsp; &nbsp;print("Majeur");<br>&nbsp; print(" Madame ou Monsieur");<br>?&gt;</div>]]></text>
+		</questiontext>
+		<externallink/>
+		<usecase>1</usecase>
+		<defaultgrade>1</defaultgrade>
+		<editeur>0</editeur>
+		<single>true</single>
+		<answer fraction="-50" format="plain_text">
+			<text><![CDATA[Majeur]]></text>
+			<feedback>
+				<text><![CDATA[]]></text>
+			</feedback>
+		</answer>
+		<answer fraction="-50" format="plain_text">
+			<text><![CDATA[Rien]]></text>
+			<feedback>
+				<text><![CDATA[]]></text>
+			</feedback>
+		</answer>
+		<answer fraction="-50" format="plain_text">
+			<text><![CDATA[Majeur  puis :  Madame ou Monsieur]]></text>
+			<feedback>
+				<text><![CDATA[]]></text>
+			</feedback>
+		</answer>
+		<answer fraction="100" format="plain_text">
+			<text><![CDATA[Madame ou Monsieur]]></text>
+			<feedback>
+				<text><![CDATA[]]></text>
+			</feedback>
+		</answer>
+	</question>
+	<question type="multichoice">
+		<name>
+			<text><![CDATA[]]></text>
+		</name>
+		<questiontext format="html">
+			<text><![CDATA[<div style="font-family: Arial; font-size: 13px;">Que va afficher ce code :&nbsp;</div><div style="font-family: Arial; font-size: 13px;">&lt;?php<br>&nbsp; $heure = 18 ;<br>&nbsp; if ($heure &lt;= 7)<br>&nbsp; &nbsp; &nbsp; &nbsp;$reponse = "nuit" ;<br>&nbsp; &nbsp;elseif ($heure &lt;= 12)<br>&nbsp; &nbsp; &nbsp; &nbsp;$reponse = "matin" ;<br>&nbsp; &nbsp;elseif ($heure &lt;= 19)<br>&nbsp; &nbsp; &nbsp; &nbsp;$reponse = "apres-midi" ;<br>&nbsp; &nbsp;else&nbsp;<br>&nbsp; &nbsp; &nbsp; &nbsp;$reponse = "soir" ;<br>&nbsp; &nbsp;echo $reponse ;<br>?&gt;</div>]]></text>
+		</questiontext>
+		<externallink/>
+		<usecase>1</usecase>
+		<defaultgrade>1</defaultgrade>
+		<editeur>0</editeur>
+		<single>true</single>
+		<answer fraction="-50" format="plain_text">
+			<text><![CDATA[matin]]></text>
+			<feedback>
+				<text><![CDATA[]]></text>
+			</feedback>
+		</answer>
+		<answer fraction="100" format="plain_text">
+			<text><![CDATA[apres-midi]]></text>
+			<feedback>
+				<text><![CDATA[]]></text>
+			</feedback>
+		</answer>
+		<answer fraction="-50" format="plain_text">
+			<text><![CDATA[soir]]></text>
+			<feedback>
+				<text><![CDATA[]]></text>
+			</feedback>
+		</answer>
+		<answer fraction="-50" format="plain_text">
+			<text><![CDATA[nuit]]></text>
+			<feedback>
+				<text><![CDATA[]]></text>
+			</feedback>
+		</answer>
+	</question>
+	<question type="multichoice">
+		<name>
+			<text><![CDATA[]]></text>
+		</name>
+		<questiontext format="html">
+			<text><![CDATA[<div style="font-family: Arial; font-size: 13px;"><div style="font-family: Arial; font-size: 13px;">Soit le code suivant : <br>&lt;?php<br>&nbsp; $age=15;<br>&nbsp; if($age &gt; 18) ;</div><div style="margin-left: 40px;">echo 'tarif réduit';</div><div style="font-family: Arial; font-size: 13px;">?&gt;<br>Déterminez parmi les propositions ci-dessous, celle qui est vraie :</div></div>]]></text>
+		</questiontext>
+		<externallink/>
+		<usecase>1</usecase>
+		<defaultgrade>1</defaultgrade>
+		<editeur>0</editeur>
+		<single>true</single>
+		<answer fraction="100" format="plain_text">
+			<text><![CDATA[ce code affiche : tarif réduit]]></text>
+			<feedback>
+				<text><![CDATA[le ; à la suite de la condition arrête le test et on exécute l'instruction suivante]]></text>
+			</feedback>
+		</answer>
+		<answer fraction="-50" format="plain_text">
+			<text><![CDATA[ce code n'affiche rien]]></text>
+			<feedback>
+				<text><![CDATA[]]></text>
+			</feedback>
+		</answer>
+		<answer fraction="-50" format="plain_text">
+			<text><![CDATA[ce code provoque une erreur]]></text>
+			<feedback>
+				<text><![CDATA[]]></text>
+			</feedback>
+		</answer>
+		<answer fraction="0" format="plain_text">
+			<text><![CDATA[En PHP chaque instruction se termine par un ;]]></text>
+			<feedback>
+				<text><![CDATA[]]></text>
+			</feedback>
+		</answer>
+	</question>
+	<question type="multichoice">
+		<name>
+			<text><![CDATA[tableau]]></text>
+		</name>
+		<questiontext format="html">
+			<text><![CDATA[<div style="font-family: Arial; font-size: 13px;"><div style="font-family: Arial; font-size: 13px;"><strong>Qu'affiche le programme :</strong><br><code id="cc"></code>&lt;?php</div>&nbsp;&nbsp; $nombre = [3,1,8] ;<br>&nbsp;&nbsp; $n = $nombre[0]+$nombre[1] ;<br>&nbsp;&nbsp; print($n) ;<br>?&gt;</div>]]></text>
+		</questiontext>
+		<externallink/>
+		<usecase>1</usecase>
+		<defaultgrade>1</defaultgrade>
+		<editeur>0</editeur>
+		<single>true</single>
+		<answer fraction="-50" format="plain_text">
+			<text><![CDATA[$n]]></text>
+			<feedback>
+				<text><![CDATA[]]></text>
+			</feedback>
+		</answer>
+		<answer fraction="100" format="plain_text">
+			<text><![CDATA[4]]></text>
+			<feedback>
+				<text><![CDATA[]]></text>
+			</feedback>
+		</answer>
+		<answer fraction="-50" format="plain_text">
+			<text><![CDATA[12]]></text>
+			<feedback>
+				<text><![CDATA[]]></text>
+			</feedback>
+		</answer>
+		<answer fraction="-50" format="plain_text">
+			<text><![CDATA[3,1]]></text>
+			<feedback>
+				<text><![CDATA[]]></text>
+			</feedback>
+		</answer>
+	</question>
+	<question type="multichoice">
+		<name>
+			<text><![CDATA[tableau]]></text>
+		</name>
+		<questiontext format="html">
+			<text><![CDATA[<div style="font-family: Arial; font-size: 13px;">Soit le code suivant :<br>&lt;?php<br>&nbsp;$tabPays = array('france','italie','allemagne', 'espagne');<br>&nbsp;$tabPays[] = 'islande' ;<br>&nbsp;echo $tabPays[4];<br>?&gt;<br>Déterminez, parmi les propositions ci-dessous, celles qui sont vraies :</div>]]></text>
+		</questiontext>
+		<externallink/>
+		<usecase>1</usecase>
+		<defaultgrade>1</defaultgrade>
+		<editeur>0</editeur>
+		<single>false</single>
+		<answer fraction="70" format="plain_text">
+			<text><![CDATA[le code va afficher : islande]]></text>
+			<feedback>
+				<text><![CDATA[]]></text>
+			</feedback>
+		</answer>
+		<answer fraction="-25" format="plain_text">
+			<text><![CDATA[le code va afficher : espagne]]></text>
+			<feedback>
+				<text><![CDATA[]]></text>
+			</feedback>
+		</answer>
+		<answer fraction="-25" format="plain_text">
+			<text><![CDATA[le code va générer une erreur]]></text>
+			<feedback>
+				<text><![CDATA[]]></text>
+			</feedback>
+		</answer>
+		<answer fraction="30" format="plain_text">
+			<text><![CDATA[l'instruction $tabPays[] = 'islande'  ajoue l'islande à la fin du tableau]]></text>
+			<feedback>
+				<text><![CDATA[]]></text>
+			</feedback>
+		</answer>
+	</question>
+	<question type="multichoice">
+		<name>
+			<text><![CDATA[tableau]]></text>
+		</name>
+		<questiontext format="html">
+			<text><![CDATA[<div style="font-family: Arial; font-size: 13px;"><div style="font-family: Arial; font-size: 13px;"><strong>Soit la déclaration du tableau :</strong><br><span style="font-family: courier new,courier,monospace;">&lt;?php</span></div><div style="margin-left: 40px; font-family: courier new,courier,monospace;">$tabChomage = array('France'=&gt;10,'Espagne'=&gt;12,'Finlande'=&gt;5); <br>foreach($tabChomage as $cle=&gt;$val){<br><div style="margin-left: 40px;">echo "$val&nbsp; ";</div>}</div><div style="margin-left: 40px; font-family: courier new,courier,monospace;">&nbsp;</div><div style="font-family: Arial; font-size: 13px;"><span style="font-family: courier new,courier,monospace;">?&gt; </span><br>Déterminez, parmi les propositions ci-dessous, celles qui sont vraies:</div></div>]]></text>
+		</questiontext>
+		<externallink/>
+		<usecase>1</usecase>
+		<defaultgrade>1</defaultgrade>
+		<editeur>0</editeur>
+		<single>false</single>
+		<answer fraction="50" format="plain_text">
+			<text><![CDATA[le code va afficher : 10 12 5]]></text>
+			<feedback>
+				<text><![CDATA[]]></text>
+			</feedback>
+		</answer>
+		<answer fraction="-25" format="plain_text">
+			<text><![CDATA[le code va afficher : France Espagne Finlande]]></text>
+			<feedback>
+				<text><![CDATA[Non, on demande d'afficher les valeurs pas les clés]]></text>
+			</feedback>
+		</answer>
+		<answer fraction="-25" format="plain_text">
+			<text><![CDATA[echo $tabChomage[0]; va afficher "France"]]></text>
+			<feedback>
+				<text><![CDATA[NON, France ne se trouve pas à l'indice 0 du tableau, dans un tableau associatif les indices numériques sont remplacés par des clés]]></text>
+			</feedback>
+		</answer>
+		<answer fraction="50" format="plain_text">
+			<text><![CDATA[echo $tabChomage['Finlande']; va afficher 5]]></text>
+			<feedback>
+				<text><![CDATA[]]></text>
+			</feedback>
+		</answer>
+		<answer fraction="-25" format="plain_text">
+			<text><![CDATA[ce code va afficher le nom et le taux de chomage de tous les pays se trouvant dans le tableau]]></text>
+			<feedback>
+				<text><![CDATA[]]></text>
+			</feedback>
+		</answer>
+	</question>
+	<question type="multichoice">
+		<name>
+			<text><![CDATA[]]></text>
+		</name>
+		<questiontext format="html">
+			<text><![CDATA[<div style="font-family: Arial; font-size: 13px;"><div class="below-entry-meta">En vous aidant de la documentation, indiquer ce que va afficher le code suivant :</div><div style="font-family: Arial; font-size: 13px;" class="below-entry-meta"><div class="w3-code notranslate htmlHigh"><span style="color: #000000;" class="phpcolor"><span class="phptagcolor">&lt;?php</span><br><span class="phpnumbercolor">&nbsp; </span>$a=<span class="phpkeywordcolor">array</span>(<span class="phpstringcolor">"red"</span>,<span class="phpstringcolor">"green"</span>,<span class="phpstringcolor">"blue"</span>,<span class="phpstringcolor">"yellow"</span>,<span class="phpstringcolor">"brown"</span>);<br>&nbsp; print_r(array_slice($a,<span class="phpnumbercolor">2,1</span>));<br><span class="phptagcolor">?&gt;</span></span></div></div><div class="entry-content clearfix"><p>La fonction <strong>array_slice()</strong> est une fonction intégrée en PHP qui renvoie les parties sélectionnées d’un tableau. La fonction <strong>array_slice()</strong> est utilisée pour extraire une tranche d’un tableau. Syntaxe : <strong>array_slice(array, start, length, preserve_key)</strong></p><p><strong>array : le tableau dont on souhaite extraire une partie ( obligatoire )</strong></p><p><strong>start : l'indice de début ( obligatoire )</strong></p><p><strong>lenght : le nombre d'élément qu'on souhaite extraire ( facultatif si ce paramètre n'est pas indiqué on prend tous les éléments se trouvant après l'indice de début )</strong></p><p><strong>preserve_key : facultatif, on conserve les clés initiales du tableau<br></strong></p><p><strong>exemple :</strong></p><div class=""><div><span class="enlighter-k7">$arr</span><span class="enlighter-text"> = </span><span class="enlighter-k0">array</span><span class="enlighter-g1">(</span><span class="enlighter-s0">"PHP"</span><span class="enlighter-text">,</span><span class="enlighter-s0">"Java"</span><span class="enlighter-text">,</span><span class="enlighter-s0">"Python"</span><span class="enlighter-text">,</span><span class="enlighter-s0">"C"</span><span class="enlighter-text">,</span><span class="enlighter-s0">"C++"</span><span class="enlighter-g1">)</span><span class="enlighter-text">;</span></div></div><div class=""><div><span class="enlighter-m0">print_r</span><span class="enlighter-g1">(</span><span class="enlighter-m0">array_slice</span><span class="enlighter-g1">(</span><span class="enlighter-k7">$arr,1,2</span><span class="enlighter-g1">))</span><span class="enlighter-text">;</span> // affiche Array( [0] =&gt; Java [1] =&gt; Python ), on commence à l'indice 1 et on extrait 2 éléments</div><div style="font-family: Arial; font-size: 13px;"><span class="enlighter-m0">print_r</span><span class="enlighter-g1">(</span><span class="enlighter-m0">array_slice</span><span class="enlighter-g1">(</span><span class="enlighter-k7">$arr,-2,2</span><span class="enlighter-g1">))</span><span class="enlighter-text">;</span> // affiche Array( [0] =&gt; C[1] =&gt; C++ ), on commence à la position -2 et on extrait 2 éléments</div></div><p>&nbsp;</p></div></div>]]></text>
+		</questiontext>
+		<externallink/>
+		<usecase>1</usecase>
+		<defaultgrade>1</defaultgrade>
+		<editeur>0</editeur>
+		<single>true</single>
+		<answer fraction="-50" format="plain_text">
+			<text><![CDATA[green]]></text>
+			<feedback>
+				<text><![CDATA[]]></text>
+			</feedback>
+		</answer>
+		<answer fraction="-50" format="plain_text">
+			<text><![CDATA[red green]]></text>
+			<feedback>
+				<text><![CDATA[]]></text>
+			</feedback>
+		</answer>
+		<answer fraction="-50" format="plain_text">
+			<text><![CDATA[bue yellow]]></text>
+			<feedback>
+				<text><![CDATA[]]></text>
+			</feedback>
+		</answer>
+		<answer fraction="100" format="plain_text">
+			<text><![CDATA[blue]]></text>
+			<feedback>
+				<text><![CDATA[on commence à l'indice 2 et on extrait 1 élément donc l'indice 2]]></text>
+			</feedback>
+		</answer>
+	</question>
+	<question type="multichoice">
+		<name>
+			<text><![CDATA[tableau]]></text>
+		</name>
+		<questiontext format="html">
+			<text><![CDATA[<div style="font-family: Arial; font-size: 13px;"><div class="below-entry-meta">En vous aidant de la documentation, indiquer ce que va afficher le code suivant :</div><div style="font-family: Arial; font-size: 13px;" class="below-entry-meta"><div class="w3-code notranslate htmlHigh"><span style="color: #000000;" class="phpcolor"><span class="phptagcolor">&lt;?php</span><br><span class="phpnumbercolor">&nbsp; </span>$a=<span class="phpkeywordcolor">array</span>(<span class="phpstringcolor">"red"</span>,<span class="phpstringcolor">"green"</span>,<span class="phpstringcolor">"blue"</span>,<span class="phpstringcolor">"yellow"</span>,<span class="phpstringcolor">"brown"</span>);<br>&nbsp; print_r(array_slice($a,<span class="phpnumbercolor">-3</span>));<br><span class="phptagcolor">?&gt;</span></span></div></div><div class="entry-content clearfix"><p>La fonction <strong>array_slice()</strong> est une fonction intégrée en PHP qui renvoie les parties sélectionnées d’un tableau. La fonction <strong>array_slice()</strong> est utilisée pour extraire une tranche d’un tableau. Syntaxe : <strong>array_slice(array, start, length, preserve_key)</strong></p><p><strong>array : le tableau dont on souhaite extraire une partie ( obligatoire )</strong></p><p><strong>start : l'indice de début ( obligatoire )</strong></p><p><strong>lenght : le nombre d'élément qu'on souhaite extraire ( facultatif si ce paramètre n'est pas indiqué on prend tous les éléments se trouvant après l'indice de début )</strong></p><p><strong>preserve_key : facultatif, on conserve les clés initiales du tableau<br></strong></p><p><strong>exemple :</strong></p><div class=""><div><span class="enlighter-k7">$arr</span><span class="enlighter-text"> = </span><span class="enlighter-k0">array</span><span class="enlighter-g1">(</span><span class="enlighter-s0">"PHP"</span><span class="enlighter-text">,</span><span class="enlighter-s0">"Java"</span><span class="enlighter-text">,</span><span class="enlighter-s0">"Python"</span><span class="enlighter-text">,</span><span class="enlighter-s0">"C"</span><span class="enlighter-text">,</span><span class="enlighter-s0">"C++"</span><span class="enlighter-g1">)</span><span class="enlighter-text">;</span></div></div><div class=""><div><span class="enlighter-m0">print_r</span><span class="enlighter-g1">(</span><span class="enlighter-m0">array_slice</span><span class="enlighter-g1">(</span><span class="enlighter-k7">$arr,1,2</span><span class="enlighter-g1">))</span><span class="enlighter-text">;</span> // affiche Array( [0] =&gt; Java [1] =&gt; Python ), on commence à l'indice 1 et on extrait 2 éléments</div><div style="font-family: Arial; font-size: 13px;"><span class="enlighter-m0">print_r</span><span class="enlighter-g1">(</span><span class="enlighter-m0">array_slice</span><span class="enlighter-g1">(</span><span class="enlighter-k7">$arr,-2,2</span><span class="enlighter-g1">))</span><span class="enlighter-text">;</span> // affiche Array( [0] =&gt; C[1] =&gt; C++ ), on commence à la position -2 et on extrait 2 éléments</div></div></div></div>]]></text>
+		</questiontext>
+		<externallink/>
+		<usecase>1</usecase>
+		<defaultgrade>1</defaultgrade>
+		<editeur>0</editeur>
+		<single>true</single>
+		<answer fraction="-50" format="plain_text">
+			<text><![CDATA[blue]]></text>
+			<feedback>
+				<text><![CDATA[]]></text>
+			</feedback>
+		</answer>
+		<answer fraction="-50" format="plain_text">
+			<text><![CDATA[blue green red]]></text>
+			<feedback>
+				<text><![CDATA[]]></text>
+			</feedback>
+		</answer>
+		<answer fraction="-50" format="plain_text">
+			<text><![CDATA[erreur]]></text>
+			<feedback>
+				<text><![CDATA[]]></text>
+			</feedback>
+		</answer>
+		<answer fraction="100" format="plain_text">
+			<text><![CDATA[blue yellow brown]]></text>
+			<feedback>
+				<text><![CDATA[]]></text>
+			</feedback>
+		</answer>
+	</question>
+	<question type="multichoice">
+		<name>
+			<text><![CDATA[While]]></text>
+		</name>
+		<questiontext format="html">
+			<text><![CDATA[<div style="font-family: Arial; font-size: 13px;"><strong>Qu'affiche ce code :</strong>&nbsp;</div><div style="font-family: Arial; font-size: 13px;"><div>&lt;?php<br>&nbsp; $n = 0;<br>&nbsp; while ($n &lt; 15) {<br>&nbsp; &nbsp; $n = $n + 2;<br>&nbsp; }<br>&nbsp; print $n;</div><div>?&gt;</div></div>]]></text>
+		</questiontext>
+		<externallink/>
+		<usecase>1</usecase>
+		<defaultgrade>1</defaultgrade>
+		<editeur>0</editeur>
+		<single>true</single>
+		<answer fraction="100" format="plain_text">
+			<text><![CDATA[16]]></text>
+			<feedback>
+				<text><![CDATA[]]></text>
+			</feedback>
+		</answer>
+		<answer fraction="0" format="plain_text">
+			<text><![CDATA[erreur]]></text>
+			<feedback>
+				<text><![CDATA[]]></text>
+			</feedback>
+		</answer>
+		<answer fraction="0" format="plain_text">
+			<text><![CDATA[14]]></text>
+			<feedback>
+				<text><![CDATA[]]></text>
+			</feedback>
+		</answer>
+		<answer fraction="0" format="plain_text">
+			<text><![CDATA[15]]></text>
+			<feedback>
+				<text><![CDATA[]]></text>
+			</feedback>
+		</answer>
+		<answer fraction="0" format="plain_text">
+			<text><![CDATA[18]]></text>
+			<feedback>
+				<text><![CDATA[]]></text>
+			</feedback>
+		</answer>
+	</question>
+	<question type="multichoice">
+		<name>
+			<text><![CDATA[]]></text>
+		</name>
+		<questiontext format="html">
+			<text><![CDATA[<div style="font-family: Arial; font-size: 13px;"><strong>Qu'affiche ce script :</strong></div><div style="font-family: Arial; font-size: 13px;">&lt;?php<br>&nbsp;$n = 10;<br>&nbsp; while ($n&gt;=11) {<br>&nbsp; &nbsp; $n = $n + 2;<br>&nbsp; }<br>&nbsp; print $n;<br>?&gt;</div>]]></text>
+		</questiontext>
+		<externallink/>
+		<usecase>1</usecase>
+		<defaultgrade>1</defaultgrade>
+		<editeur>0</editeur>
+		<single>true</single>
+		<answer fraction="100" format="plain_text">
+			<text><![CDATA[10]]></text>
+			<feedback>
+				<text><![CDATA[]]></text>
+			</feedback>
+		</answer>
+		<answer fraction="0" format="plain_text">
+			<text><![CDATA[11]]></text>
+			<feedback>
+				<text><![CDATA[]]></text>
+			</feedback>
+		</answer>
+		<answer fraction="0" format="plain_text">
+			<text><![CDATA[12]]></text>
+			<feedback>
+				<text><![CDATA[]]></text>
+			</feedback>
+		</answer>
+		<answer fraction="0" format="plain_text">
+			<text><![CDATA[14]]></text>
+			<feedback>
+				<text><![CDATA[]]></text>
+			</feedback>
+		</answer>
+	</question>
+	<question type="multichoice">
+		<name>
+			<text><![CDATA[]]></text>
+		</name>
+		<questiontext format="html">
+			<text><![CDATA[<div style="font-family: Arial; font-size: 13px;">Qu'affiche le script ?</div><div style="font-family: Arial; font-size: 13px;"><div>&lt;?php<br>&nbsp; $n = 0;<br>&nbsp;for ($i = 0; $i &lt;= 4; $i++) {<br>&nbsp; &nbsp; $n = $n + 1;<br>&nbsp;}<br>&nbsp;print $n;</div><div>?&gt;</div></div>]]></text>
+		</questiontext>
+		<externallink/>
+		<usecase>1</usecase>
+		<defaultgrade>1</defaultgrade>
+		<editeur>0</editeur>
+		<single>true</single>
+		<answer fraction="0" format="plain_text">
+			<text><![CDATA[4]]></text>
+			<feedback>
+				<text><![CDATA[]]></text>
+			</feedback>
+		</answer>
+		<answer fraction="100" format="plain_text">
+			<text><![CDATA[5]]></text>
+			<feedback>
+				<text><![CDATA[]]></text>
+			</feedback>
+		</answer>
+		<answer fraction="0" format="plain_text">
+			<text><![CDATA[6]]></text>
+			<feedback>
+				<text><![CDATA[]]></text>
+			</feedback>
+		</answer>
+	</question>
+	<question type="multichoice">
+		<name>
+			<text><![CDATA[]]></text>
+		</name>
+		<questiontext format="html">
+			<text><![CDATA[<div style="font-family: Arial; font-size: 13px;">Qu'affiche ce script :</div><div style="font-family: Arial; font-size: 13px;"><div>&lt;?php<br>&nbsp;$a = 1 ;<br>&nbsp;for ( $i = 0 ; $i &lt; 4 ;$i++ ) {<br>&nbsp; &nbsp; $a = $a + 3 ;<br>&nbsp; &nbsp; print("$a ");<br>&nbsp;}</div><div>?&gt;</div></div>]]></text>
+		</questiontext>
+		<externallink/>
+		<usecase>1</usecase>
+		<defaultgrade>1</defaultgrade>
+		<editeur>0</editeur>
+		<single>true</single>
+		<answer fraction="100" format="plain_text">
+			<text><![CDATA[4 7 10 13]]></text>
+			<feedback>
+				<text><![CDATA[]]></text>
+			</feedback>
+		</answer>
+		<answer fraction="0" format="plain_text">
+			<text><![CDATA[1 2 3 4]]></text>
+			<feedback>
+				<text><![CDATA[]]></text>
+			</feedback>
+		</answer>
+		<answer fraction="0" format="plain_text">
+			<text><![CDATA[4 7 10]]></text>
+			<feedback>
+				<text><![CDATA[]]></text>
+			</feedback>
+		</answer>
+		<answer fraction="0" format="plain_text">
+			<text><![CDATA[4 7 10 13 16]]></text>
+			<feedback>
+				<text><![CDATA[]]></text>
+			</feedback>
+		</answer>
+	</question>
+	<question type="multichoice">
+		<name>
+			<text><![CDATA[]]></text>
+		</name>
+		<questiontext format="html">
+			<text><![CDATA[<div style="font-family: Arial; font-size: 13px;"><strong>Qu'affiche le script suivant :</strong></div><div style="font-family: Arial; font-size: 13px;"><div>&lt;?php<br>&nbsp; $a = 6 ;<br>&nbsp; for ( $i = 1 ; $i &lt; 4; $i++ ){<br>&nbsp; &nbsp; $a = $a * 2;<br>&nbsp; &nbsp; $a = $a - 6;<br>&nbsp; }&nbsp;<br>&nbsp;print $a ;</div><div>?&gt;</div></div>]]></text>
+		</questiontext>
+		<externallink/>
+		<usecase>1</usecase>
+		<defaultgrade>1</defaultgrade>
+		<editeur>0</editeur>
+		<single>true</single>
+		<answer fraction="100" format="plain_text">
+			<text><![CDATA[4]]></text>
+			<feedback>
+				<text><![CDATA[]]></text>
+			</feedback>
+		</answer>
+		<answer fraction="0" format="plain_text">
+			<text><![CDATA[6]]></text>
+			<feedback>
+				<text><![CDATA[]]></text>
+			</feedback>
+		</answer>
+		<answer fraction="0" format="plain_text">
+			<text><![CDATA[8]]></text>
+			<feedback>
+				<text><![CDATA[]]></text>
+			</feedback>
+		</answer>
+		<answer fraction="0" format="plain_text">
+			<text><![CDATA[12]]></text>
+			<feedback>
+				<text><![CDATA[]]></text>
+			</feedback>
+		</answer>
+	</question>
+	<question type="multichoice">
+		<name>
+			<text><![CDATA[for]]></text>
+		</name>
+		<questiontext format="html">
+			<text><![CDATA[<div style="font-family: Arial; font-size: 13px;">for : qu'affiche ce script :</div><div style="font-family: Arial; font-size: 13px;"><div>&lt;?php<br>&nbsp;$resultat = "Bonjour";<br>&nbsp;for ($i = 1; $i &lt; 3; $i++) {<br>&nbsp; &nbsp; $resultat = $resultat."Bonsoir";<br>}<br>print $resultat;</div><div>?&gt;</div></div>]]></text>
+		</questiontext>
+		<externallink/>
+		<usecase>1</usecase>
+		<defaultgrade>1</defaultgrade>
+		<editeur>0</editeur>
+		<single>true</single>
+		<answer fraction="0" format="plain_text">
+			<text><![CDATA[BonsoirBonsoir]]></text>
+			<feedback>
+				<text><![CDATA[]]></text>
+			</feedback>
+		</answer>
+		<answer fraction="0" format="plain_text">
+			<text><![CDATA[BonsoirBonjourBonsoir]]></text>
+			<feedback>
+				<text><![CDATA[]]></text>
+			</feedback>
+		</answer>
+		<answer fraction="0" format="plain_text">
+			<text><![CDATA[BonjourBonsoir]]></text>
+			<feedback>
+				<text><![CDATA[]]></text>
+			</feedback>
+		</answer>
+		<answer fraction="100" format="plain_text">
+			<text><![CDATA[BonjourBonsoirBonsoir]]></text>
+			<feedback>
+				<text><![CDATA[]]></text>
+			</feedback>
+		</answer>
+	</question>
+	<question type="multichoice">
+		<name>
+			<text><![CDATA[]]></text>
+		</name>
+		<questiontext format="html">
+			<text><![CDATA[<div style="font-family: Arial; font-size: 13px;"><div style="font-family: Arial; font-size: 13px;"><strong>Que va afficher ce script :</strong></div><div>for ($i = 0 ; $i &lt; 2 ; $i++ ){<br>&nbsp; &nbsp; echo "b";<br>&nbsp; &nbsp; for ($j = 2 ; $j &gt; 3 ; $j-- ){<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;echo "a" ;<br>&nbsp; &nbsp; }<br>}</div></div>]]></text>
+		</questiontext>
+		<externallink/>
+		<usecase>1</usecase>
+		<defaultgrade>1</defaultgrade>
+		<editeur>0</editeur>
+		<single>true</single>
+		<answer fraction="0" format="plain_text">
+			<text><![CDATA[baba]]></text>
+			<feedback>
+				<text><![CDATA[]]></text>
+			</feedback>
+		</answer>
+		<answer fraction="100" format="plain_text">
+			<text><![CDATA[bb]]></text>
+			<feedback>
+				<text><![CDATA[]]></text>
+			</feedback>
+		</answer>
+		<answer fraction="0" format="plain_text">
+			<text><![CDATA[bba]]></text>
+			<feedback>
+				<text><![CDATA[]]></text>
+			</feedback>
+		</answer>
+		<answer fraction="0" format="plain_text">
+			<text><![CDATA[bbaa]]></text>
+			<feedback>
+				<text><![CDATA[]]></text>
+			</feedback>
+		</answer>
+		<answer fraction="0" format="plain_text">
+			<text><![CDATA[bbbaa]]></text>
+			<feedback>
+				<text><![CDATA[]]></text>
+			</feedback>
+		</answer>
+	</question>
+	<question type="multichoice">
+		<name>
+			<text><![CDATA[]]></text>
+		</name>
+		<questiontext format="html">
+			<text><![CDATA[<div style="font-family: Arial; font-size: 13px;"><p><strong>Quelle est la valeur de la variable somme après exécution des instructions suivantes:<tt></tt></strong></p><tt>$somme = 0;&nbsp;</tt></div><div style="font-family: Arial; font-size: 13px;"><tt>for ($i = 1; $i &lt; 6; $i = $i + 2){ </tt></div><div style="font-family: Arial; font-size: 13px;"><tt>&nbsp; &nbsp; &nbsp; $somme = $somme + $i;&nbsp;</tt></div><div style="font-family: Arial; font-size: 13px;"><tt>}</tt><div>&nbsp;</div><p>&nbsp;</p></div>]]></text>
+		</questiontext>
+		<externallink/>
+		<usecase>1</usecase>
+		<defaultgrade>1</defaultgrade>
+		<editeur>0</editeur>
+		<single>true</single>
+		<answer fraction="100" format="plain_text">
+			<text><![CDATA[9]]></text>
+			<feedback>
+				<text><![CDATA[]]></text>
+			</feedback>
+		</answer>
+		<answer fraction="0" format="plain_text">
+			<text><![CDATA[7]]></text>
+			<feedback>
+				<text><![CDATA[]]></text>
+			</feedback>
+		</answer>
+		<answer fraction="0" format="plain_text">
+			<text><![CDATA[8]]></text>
+			<feedback>
+				<text><![CDATA[]]></text>
+			</feedback>
+		</answer>
+		<answer fraction="0" format="plain_text">
+			<text><![CDATA[10]]></text>
+			<feedback>
+				<text><![CDATA[]]></text>
+			</feedback>
+		</answer>
+	</question>
+	<question type="multichoice">
+		<name>
+			<text><![CDATA[]]></text>
+		</name>
+		<questiontext format="html">
+			<text><![CDATA[<div style="font-family: Arial; font-size: 13px;"><strong>Déterminer la ou les boucles dont le corps ne sera jamais exécuté :</strong></div>]]></text>
+		</questiontext>
+		<externallink/>
+		<usecase>1</usecase>
+		<defaultgrade>1</defaultgrade>
+		<editeur>0</editeur>
+		<single>false</single>
+		<answer fraction="50" format="plain_text">
+			<text><![CDATA[for ($a = 10 ; $a < 5 ; $a++){echo $a;} ]]></text>
+			<feedback>
+				<text><![CDATA[$a a pour valeur 10 donc la condition $a&lt;5 est FAUX , la boucle ne s'exécute pas]]></text>
+			</feedback>
+		</answer>
+		<answer fraction="0" format="plain_text">
+			<text><![CDATA[for ( $a = 0 ; $a <= 5 ; $a++){echo $a++;}]]></text>
+			<feedback>
+				<text><![CDATA[]]></text>
+			</feedback>
+		</answer>
+		<answer fraction="0" format="plain_text">
+			<text><![CDATA[for ( $a = 10 ; $a == 10 ; $a++){echo $a;}]]></text>
+			<feedback>
+				<text><![CDATA[]]></text>
+			</feedback>
+		</answer>
+		<answer fraction="50" format="plain_text">
+			<text><![CDATA[for ( $a = -2; $a > 5; $a++){echo $a;}]]></text>
+			<feedback>
+				<text><![CDATA[]]></text>
+			</feedback>
+		</answer>
+	</question>
+	<question type="multichoice">
+		<name>
+			<text><![CDATA[]]></text>
+		</name>
+		<questiontext format="html">
+			<text><![CDATA[<div style="font-family: Arial; font-size: 13px;"><p><strong>Que renvoie le programme suivant : </strong></p><p>$n = 1 ;</p><p>while (2+3 == 5) {</p><p>&nbsp; &nbsp; &nbsp; &nbsp;$n++ ;&nbsp;</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; print $n ;</p><p>}</p></div>]]></text>
+		</questiontext>
+		<externallink/>
+		<usecase>1</usecase>
+		<defaultgrade>1</defaultgrade>
+		<editeur>0</editeur>
+		<single>true</single>
+		<answer fraction="0" format="plain_text">
+			<text><![CDATA[12345]]></text>
+			<feedback>
+				<text><![CDATA[]]></text>
+			</feedback>
+		</answer>
+		<answer fraction="0" format="plain_text">
+			<text><![CDATA[1234]]></text>
+			<feedback>
+				<text><![CDATA[]]></text>
+			</feedback>
+		</answer>
+		<answer fraction="0" format="plain_text">
+			<text><![CDATA[23456]]></text>
+			<feedback>
+				<text><![CDATA[]]></text>
+			</feedback>
+		</answer>
+		<answer fraction="100" format="plain_text">
+			<text><![CDATA[234567891011.......une boucle infinie]]></text>
+			<feedback>
+				<text><![CDATA[]]></text>
+			</feedback>
+		</answer>
+	</question>
+	<question type="multichoice">
+		<name>
+			<text><![CDATA[]]></text>
+		</name>
+		<questiontext format="html">
+			<text><![CDATA[<div style="font-family: Arial; font-size: 13px;">Que va afficher ce code :</div><div style="font-family: Arial; font-size: 13px;"><div class=""><div><span class="enlighter-g1">&lt;</span><span class="enlighter-text">?php</span></div></div><div class=""><div><span class="enlighter-k7">&nbsp; $number</span><span class="enlighter-text"> = </span><span class="enlighter-n1">9876</span><span class="enlighter-text">;</span></div></div><div class=""><div><span class="enlighter-k7">&nbsp; $nbr</span><span class="enlighter-text"> = </span><span class="enlighter-g1">(</span><span class="enlighter-k0">array</span><span class="enlighter-g1">)</span> <span class="enlighter-k7">$number</span><span class="enlighter-text">;</span></div></div><div class=""><div><span class="enlighter-k0">&nbsp; echo</span> <span class="enlighter-k7">$nbr[0]</span><span class="enlighter-text">;</span></div></div><div class=""><div><span class="enlighter-text">?</span><span class="enlighter-g1">&gt;</span></div></div></div>]]></text>
+		</questiontext>
+		<externallink/>
+		<usecase>1</usecase>
+		<defaultgrade>1</defaultgrade>
+		<editeur>0</editeur>
+		<single>true</single>
+		<answer fraction="0" format="plain_text">
+			<text><![CDATA[erreur]]></text>
+			<feedback>
+				<text><![CDATA[]]></text>
+			</feedback>
+		</answer>
+		<answer fraction="0" format="plain_text">
+			<text><![CDATA[9]]></text>
+			<feedback>
+				<text><![CDATA[]]></text>
+			</feedback>
+		</answer>
+		<answer fraction="100" format="plain_text">
+			<text><![CDATA[9876]]></text>
+			<feedback>
+				<text><![CDATA[]]></text>
+			</feedback>
+		</answer>
+		<answer fraction="0" format="plain_text">
+			<text><![CDATA[6]]></text>
+			<feedback>
+				<text><![CDATA[]]></text>
+			</feedback>
+		</answer>
+		<answer fraction="0" format="plain_text">
+			<text><![CDATA[8]]></text>
+			<feedback>
+				<text><![CDATA[]]></text>
+			</feedback>
+		</answer>
+	</question>
+	<question type="multichoice">
+		<name>
+			<text><![CDATA[]]></text>
+		</name>
+		<questiontext format="html">
+			<text><![CDATA[<div style="font-family: Arial; font-size: 13px;">Que va afficher ce code :</div><div style="font-family: Arial; font-size: 13px;"><div class=""><div><span class="enlighter-g1">&lt;</span><span class="enlighter-text">?php</span></div></div><div class=""><div><span class="enlighter-k7">$color</span><span class="enlighter-text"> = </span><span class="enlighter-s0">"blue"</span><span class="enlighter-text">;</span></div></div><div class=""><div><span class="enlighter-k7">$var</span><span class="enlighter-text"> = </span><span class="enlighter-k7">$color[2]</span><span class="enlighter-text">;</span></div></div><div class=""><div><span class="enlighter-k0">echo</span> <span class="enlighter-s0">"$var"</span><span class="enlighter-text">;</span></div></div><div class=""><div><span class="enlighter-text">?</span><span class="enlighter-g1">&gt;</span></div></div></div>]]></text>
+		</questiontext>
+		<externallink/>
+		<usecase>1</usecase>
+		<defaultgrade>1</defaultgrade>
+		<editeur>0</editeur>
+		<single>true</single>
+		<answer fraction="0" format="plain_text">
+			<text><![CDATA[$color[2]]]></text>
+			<feedback>
+				<text><![CDATA[]]></text>
+			</feedback>
+		</answer>
+		<answer fraction="0" format="plain_text">
+			<text><![CDATA[$var]]></text>
+			<feedback>
+				<text><![CDATA[]]></text>
+			</feedback>
+		</answer>
+		<answer fraction="100" format="plain_text">
+			<text><![CDATA[u]]></text>
+			<feedback>
+				<text><![CDATA[]]></text>
+			</feedback>
+		</answer>
+		<answer fraction="0" format="plain_text">
+			<text><![CDATA[blue]]></text>
+			<feedback>
+				<text><![CDATA[]]></text>
+			</feedback>
+		</answer>
+	</question>
+	<question type="multichoice">
+		<name>
+			<text><![CDATA[]]></text>
+		</name>
+		<questiontext format="html">
+			<text><![CDATA[<div style="font-family: Arial; font-size: 13px;">Que va afficher ce code :&nbsp;</div><div style="font-family: Arial; font-size: 13px;"><div class=""><div><span class="enlighter-g1">&lt;</span><span class="enlighter-text">?php</span></div></div><div class=""><div><span class="enlighter-k7">$var</span><span class="enlighter-text"> = </span><span class="enlighter-s0">"Bon"</span><span class="enlighter-text">;</span></div></div><div class=""><div><span class="enlighter-k7">$var</span><span class="enlighter-text"> .= </span><span class="enlighter-s0">"jour"</span><span class="enlighter-text">;</span></div></div><div class=""><div><span class="enlighter-k0">echo</span> <span class="enlighter-s0">"$var"</span><span class="enlighter-text">;</span></div></div><div class=""><div><span class="enlighter-text">?</span><span class="enlighter-g1">&gt;</span></div></div></div>]]></text>
+		</questiontext>
+		<externallink/>
+		<usecase>1</usecase>
+		<defaultgrade>1</defaultgrade>
+		<editeur>0</editeur>
+		<single>true</single>
+		<answer fraction="0" format="plain_text">
+			<text><![CDATA[erreur]]></text>
+			<feedback>
+				<text><![CDATA[]]></text>
+			</feedback>
+		</answer>
+		<answer fraction="0" format="plain_text">
+			<text><![CDATA[Bon]]></text>
+			<feedback>
+				<text><![CDATA[]]></text>
+			</feedback>
+		</answer>
+		<answer fraction="0" format="plain_text">
+			<text><![CDATA[jourBon]]></text>
+			<feedback>
+				<text><![CDATA[]]></text>
+			</feedback>
+		</answer>
+		<answer fraction="100" format="plain_text">
+			<text><![CDATA[Bonjour]]></text>
+			<feedback>
+				<text><![CDATA[]]></text>
+			</feedback>
+		</answer>
+		<answer fraction="0" format="plain_text">
+			<text><![CDATA[jourjour]]></text>
+			<feedback>
+				<text><![CDATA[]]></text>
+			</feedback>
+		</answer>
+	</question>
+	<question type="multichoice">
+		<name>
+			<text><![CDATA[]]></text>
+		</name>
+		<questiontext format="html">
+			<text><![CDATA[<div style="font-family: Arial; font-size: 13px;">Que va afficher le code suivant :</div><div style="font-family: Arial; font-size: 13px;">&lt;?php<br>&nbsp; $var = false;<br>&nbsp; if ($var) {<br>&nbsp; &nbsp; &nbsp; echo 'true';<br>&nbsp; } else {<br>&nbsp; &nbsp; &nbsp; echo 'false';<br>&nbsp; }<br>?&gt;</div>]]></text>
+		</questiontext>
+		<externallink/>
+		<usecase>1</usecase>
+		<defaultgrade>1</defaultgrade>
+		<editeur>0</editeur>
+		<single>true</single>
+		<answer fraction="0" format="plain_text">
+			<text><![CDATA[erreur]]></text>
+			<feedback>
+				<text><![CDATA[]]></text>
+			</feedback>
+		</answer>
+		<answer fraction="0" format="plain_text">
+			<text><![CDATA[true]]></text>
+			<feedback>
+				<text><![CDATA[]]></text>
+			</feedback>
+		</answer>
+		<answer fraction="100" format="plain_text">
+			<text><![CDATA[false]]></text>
+			<feedback>
+				<text><![CDATA[]]></text>
+			</feedback>
+		</answer>
+		<answer fraction="0" format="plain_text">
+			<text><![CDATA[ce code n'affiche rien ]]></text>
+			<feedback>
+				<text><![CDATA[]]></text>
+			</feedback>
+		</answer>
+	</question>
+	<question type="multichoice">
+		<name>
+			<text><![CDATA[]]></text>
+		</name>
+		<questiontext format="html">
+			<text><![CDATA[<div style="font-family: Arial; font-size: 13px;"><strong>Que va afficher ce code :</strong></div><div style="font-family: Arial; font-size: 13px;"><div>&lt;?php<br>&nbsp; &nbsp; $a =30;<br>&nbsp; &nbsp; while($a &lt; 10){<br>&nbsp; &nbsp; &nbsp; &nbsp; $a--;<br>&nbsp; &nbsp; }<br>&nbsp; &nbsp; print($a);</div><div>?&gt;</div></div>]]></text>
+		</questiontext>
+		<externallink/>
+		<usecase>1</usecase>
+		<defaultgrade>1</defaultgrade>
+		<editeur>0</editeur>
+		<single>true</single>
+		<answer fraction="0" format="plain_text">
+			<text><![CDATA[erreur]]></text>
+			<feedback>
+				<text><![CDATA[]]></text>
+			</feedback>
+		</answer>
+		<answer fraction="0" format="plain_text">
+			<text><![CDATA[ce code n'affiche rien , on est dans une boucle infinie]]></text>
+			<feedback>
+				<text><![CDATA[]]></text>
+			</feedback>
+		</answer>
+		<answer fraction="100" format="plain_text">
+			<text><![CDATA[30]]></text>
+			<feedback>
+				<text><![CDATA[]]></text>
+			</feedback>
+		</answer>
+		<answer fraction="0" format="plain_text">
+			<text><![CDATA[10]]></text>
+			<feedback>
+				<text><![CDATA[]]></text>
+			</feedback>
+		</answer>
+	</question>
+	<question type="multichoice">
+		<name>
+			<text><![CDATA[]]></text>
+		</name>
+		<questiontext format="html">
+			<text><![CDATA[<div style="font-family: Arial; font-size: 13px;">Qu'affiche ce code :&nbsp;</div><div style="font-family: Arial; font-size: 13px;"><div>&lt;?php</div><div>&nbsp; $nombres = array (4, 6, 2, 9, -1, 7);<br>&nbsp; $resultat = ($nombres[2] * $nombres[4] + $nombres[0]) / ($nombres[1] - $nombres[0]);<br>&nbsp; echo $resultat ;</div><div>?&gt;</div></div>]]></text>
+		</questiontext>
+		<externallink/>
+		<usecase>1</usecase>
+		<defaultgrade>1</defaultgrade>
+		<editeur>0</editeur>
+		<single>true</single>
+		<answer fraction="0" format="plain_text">
+			<text><![CDATA[6]]></text>
+			<feedback>
+				<text><![CDATA[]]></text>
+			</feedback>
+		</answer>
+		<answer fraction="0" format="plain_text">
+			<text><![CDATA[2]]></text>
+			<feedback>
+				<text><![CDATA[]]></text>
+			</feedback>
+		</answer>
+		<answer fraction="0" format="plain_text">
+			<text><![CDATA[8]]></text>
+			<feedback>
+				<text><![CDATA[]]></text>
+			</feedback>
+		</answer>
+		<answer fraction="100" format="plain_text">
+			<text><![CDATA[1]]></text>
+			<feedback>
+				<text><![CDATA[]]></text>
+			</feedback>
+		</answer>
+		<answer fraction="0" format="plain_text">
+			<text><![CDATA[erreur]]></text>
+			<feedback>
+				<text><![CDATA[]]></text>
+			</feedback>
+		</answer>
+	</question>
+	<question type="multichoice">
+		<name>
+			<text><![CDATA[]]></text>
+		</name>
+		<questiontext format="html">
+			<text><![CDATA[<div style="font-family: Arial; font-size: 13px;">Que va afficher ce code :&nbsp;</div><div style="font-family: Arial; font-size: 13px;">&lt;?php<br>&nbsp; $capitales = array( "Singapour" =&gt; "Singapour", "France" =&gt; "Paris", "Australie" =&gt; "Camberra" );<br>&nbsp; foreach($capitales as $c) {<br>&nbsp; &nbsp; echo ("$c ") ;<br>&nbsp; }<br>?&gt;</div>]]></text>
+		</questiontext>
+		<externallink/>
+		<usecase>1</usecase>
+		<defaultgrade>1</defaultgrade>
+		<editeur>0</editeur>
+		<single>true</single>
+		<answer fraction="0" format="plain_text">
+			<text><![CDATA[Singapour Paris Camberra]]></text>
+			<feedback>
+				<text><![CDATA[]]></text>
+			</feedback>
+		</answer>
+		<answer fraction="100" format="plain_text">
+			<text><![CDATA[Singapour France Australie]]></text>
+			<feedback>
+				<text><![CDATA[]]></text>
+			</feedback>
+		</answer>
+		<answer fraction="0" format="plain_text">
+			<text><![CDATA[« array( [Singapour] => Singapour,[France] => Paris, [Australie] => Camberra) »]]></text>
+			<feedback>
+				<text><![CDATA[]]></text>
+			</feedback>
+		</answer>
+		<answer fraction="0" format="plain_text">
+			<text><![CDATA[« Array Array Array »]]></text>
+			<feedback>
+				<text><![CDATA[]]></text>
+			</feedback>
+		</answer>
+	</question>
+	<question type="multichoice">
+		<name>
+			<text><![CDATA[]]></text>
+		</name>
+		<questiontext format="html">
+			<text><![CDATA[<div style="font-family: Arial; font-size: 13px;">Que va afficher le code suivant :&nbsp;</div><div style="font-family: Arial; font-size: 13px;">&lt;?php<br>&nbsp; $nombres = [4,3,15,-8] ;<br>&nbsp; foreach($nombres as $key=&gt;$value) {<br>&nbsp; &nbsp; echo ("$key ") ;<br>&nbsp;}<br>?&gt;</div>]]></text>
+		</questiontext>
+		<externallink/>
+		<usecase>1</usecase>
+		<defaultgrade>1</defaultgrade>
+		<editeur>0</editeur>
+		<single>true</single>
+		<answer fraction="0" format="plain_text">
+			<text><![CDATA[4 3 15 -8]]></text>
+			<feedback>
+				<text><![CDATA[]]></text>
+			</feedback>
+		</answer>
+		<answer fraction="100" format="plain_text">
+			<text><![CDATA[0 1 2 3]]></text>
+			<feedback>
+				<text><![CDATA[]]></text>
+			</feedback>
+		</answer>
+		<answer fraction="0" format="plain_text">
+			<text><![CDATA[array]]></text>
+			<feedback>
+				<text><![CDATA[]]></text>
+			</feedback>
+		</answer>
+		<answer fraction="0" format="plain_text">
+			<text><![CDATA[-8]]></text>
+			<feedback>
+				<text><![CDATA[]]></text>
+			</feedback>
+		</answer>
+		<answer fraction="0" format="plain_text">
+			<text><![CDATA[4]]></text>
+			<feedback>
+				<text><![CDATA[]]></text>
+			</feedback>
+		</answer>
+	</question>
+	<question type="multichoice">
+		<name>
+			<text><![CDATA[]]></text>
+		</name>
+		<questiontext format="html">
+			<text><![CDATA[<div style="font-family: Arial; font-size: 13px;">Que va afficher ce code :&nbsp;</div><div style="font-family: Arial; font-size: 13px;">&lt;?php<br>$total = 0 ;&nbsp;<br>$nombres = [4,3,15,-8,-4, 5] ;<br>for($i = 0 ; $i &lt; count($nombres) ; $i++) {<br>&nbsp; $total += $i ;<br>}<br>echo $i ;<br>?&gt;</div>]]></text>
+		</questiontext>
+		<externallink/>
+		<usecase>1</usecase>
+		<defaultgrade>1</defaultgrade>
+		<editeur>0</editeur>
+		<single>true</single>
+		<answer fraction="0" format="plain_text">
+			<text><![CDATA[15]]></text>
+			<feedback>
+				<text><![CDATA[]]></text>
+			</feedback>
+		</answer>
+		<answer fraction="0" format="plain_text">
+			<text><![CDATA[0]]></text>
+			<feedback>
+				<text><![CDATA[]]></text>
+			</feedback>
+		</answer>
+		<answer fraction="100" format="plain_text">
+			<text><![CDATA[6]]></text>
+			<feedback>
+				<text><![CDATA[]]></text>
+			</feedback>
+		</answer>
+		<answer fraction="0" format="plain_text">
+			<text><![CDATA[27]]></text>
+			<feedback>
+				<text><![CDATA[]]></text>
+			</feedback>
+		</answer>
+	</question>
+	<question type="multichoice">
+		<name>
+			<text><![CDATA[]]></text>
+		</name>
+		<questiontext format="html">
+			<text><![CDATA[<div style="font-family: Arial; font-size: 13px;">Que va afficher ce code :&nbsp;</div><div style="font-family: Arial; font-size: 13px;">&lt;?php<br>$total = 0 ;&nbsp;<br>$nombres = [4,3,15,-8,-4, 5] ;<br>for($i = 0 ; $i &lt; count($nombres) ; $i++) {<br>&nbsp; $total += $nombres[$i] ;<br>}<br>echo $total ;<br>?&gt;</div>]]></text>
+		</questiontext>
+		<externallink/>
+		<usecase>1</usecase>
+		<defaultgrade>1</defaultgrade>
+		<editeur>0</editeur>
+		<single>true</single>
+		<answer fraction="0" format="plain_text">
+			<text><![CDATA[6]]></text>
+			<feedback>
+				<text><![CDATA[]]></text>
+			</feedback>
+		</answer>
+		<answer fraction="0" format="plain_text">
+			<text><![CDATA[0]]></text>
+			<feedback>
+				<text><![CDATA[]]></text>
+			</feedback>
+		</answer>
+		<answer fraction="0" format="plain_text">
+			<text><![CDATA[27]]></text>
+			<feedback>
+				<text><![CDATA[]]></text>
+			</feedback>
+		</answer>
+		<answer fraction="0" format="plain_text">
+			<text><![CDATA[erreur]]></text>
+			<feedback>
+				<text><![CDATA[]]></text>
+			</feedback>
+		</answer>
+		<answer fraction="100" format="plain_text">
+			<text><![CDATA[15]]></text>
+			<feedback>
+				<text><![CDATA[]]></text>
+			</feedback>
+		</answer>
+	</question>
+	<question type="multichoice">
+		<name>
+			<text><![CDATA[]]></text>
+		</name>
+		<questiontext format="html">
+			<text><![CDATA[<div style="font-family: Arial; font-size: 13px;">Que va afficher ce code :&nbsp;</div><div style="font-family: Arial; font-size: 13px;">&lt;?php<br>$total = 0 ;&nbsp;<br>$nombres = [4,-8,15,-2, 5,6] ;<br>for($i = 0 ; $i &lt; count($nombres) ; $i += 2) {<br>&nbsp; $total += $nombres[$i] ;<br>}<br>echo $total ;<br>?&gt;</div>]]></text>
+		</questiontext>
+		<externallink/>
+		<usecase>1</usecase>
+		<defaultgrade>1</defaultgrade>
+		<editeur>0</editeur>
+		<single>true</single>
+		<answer fraction="0" format="plain_text">
+			<text><![CDATA[6]]></text>
+			<feedback>
+				<text><![CDATA[]]></text>
+			</feedback>
+		</answer>
+		<answer fraction="0" format="plain_text">
+			<text><![CDATA[-4]]></text>
+			<feedback>
+				<text><![CDATA[]]></text>
+			</feedback>
+		</answer>
+		<answer fraction="0" format="plain_text">
+			<text><![CDATA[20]]></text>
+			<feedback>
+				<text><![CDATA[]]></text>
+			</feedback>
+		</answer>
+		<answer fraction="100" format="plain_text">
+			<text><![CDATA[24]]></text>
+			<feedback>
+				<text><![CDATA[]]></text>
+			</feedback>
+		</answer>
+	</question>
+	<question type="multichoice">
+		<name>
+			<text><![CDATA[]]></text>
+		</name>
+		<questiontext format="html">
+			<text><![CDATA[<div style="font-family: Arial; font-size: 13px;"><p><span style="color: #000000;"><span style="font-size: small;"><strong>Que vaut $animal à la fin de ce code ?</strong></span></span></p><p>&lt;?php<br>$longueur = 145;<br>$largeur = 73;<br>if ($longueur &gt; $largeur || $largeur &gt; 100)<br>&nbsp; &nbsp; $animal = "Perroquet";<br>elseif ($longueur &gt; $largeur &amp;&amp; $largeur == 73)<br>&nbsp; &nbsp; $animal = "Serpent";<br>else<br>&nbsp; &nbsp; $animal = "Renard";<br>?&gt;</p></div>]]></text>
+		</questiontext>
+		<externallink/>
+		<usecase>1</usecase>
+		<defaultgrade>1</defaultgrade>
+		<editeur>0</editeur>
+		<single>true</single>
+		<answer fraction="0" format="plain_text">
+			<text><![CDATA[Renard]]></text>
+			<feedback>
+				<text><![CDATA[]]></text>
+			</feedback>
+		</answer>
+		<answer fraction="0" format="plain_text">
+			<text><![CDATA[Serpent]]></text>
+			<feedback>
+				<text><![CDATA[]]></text>
+			</feedback>
+		</answer>
+		<answer fraction="100" format="plain_text">
+			<text><![CDATA[Perroquet]]></text>
+			<feedback>
+				<text><![CDATA[]]></text>
+			</feedback>
+		</answer>
+	</question>
+	<question type="multichoice">
+		<name>
+			<text><![CDATA[]]></text>
+		</name>
+		<questiontext format="html">
+			<text><![CDATA[<div style="font-family: Arial; font-size: 13px;">Que va afficher ce code :</div><div style="font-family: Arial; font-size: 13px;"><div>&lt;?php<br>$anciennete = 6;<br>$statut = 'N';<br>if ($anciennete &gt;= 5 &nbsp;&amp;&amp; $statut == 'N')<br>&nbsp; &nbsp; $prime = 500;<br>if ($anciennete &gt;= 5 &nbsp;&amp;&amp; $statut != 'C')<br>&nbsp; &nbsp; $prime = 300 ;<br>else<br>&nbsp; &nbsp; $prime = 50 ;</div><div>print $prime ;</div><div>?&gt;</div></div>]]></text>
+		</questiontext>
+		<externallink/>
+		<usecase>1</usecase>
+		<defaultgrade>1</defaultgrade>
+		<editeur>0</editeur>
+		<single>true</single>
+		<answer fraction="0" format="plain_text">
+			<text><![CDATA[50]]></text>
+			<feedback>
+				<text><![CDATA[]]></text>
+			</feedback>
+		</answer>
+		<answer fraction="100" format="plain_text">
+			<text><![CDATA[300]]></text>
+			<feedback>
+				<text><![CDATA[]]></text>
+			</feedback>
+		</answer>
+		<answer fraction="0" format="plain_text">
+			<text><![CDATA[500]]></text>
+			<feedback>
+				<text><![CDATA[]]></text>
+			</feedback>
+		</answer>
+		<answer fraction="0" format="plain_text">
+			<text><![CDATA[erreur]]></text>
+			<feedback>
+				<text><![CDATA[]]></text>
+			</feedback>
+		</answer>
+	</question>
+	<question type="multichoice">
+		<name>
+			<text><![CDATA[]]></text>
+		</name>
+		<questiontext format="html">
+			<text><![CDATA[<div style="font-family: Arial; font-size: 13px;">&lt;?php<br>$eleves = ['alan','bert','thomas', 'said'] ;<br>$eleves[] = 'tristan'; //instruction 2<br>$eleves[1] = 'albert' ; //instruction 3<br>print(count($eleves));&nbsp;<br>?&gt;</div><div style="font-family: Arial; font-size: 13px;">Déterminez parmi les affirmations suivantes, celles qui sont vraies :</div>]]></text>
+		</questiontext>
+		<externallink/>
+		<usecase>1</usecase>
+		<defaultgrade>1</defaultgrade>
+		<editeur>0</editeur>
+		<single>false</single>
+		<answer fraction="-20" format="plain_text">
+			<text><![CDATA[le code affiche 4]]></text>
+			<feedback>
+				<text><![CDATA[]]></text>
+			</feedback>
+		</answer>
+		<answer fraction="30" format="plain_text">
+			<text><![CDATA[le code affiche 5]]></text>
+			<feedback>
+				<text><![CDATA[]]></text>
+			</feedback>
+		</answer>
+		<answer fraction="30" format="plain_text">
+			<text><![CDATA[L'instruction 2 ajoute tristan à la fin du tableau eleves]]></text>
+			<feedback>
+				<text><![CDATA[]]></text>
+			</feedback>
+		</answer>
+		<answer fraction="-25" format="plain_text">
+			<text><![CDATA[l'instruction 3 ajoute albert au tableau eleves]]></text>
+			<feedback>
+				<text><![CDATA[]]></text>
+			</feedback>
+		</answer>
+		<answer fraction="-25" format="plain_text">
+			<text><![CDATA[l'instruction 3 ajoute tristan au début du tableau]]></text>
+			<feedback>
+				<text><![CDATA[]]></text>
+			</feedback>
+		</answer>
+		<answer fraction="40" format="plain_text">
+			<text><![CDATA[l'instruction 3 remplace bert par albert dans le tableau $eleves]]></text>
+			<feedback>
+				<text><![CDATA[]]></text>
+			</feedback>
+		</answer>
+	</question>
+</quiz>

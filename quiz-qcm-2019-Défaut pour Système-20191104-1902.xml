@@ -1,0 +1,2772 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+<!-- question: 0  -->
+  <question type="category">
+    <category>
+      <text>top/Défaut pour Système</text>
+    </category>
+    <info format="moodle_auto_format">
+      <text>La catégorie par défaut pour les questions partagées dans le contexte « Système ».</text>
+    </info>
+  </question>
+
+<!-- question: 148  -->
+  <question type="multichoice">
+    <name>
+      <text>boucle for</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>$resultat = "Bonjour";<br>for ( $i = 1; $i &lt; 3 ; $i++) {<br>&nbsp;&nbsp;&nbsp;&nbsp;$resultat = $resultat."Bonsoir";<br>}<br>echo $resultat;<br><br>Qu'affiche le script ?<br></p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <correctfeedback format="html">
+      <text>Votre réponse est correcte.</text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text>Votre réponse est partiellement correcte.</text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text>Votre réponse est incorrecte.</text>
+    </incorrectfeedback>
+    <shownumcorrect/>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>je ne sais pas<br></p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="-50" format="html">
+      <text><![CDATA[<p>BonjourBonsoir<br></p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="-50" format="html">
+      <text><![CDATA[<p>BonjourBonsoirBonsoir<br></p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<p>BonsoirBonsoirBonjour<br></p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- question: 158  -->
+  <question type="multichoice">
+    <name>
+      <text>boucle for</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p><b style="color: rgb(0, 0, 0); font-family: 'Times New Roman'; font-size: medium; font-style: normal; font-variant: normal; letter-spacing: normal; line-height: normal; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(240, 255, 255);">Quelle est la valeur de la variable somme après exécution des instructions suivantes:<tt></tt></b></p><pre><b style="color: rgb(0, 0, 0); font-family: 'Times New Roman'; font-size: medium; font-style: normal; font-variant: normal; letter-spacing: normal; line-height: normal; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(240, 255, 255);"><tt>$somme = 0;&nbsp;</tt></b></pre><pre><b style="color: rgb(0, 0, 0); font-family: 'Times New Roman'; font-size: medium; line-height: normal; white-space: normal; background-color: rgb(240, 255, 255);"><tt>for ($i = 1; $i &lt; 6; $i = $i + 2){&nbsp;</tt></b></pre><pre><b style="color: rgb(0, 0, 0); font-family: 'Times New Roman'; font-size: medium; line-height: normal; white-space: normal; background-color: rgb(240, 255, 255);"><tt>&nbsp; &nbsp; &nbsp; $somme  = $somme + $i;&nbsp;</tt></b></pre><pre><b style="color: rgb(0, 0, 0); font-family: 'Times New Roman'; font-size: medium; line-height: normal; white-space: normal; background-color: rgb(240, 255, 255);"><tt>}</tt></b><br></pre><br><p></p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <correctfeedback format="html">
+      <text>Votre réponse est correcte.</text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text>Votre réponse est partiellement correcte.</text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text>Votre réponse est incorrecte.</text>
+    </incorrectfeedback>
+    <shownumcorrect/>
+    <answer fraction="-50" format="html">
+      <text><![CDATA[<p>7</p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="-50" format="html">
+      <text><![CDATA[<p>8</p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<p>9</p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="-50" format="html">
+      <text><![CDATA[<p>10</p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="-50" format="html">
+      <text><![CDATA[<p>11</p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- question: 147  -->
+  <question type="multichoice">
+    <name>
+      <text>boucle imbriquée 2</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[for ($i = 0 ; $i &lt; 2 ; $i++ ){<br><br>&nbsp;&nbsp;&nbsp; echo "b";<br><br>&nbsp;&nbsp;&nbsp; for ($j = 2 ; $j &gt; 3 ; $j-- ){<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; echo "a" ;<br><br>&nbsp;&nbsp;&nbsp; }<br><br>}<br><p>que va afficher ce script ?</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <correctfeedback format="html">
+      <text>Votre réponse est correcte.</text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text>Votre réponse est partiellement correcte.</text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text>Votre réponse est incorrecte.</text>
+    </incorrectfeedback>
+    <shownumcorrect/>
+    <answer fraction="-33.33333" format="html">
+      <text><![CDATA[<p>une suite infinie de a et de b</p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="-33.33333" format="html">
+      <text><![CDATA[<p>baba</p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<p>bb</p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="-33.33333" format="html">
+      <text><![CDATA[<p>baabaa</p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- question: 146  -->
+  <question type="multichoice">
+    <name>
+      <text>fonction</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>function func($a)<br>{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;$a += 2;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;return $a;<br>}<br>
+<br>
+$a = 5;<br>
+$b = func($a);<br>
+print "$a $b";<br><br>Qu'affiche le script ?<br></p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <correctfeedback format="html">
+      <text>Votre réponse est correcte.</text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text>Votre réponse est partiellement correcte.</text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text>Votre réponse est incorrecte.</text>
+    </incorrectfeedback>
+    <shownumcorrect/>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>je ne sais pas<br></p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="-50" format="html">
+      <text><![CDATA[<p>7&nbsp; 7<br></p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="-50" format="html">
+      <text><![CDATA[<p>7&nbsp; 5<br></p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<p>5&nbsp; 7<br></p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- question: 145  -->
+  <question type="multichoice">
+    <name>
+      <text>$_GET</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p></p><p style="margin-bottom: 0cm"><b>si
+</b><span style="font-weight: normal">$_GET
+vaut [ 0=&gt; 20, 1 =&gt; 18,  2 =&gt; 10,  3 =&gt; 6] </span>
+</p>
+<p style="margin-bottom: 0cm">      <b>Que
+va afficher ce programme&nbsp;:</b></p><p style="margin-bottom: 0cm"><b><br></b></p><p style="margin-bottom: 0cm"><b>&lt;?php</b></p><p style="margin-bottom: 0cm"><b>&nbsp; &nbsp;if ( count($_GET) &gt;= 3 ){</b></p><p style="margin-bottom: 0cm"><b>&nbsp; &nbsp; &nbsp; &nbsp; $total = 0 ;</b></p><p style="margin-bottom: 0cm"><b>&nbsp; &nbsp; &nbsp; &nbsp; for ( $i = 0 ; $i &lt; count($_GET) ; $i++ ){</b></p><p style="margin-bottom: 0cm"><b>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; $total = $total + $_GET[$i];</b></p><p style="margin-bottom: 0cm"><b>&nbsp; &nbsp; &nbsp; &nbsp; }</b></p><p style="margin-bottom: 0cm"><b>&nbsp; &nbsp; &nbsp; &nbsp; echo $total;</b></p><p style="margin-bottom: 0cm"><b>&nbsp; &nbsp; }</b><br></p><p style="margin-bottom: 0cm"><b>?&gt;</b></p><p></p><br><p></p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <correctfeedback format="html">
+      <text>Votre réponse est correcte.</text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text>Votre réponse est partiellement correcte.</text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text>Votre réponse est incorrecte.</text>
+    </incorrectfeedback>
+    <shownumcorrect/>
+    <answer fraction="-50" format="html">
+      <text><![CDATA[<p>0</p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="-50" format="html">
+      <text><![CDATA[<p>38</p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="-50" format="html">
+      <text><![CDATA[<p>48</p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<p>54</p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="-50" format="html">
+      <text><![CDATA[<p>28</p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- question: 144  -->
+  <question type="multichoice">
+    <name>
+      <text>PHP formulaire</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p align="left">
+Soit le code HTML suivant
+permettant de présenter un formulaire :</p>
+<p align="left">&nbsp;&nbsp;&nbsp;
+&lt;form action="ajout.php"
+method="POST"&gt;</p>
+<p align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	&lt;br&gt; Login : &lt;input
+type="text" name="login"  &gt; 
+</p>
+<p align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	&lt;br&gt; Mot de passe :
+&lt;input type="text" name="pass" &gt; 
+</p>
+<p align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	&lt;br&gt;&lt;input
+type="submit" name= "Envoi" value="ok"&gt;</p>
+<p align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/form&gt;</p><p align="left"><br></p><p align="left">Déterminez les affirmations qui sont vraies :<br></p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>false</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <correctfeedback format="html">
+      <text>Votre réponse est correcte.</text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text>Votre réponse est partiellement correcte.</text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text>Votre réponse est incorrecte.</text>
+    </incorrectfeedback>
+    <shownumcorrect/>
+    <answer fraction="25" format="html">
+      <text><![CDATA[<p>les données du formulaire sont envoyées vers page.php<br></p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="-50" format="html">
+      <text><![CDATA[<p>$_GET['login'] permet de récupérer les données saisies dans le champ login<br></p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="-25" format="html">
+      <text><![CDATA[<p>les données envoyées avec la méthode POST sont visibles dans l'URL<br></p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="-25" format="html">
+      <text><![CDATA[<p>Par défaut si aucune méthode n'est indiquée dans un formulaire, c'est la méthode POST qui s'appique<br></p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="50" format="html">
+      <text><![CDATA[<p>$_POST['pass'] permet de récupérer les données saisies dans le champ : Mot de passe<br></p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="25" format="html">
+      <text><![CDATA[<p>$_REQUEST permet de récupérer toutes les données qu elles soient envoyées avec la méthode GET ou POST<br></p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- question: 157  -->
+  <question type="multichoice">
+    <name>
+      <text>php-html</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<style type="text/css"> &amp;amp;lt;!-- @page { size: 21cm 29.7cm; margin: 2cm } P { margin-bottom: 0.21cm } PRE { font-family: &amp;amp;quot;Nimbus Mono L&amp;amp;quot;, monospace } --&amp;amp;gt; </style>
+<p align="left" style="margin-bottom: 0cm;"><font size="3"><b>De quelle(s) façon(s) le code de 'page.php' peut-il exploiter les données de ce formulaire ?</b><br /></font><br /> </p>
+<table border="0" width="386" cellspacing="0" cellpadding="2"> <col width="12"></col> <col width="366"></col> <tbody>
+  <tr>
+    <td width="12"> <pre></pre> <br />
+    </td>
+    <td width="366"> <pre style="background: rgb(230, 230, 230) none repeat scroll 0% 0%; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial;">&lt;form method=&quot;post&quot; action=&quot;page.php&quot;&gt;
+ &lt;input type=&quot;text&quot; name=&quot;age&quot; value=&quot;18&quot; /&gt;
+&lt;/form&gt;
+</pre>
+    </td>
+  </tr> </tbody>
+</table>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[pour récupérer les variables envoyées par un formulaire, vous devez utilisez la méthode indiqué dans le formulaire, dans ce cas la méthode &quot;post&quot; ou alors la $_REQUEST['nom de la variable']. Si aucune méthode n'est indiquée, la méthode get s'applique.]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.0000000</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>false</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>none</answernumbering>
+    <correctfeedback format="html">
+      <text></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text></text>
+    </incorrectfeedback>
+    <answer fraction="50" format="html">
+      <text>Une variable $_REQUEST['age'] qui aura pour valeur 18</text>
+      <feedback format="html">
+        <text><![CDATA[Exact, $_REQUESTest renseigné des valeurs valeurs transmises en POST et GET.<br />]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="-25" format="html">
+      <text>Une variable $_REQUEST['text'] qui aura pour valeur 18</text>
+      <feedback format="html">
+        <text>'test' n'a pas valeur d'identifiant ! seulement de type de composant IHM.</text>
+      </feedback>
+    </answer>
+    <answer fraction="-25" format="html">
+      <text>Une variable $_REQUEST['age'] qui aura pour valeur text</text>
+      <feedback format="html">
+        <text><![CDATA[Les valeurs valeurs transmises en POST et GET sont les <span style="font-style: italic;">values</span>.]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="-25" format="html">
+      <text>Une variable $_GET['age'] qui aura pour valeur 18</text>
+      <feedback format="html">
+        <text>Les données sont transmises ici en POST.</text>
+      </feedback>
+    </answer>
+    <answer fraction="50" format="html">
+      <text>Une variable $_POST['age'] qui aura pour valeur 18</text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="-25" format="html">
+      <text>Une variable $_POST['text'] qui aura pour valeur 18</text>
+      <feedback format="html">
+        <text><![CDATA[La clé de la valeur est 'age'.<br />]]></text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- question: 143  -->
+  <question type="multichoice">
+    <name>
+      <text>php-html</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<style type="text/css"> &amp;amp;lt;!-- @page { size: 21cm 29.7cm; margin: 2cm } P { margin-bottom: 0.21cm } PRE { font-family: &amp;amp;quot;Nimbus Mono L&amp;amp;quot;, monospace } --&amp;amp;gt; </style>
+<p align="left" style="margin-bottom: 0cm;"><font size="3"><b>De quelle(s) façon(s) le code de 'page.php' peut-il exploiter les données de ce formulaire ?</b><br /></font><br /> </p>
+<table border="0" width="386" cellspacing="0" cellpadding="2"> <col width="12"></col> <col width="366"></col> <tbody>
+  <tr>
+    <td width="12"> <pre></pre> <br />
+    </td>
+    <td width="366"> <pre style="background: rgb(230, 230, 230) none repeat scroll 0% 0%; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial;">&lt;form method=&quot;post&quot; action=&quot;page.php&quot;&gt;
+ &lt;input type=&quot;text&quot; name=&quot;age&quot; value=&quot;18&quot; /&gt;
+&lt;/form&gt;
+</pre>
+    </td>
+  </tr> </tbody>
+</table>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[pour récupérer les variables envoyées par un formulaire, vous devez utilisez la méthode indiqué dans le formulaire, dans ce cas la méthode &quot;post&quot; ou alors la $_REQUEST['nom de la variable']. Si aucune méthode n'est indiquée, la méthode get s'applique.]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.0000000</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>false</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>none</answernumbering>
+    <correctfeedback format="html">
+      <text></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text></text>
+    </incorrectfeedback>
+    <answer fraction="50" format="html">
+      <text>Une variable $_REQUEST['age'] qui aura pour valeur 18</text>
+      <feedback format="html">
+        <text><![CDATA[Exact, $_REQUESTest renseigné des valeurs valeurs transmises en POST et GET.<br />]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="-25" format="html">
+      <text>Une variable $_REQUEST['text'] qui aura pour valeur 18</text>
+      <feedback format="html">
+        <text>'test' n'a pas valeur d'identifiant ! seulement de type de composant IHM.</text>
+      </feedback>
+    </answer>
+    <answer fraction="-25" format="html">
+      <text>Une variable $_REQUEST['age'] qui aura pour valeur text</text>
+      <feedback format="html">
+        <text><![CDATA[Les valeurs valeurs transmises en POST et GET sont les <span style="font-style: italic;">values</span>.]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="-25" format="html">
+      <text>Une variable $_GET['age'] qui aura pour valeur 18</text>
+      <feedback format="html">
+        <text>Les données sont transmises ici en POST.</text>
+      </feedback>
+    </answer>
+    <answer fraction="50" format="html">
+      <text>Une variable $_POST['age'] qui aura pour valeur 18</text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="-25" format="html">
+      <text>Une variable $_POST['text'] qui aura pour valeur 18</text>
+      <feedback format="html">
+        <text><![CDATA[La clé de la valeur est 'age'.<br />]]></text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- question: 142  -->
+  <question type="multichoice">
+    <name>
+      <text>php-html(2)</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[Déterminer les extraits d'informations retournés suite à un appel de la page5.php, avec l'url suivante: <span style="font-family: courier new,courier,monospace;">hptt://......page5.php?age</span> <br>code page5.php<br>&lt;?php<br>if (! isset<span style="background: transparent none repeat scroll 0% 0%; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial;">($_REQUEST['age']))<br></span>
+<div style="margin-left: 40px; font-family: courier new,courier,monospace;"><span style="background: transparent none repeat scroll 0% 0%; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial;">echo ' la variable age n'existe pas';</span><br></div><span style="background: transparent none repeat scroll 0% 0%; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial;">if (empty($_REQUEST['age']) )<br></span>
+<div style="margin-left: 40px; font-family: courier new,courier,monospace;"><span style="background: transparent none repeat scroll 0% 0%; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial;">echo ' la variable age n'a pas de valeur</span><br></div> <span style="background: transparent none repeat scroll 0% 0%; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial;">else<br></span>
+<div style="margin-left: 40px; font-family: courier new,courier,monospace;">$age = <span style="background: transparent none repeat scroll 0% 0%; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial;">$_REQUEST['age'];</span><br><br></div><span style="background: transparent none repeat scroll 0% 0%; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial;">echo ' vous avez '.$age;<br>?&gt;<br></span><br>documentation PHP :<br><br><b><i>isset()</i></b> Détermine si une variable est affectée<br>&nbsp;&nbsp;&nbsp;&nbsp; bool&nbsp; isset ( mixed&nbsp;&nbsp; var , mixed&nbsp;&nbsp; var , ...&nbsp;&nbsp; ) <br>&nbsp;&nbsp;&nbsp;&nbsp; isset renvoie TRUE si la variable var est définie, FALSE sinon. <br>&nbsp;&nbsp;&nbsp;&nbsp; Exemple avec isset <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; //si la variable var est définie, alors le texte est affiché<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if (isset($var)) {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; echo 'Cette variable existe, donc je peux l\'afficher.';<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br><br><i><b>empty()&nbsp;</b></i> — Détermine si une variable contient une valeur non nulle<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Retourne FALSE si var a une valeur non­vide et différente de zéro. <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Exemple #1 Une comparaison simple empty() / isset(). <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;?php<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $var=0;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; //Evalué à vrai car $var est vide ou égale à 0<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if (empty($var)){<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; echo '$var vaut soit 0, vide, ou pas définie du tout';<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; //Evalué à vrai car $var est défini<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if(isset($var)){<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; echo '$var est définie même si elle est vide';<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ?&gt;<br>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.0000000</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>false</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>none</answernumbering>
+    <correctfeedback format="html">
+      <text></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text></text>
+    </incorrectfeedback>
+    <answer fraction="-50" format="html">
+      <text>la variable age n'existe pas</text>
+      <feedback format="html">
+        <text><![CDATA[La fonction isset retourne VRAI si la variable age est défini , ce qui est le cas. Par contre on teste avec le &quot;!&quot; la négation donc on demande si la fonction renvoie FAUX, donc la condition testée n'est pas remplie]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="30" format="html">
+      <text>vous avez</text>
+      <feedback format="html">
+        <text>a la sortie des tests, la variable $age est inconnue donc elle n'est pas affichée</text>
+      </feedback>
+    </answer>
+    <answer fraction="70" format="html">
+      <text>la variable age n'a pas de valeur</text>
+      <feedback format="html">
+        <text><![CDATA[La fonction empty retourne VRAI si la variable age n'a pas de valeur , ce qui est le cas <br />]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="-50" format="html">
+      <text>n'affiche rien</text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- question: 141  -->
+  <question type="multichoice">
+    <name>
+      <text>Question exemple</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[Voici une expression : <br />
+<div style="margin-left: 40px;"><br /><span style="font-family: courier new,courier,monospace;">1==1</span><br /><br /></div>Parmi les différentes propositions, sélectionner celles que<br />vous considérer comme justes.<br /><br />]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[C'est une expression dont la valeur est prise dans l'ensemble {true, false}<br />c'est donc une expression booléenne.]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.1000000</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>false</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>none</answernumbering>
+    <correctfeedback format="html">
+      <text></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text></text>
+    </incorrectfeedback>
+    <answer fraction="50" format="html">
+      <text>C'est une expression booléenne</text>
+      <feedback format="html">
+        <text><![CDATA[<style type="text/css"> &amp;amp;lt;!-- @page { margin: 2cm } P { margin-bottom: 0.21cm } --&amp;amp;gt; </style>
+<p>Une expression est qualifiée de <em>booléenne</em> si sa valeur ne peut être que soit vrai (true) soit faux (false), exclusivement. Elle tient son nom du mathématicien et logicien anglais Georges Bool (1815-1864).</p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="-33.33333" format="html">
+      <text>C'est une expression coréenne</text>
+      <feedback format="html">
+        <text>Heu, là vous vous trompez de ligue...</text>
+      </feedback>
+    </answer>
+    <answer fraction="-100" format="html">
+      <text>C'est une affectation</text>
+      <feedback format="html">
+        <text><![CDATA[Ne pas confondre l'opérateur d'affectation (<span style="font-family: courier new,courier,monospace;">=</span>) avec l'opérateur booléen de test d'égalité (<span style="font-family: courier new,courier,monospace;">==</span>). (de plus la partie gauche n'est pas assignable) <br />]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="25" format="html">
+      <text>C'est une comparaison entre deux constantes littérales de même valeur</text>
+      <feedback format="html">
+        <text><![CDATA[Les valeurs placées &quot;en dur&quot; dans le code sont appelées <span style="font-weight: bold;">constantes littérales</span>, dans l'exemple <span style="font-weight: bold;">1</span> est une constante littérale de type entier, et vaut... un.]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="-25" format="html">
+      <text>Il est interdit de comparer une constante avec elle-même</text>
+      <feedback format="html">
+        <text>Ce n'est pas interdit, juste inutile !</text>
+      </feedback>
+    </answer>
+    <answer fraction="25" format="html">
+      <text>La valeur de l'expression sera toujours évaluées à TRUE</text>
+      <feedback format="html">
+        <text>Fort heureusement !</text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- question: 156  -->
+  <question type="multichoice">
+    <name>
+      <text>structure alternative(2)</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[Soit le code suivant :<br />&lt;?PHP<br /> $anciennete = 6;<br /> $statut = 'N';<br />if (($anciennete &gt;= 5 ) &amp;&amp; ($statut == &quot;N&quot;))<br />
+<div style="margin-left: 40px;"> $prime =500;<br /></div>if (($anciennete &gt;= 5 ) &amp;&amp; ($statut != &quot;C&quot;))<br />
+<div style="margin-left: 40px;"> $prime =300 ;<br /></div>else<br />
+<div style="margin-left: 40px;"> $prime = 50 ;<br /></div>?&gt;<br />Déterminez parmi les propositions ci-dessous, celles qui sont vraies :<br />]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text>un programme PHP s'exécute de façon séquentielle, instruction par instruction, la première condition est remplie donc dans un premier temps la prime sera initialisée à 500, par contre la deuxième condition est également remplie le statut est différent de 'C' donc on va réinitialiser la prime à 300. A la sortie de ce code la prime ne pourra jamais être égale à 500.</text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.0000000</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>false</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <correctfeedback format="html">
+      <text></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text></text>
+    </incorrectfeedback>
+    <answer fraction="60" format="html">
+      <text>à la fin de ce code la prime est égale à 300</text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="40" format="html">
+      <text>la prime ne pourra jamais être égale à 500</text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="-50" format="html">
+      <text>à la fin de ce code la prime est égale à 50</text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="-50" format="html">
+      <text>si $statut='C' et $anciennete=15, la prime sera de 300</text>
+      <feedback format="html">
+        <text>les 2 premières conditions ne sont pas remplies donc on applique le else, la prime sera de 50</text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- question: 104  -->
+  <question type="multichoice">
+    <name>
+      <text>structure alternative(4)</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[Soit le code suivant : <br />&lt;?php<br /> $age=35;<br /> if($age=26)<br />
+<div style="margin-left: 40px;"> echo 'tarif réduit';<br /></div> elseif($age&gt;30)<br />
+<div style="margin-left: 40px;"> echo 'plein tarif';<br /></div> else<br />
+<div style="margin-left: 40px;"> echo '5€';<br /><br /></div>echo 'vous avez '.$age.' ans';<br />?&gt;<br />Déterminez parmi les propositions ci-dessous, celles qui sont vraies :<br />]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text>l'instruction if ($age=26), 'effectue aucune comparaison ( ==) mais une ré-initialisation de la variable $age qui aura pour valeur 26, donc la condition est VRAI, le programme va afficher 'tarif réduit' et la variable $age aura pour valeur 26</text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.0000000</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>false</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <correctfeedback format="html">
+      <text></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text></text>
+    </incorrectfeedback>
+    <answer fraction="50" format="html">
+      <text>le code va afficher : tarif réduit</text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="-33.33333" format="html">
+      <text>le code va afficher : plein tarif</text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="-33.33333" format="html">
+      <text>le code va afficher : gratuit</text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="-33.33333" format="html">
+      <text>le code va afficher : 5€</text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="50" format="html">
+      <text>le code va afficher : vous avez 26 ans</text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- question: 105  -->
+  <question type="multichoice">
+    <name>
+      <text>structure alternative(5)</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[Soit le code suivant : <br>&lt;?php<br> $age=15;<br> if($age&gt;18);<br>
+<div style="margin-left: 40px;">echo 'tarif réduit';<br></div>?&gt;<br>Déterminez parmi les propositions ci-dessous, celles qui sont vraies :<br>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[le fait d'avoir placé un &quot;;&quot; après le test if ($age&gt;18), ne provoque aucune erreur mais on sort du test et l'instruction suivante est exécutée, donc le code va afficher 'tarif réduit'. En PHP chaque instruction se termine par un &quot;;&quot;, il est possible d'écrire plusieurs instructions, voire tout un programme sur une seule ligne mais pour rendre votre code lisible, il faut impérativement écrire chaque instructions sur une seule ligne et indenter votre code<br />]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.0000000</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>false</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <correctfeedback format="html">
+      <text></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text></text>
+    </incorrectfeedback>
+    <answer fraction="50" format="html">
+      <text>le code va afficher : tarif réduit</text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="-50" format="html">
+      <text>le code n' affiche rien</text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="-33.33333" format="html">
+      <text>le code provoque une erreur</text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="50" format="html">
+      <text><![CDATA[en PHP une instruction se termine par un ";"]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="-33.33333" format="html">
+      <text>en PHP on doit obligatoirement écrire une instruction par ligne</text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- question: 106  -->
+  <question type="multichoice">
+    <name>
+      <text>structure répétitive (1)</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p><span style="font-family: trebuchet ms,verdana,arial,helvetica,sans-serif;">Soit le code suivant :</span></p><p>$x = 4;<br><span style="font-family: trebuchet ms,verdana,arial,helvetica,sans-serif;"></span><span style="font-family: trebuchet ms,verdana,arial,helvetica,sans-serif;"></span></p><span style="font-family: courier new,courier,monospace;">do{</span><br style="font-family: courier new,courier,monospace;">
+<div style="margin-left: 40px;"><span lang="fr-FR"><span>$x += 2 ;</span></span><br></div>} <span lang="fr-FR"><span>while ($x &gt; 10&nbsp; &amp;&amp;&nbsp; $x &lt; 2);</span></span><br style="font-family: courier new,courier,monospace;"><br>Déterminez parmi les propositions ci-dessous, celles qui sont vraies :<br>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[Il est très important de bien connaître le mode de fonctionnement des opérateurs logiques ET, OU et NOT. (&amp;&amp;, ||, !)<br><p>TANT QUE la condition est VRAI on reste dans la boucle.</p><p>$x +=2 est la notation simplifiée de $x = $x + 2<br></p><p>la condition <span lang="fr-FR"><span>($x &gt; 10&nbsp; &amp;&amp;&nbsp; $x &lt; 2) est toujours fausse</span></span><br><br></p>]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.0000000</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>false</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <correctfeedback format="html">
+      <text></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text></text>
+    </incorrectfeedback>
+    <answer fraction="-50" format="html">
+      <text><![CDATA[on boucle à l'infini<br>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="33.33333" format="html">
+      <text>$x +=2 est la notation simplifiée de $x = $x + 2</text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="33.33333" format="html">
+      <text><![CDATA[la condition <span lang="fr-FR"><span>($x &gt; 10&nbsp; &amp;&amp;&nbsp; $x &lt; 2) est toujours fausse</span></span><br><br>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="-50" format="html">
+      <text><![CDATA[à la fin du script $x vaut 4<br>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="33.33333" format="html">
+      <text><![CDATA[à la fin du script $x vaut 6<br>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- question: 155  -->
+  <question type="multichoice">
+    <name>
+      <text>structure répétitive (1)</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<span style="font-family: trebuchet ms,verdana,arial,helvetica,sans-serif;">Soit le code suivant :</span><span style="font-family: trebuchet ms,verdana,arial,helvetica,sans-serif;"></span><br style="font-family: trebuchet ms,verdana,arial,helvetica,sans-serif;"><span style="font-family: courier new,courier,monospace;">do{</span><br style="font-family: courier new,courier,monospace;">
+<div style="margin-left: 40px;">............<br> $reponse = readline("voulez-vous continuer oui/non");<br></div>}<span lang="fr-FR"><span>while ($reponse!='oui' || $reponse!='non');</span></span><br style="font-family: courier new,courier,monospace;"><br>Déterminez parmi les propositions ci-dessous, celles qui sont vraies :<br>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[Il est très important de bien connaître le mode de fonctionnement des opérateurs logiques ET, OU et NOT. (&amp;&amp;, ||, !)<br>La condition est $reponse différent de oui ou de non, cette condition sera toujours VRAI quelque soit les valeurs de $reponse car $reponse sera forcément différent de "oui" OU de "non", par conséquent on ne sortira jamais de cette boucle. TANT QUE la condition est VRAI on reste dans la boucle<br>]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.0000000</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>false</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <correctfeedback format="html">
+      <text></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text></text>
+    </incorrectfeedback>
+    <answer fraction="-50" format="html">
+      <text>pour sortir de celle boucle $reponse peut prendre n'importe quelle valeur</text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="-50" format="html">
+      <text>pour sortir de celle boucle $reponse doit avoir pour valeur oui ou non</text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="33.33333" format="html">
+      <text>($reponse!=''oui'' || $reponse!=''non'') sera toujours VRAI</text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="33.33333" format="html">
+      <text>On reste dans une boucle tant que la condition est VRAI</text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="33.33333" format="html">
+      <text>on ne pourra jamais sortir de cette boucle</text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- question: 107  -->
+  <question type="multichoice">
+    <name>
+      <text>structure répétitive (4)</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[Soit le code suivant :<br /><span style="font-family: courier new,courier,monospace;">&lt;?php</span><br style="font-family: courier new,courier,monospace;" /><span style="font-family: courier new,courier,monospace;"> $i=0;</span><br style="font-family: courier new,courier,monospace;" /><span style="font-family: courier new,courier,monospace;"> for($i=8; $i&lt;10; $i++){</span><br style="font-family: courier new,courier,monospace;" />
+<div style="margin-left: 40px; font-family: courier new,courier,monospace;"><span style="font-style: italic; color: rgb(0, 102, 0);">//traitement</span><br /> </div><span style="font-family: courier new,courier,monospace;"> }</span><br style="font-family: courier new,courier,monospace;" /><span style="font-family: courier new,courier,monospace;"> echo $i;</span><br style="font-family: courier new,courier,monospace;" /><span style="font-family: courier new,courier,monospace;"> ?&gt; </span><br style="font-family: courier new,courier,monospace;" />Déterminez parmi les propositions ci-dessous, celles qui sont vraies :<br />]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[Déroulement du programme:<br />
+<ol>
+  <li>Initialisation de $i à 0</li>
+  <li>Affectation de 8 à $i</li>
+  <li>test pour entrer dans le corps de la boucle. (VRAI)<br /></li>
+  <li>entrée dans le corps de la boucle+ traitement<br /></li>
+  <li>$i incrémenté de 1. $i vaut alors 9<br /></li>
+  <li>test pour entrer à nouveau dans le corps de la boucle. (VRAI: 9&lt;10)</li>
+  <li>entrée dans le corps de la boucle+ traitement<br /> </li>
+  <li>$i incrémenté de 1. $i vaut 10</li>
+  <li>test pour entrer à nouveau dans le corps de la boucle. (FAUX: 10&lt;10)</li>
+  <li>affichage de $i soit: 10<br /></li>
+</ol>]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.0000000</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>false</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>none</answernumbering>
+    <correctfeedback format="html">
+      <text></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text></text>
+    </incorrectfeedback>
+    <answer fraction="40" format="html">
+      <text>le corps de la boucle est exécuté 2 fois.</text>
+      <feedback format="html">
+        <text>Oui.</text>
+      </feedback>
+    </answer>
+    <answer fraction="60" format="html">
+      <text>Le programme affiche : 10</text>
+      <feedback format="html">
+        <text>Oui.</text>
+      </feedback>
+    </answer>
+    <answer fraction="-33.33333" format="html">
+      <text>Le programme affiche : 9</text>
+      <feedback format="html">
+        <text>Non. $i vaut 10</text>
+      </feedback>
+    </answer>
+    <answer fraction="-33.33333" format="html">
+      <text>Le programme affiche : 0</text>
+      <feedback format="html">
+        <text>Non.</text>
+      </feedback>
+    </answer>
+    <answer fraction="-33.33333" format="html">
+      <text>le corps de la boucle est exécuté 10 fois.</text>
+      <feedback format="html">
+        <text>Non.</text>
+      </feedback>
+    </answer>
+    <answer fraction="-33.33333" format="html">
+      <text>Le programme boucle à l'infini.</text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- question: 108  -->
+  <question type="multichoice">
+    <name>
+      <text>structure répétitive (5)</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[Quelle est la valeur affichée par l'exécution du programme suivant :<br /><br /><span style="font-family: courier new,courier,monospace;">&lt;?php</span><br style="font-family: courier new,courier,monospace;" /><span style="font-family: courier new,courier,monospace;"> $j=4;</span><br style="font-family: courier new,courier,monospace;" /><span style="font-family: courier new,courier,monospace;"> for($i=0; $i&lt; $j; $i++){</span><br style="font-family: courier new,courier,monospace;" />
+<div style="margin-left: 40px; font-family: courier new,courier,monospace;">$j-- ;<br /> </div>
+<div style="margin-left: 40px; font-family: courier new,courier,monospace;"><span style="font-style: italic; color: rgb(0, 102, 0);">//traitement</span><br /> </div><span style="font-family: courier new,courier,monospace;"> }</span><br style="font-family: courier new,courier,monospace;" /><span style="font-family: courier new,courier,monospace;"> echo $j;</span><br style="font-family: courier new,courier,monospace;" /><span style="font-family: courier new,courier,monospace;"> ?&gt;</span>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[Déroulement du programme:<br />
+<ol>
+  <li>Initialisation de $j à 4<br /></li>
+  <li>Initialisation de $i à 0<br /></li>
+  <li>test pour entrer dans le corps de la boucle. (0&lt;4 c'est VRAI)<br /></li>
+  <li>entrée dans le corps de la boucle $j-- =&gt; $j vaut 3<br /></li>
+  <li>$i incrémenté de 1. $i vaut alors 1<br /></li>
+  <li>test pour entrer à nouveau dans le corps de la boucle. (VRAI: 1&lt;3)</li>
+  <li>entrée dans le corps de la boucle $j-- =&gt; $j vaut 2 </li>
+  <li>$i incrémenté de 1. $i vaut 2<br /></li>
+  <li>test pour entrer à nouveau dans le corps de la boucle. (FAUX: 2&lt;2)</li>
+  <li>affichage de $i soit: 2<br /></li>
+</ol>]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.0000000</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>false</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>none</answernumbering>
+    <correctfeedback format="html">
+      <text></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text></text>
+    </incorrectfeedback>
+    <answer fraction="-40" format="html">
+      <text>3</text>
+      <feedback format="html">
+        <text>Oui.</text>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text>2</text>
+      <feedback format="html">
+        <text>Oui.</text>
+      </feedback>
+    </answer>
+    <answer fraction="-40" format="html">
+      <text>4</text>
+      <feedback format="html">
+        <text><![CDATA[Non. <br />]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="-40" format="html">
+      <text>0</text>
+      <feedback format="html">
+        <text>Non.</text>
+      </feedback>
+    </answer>
+    <answer fraction="-40" format="html">
+      <text>Le programme boucle à l'infini...</text>
+      <feedback format="html">
+        <text>Non.</text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- question: 268  -->
+  <question type="multichoice">
+    <name>
+      <text>structure répétitive (5)</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[Quelle est la valeur affichée par l'exécution du programme suivant :<br /><br /><span style="font-family: courier new,courier,monospace;">&lt;?php</span><br style="font-family: courier new,courier,monospace;" /><span style="font-family: courier new,courier,monospace;"> $j=4;</span><br style="font-family: courier new,courier,monospace;" /><span style="font-family: courier new,courier,monospace;"> for($i=0; $i&lt; $j; $i++){</span><br style="font-family: courier new,courier,monospace;" />
+<div style="margin-left: 40px; font-family: courier new,courier,monospace;">$j-- ;<br /> </div>
+<div style="margin-left: 40px; font-family: courier new,courier,monospace;"><span style="font-style: italic; color: rgb(0, 102, 0);">//traitement</span><br /> </div><span style="font-family: courier new,courier,monospace;"> }</span><br style="font-family: courier new,courier,monospace;" /><span style="font-family: courier new,courier,monospace;"> echo $j;</span><br style="font-family: courier new,courier,monospace;" /><span style="font-family: courier new,courier,monospace;"> ?&gt;</span>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[Déroulement du programme:<br />
+<ol>
+  <li>Initialisation de $j à 4<br /></li>
+  <li>Initialisation de $i à 0<br /></li>
+  <li>test pour entrer dans le corps de la boucle. (0&lt;4 c'est VRAI)<br /></li>
+  <li>entrée dans le corps de la boucle $j-- =&gt; $j vaut 3<br /></li>
+  <li>$i incrémenté de 1. $i vaut alors 1<br /></li>
+  <li>test pour entrer à nouveau dans le corps de la boucle. (VRAI: 1&lt;3)</li>
+  <li>entrée dans le corps de la boucle $j-- =&gt; $j vaut 2 </li>
+  <li>$i incrémenté de 1. $i vaut 2<br /></li>
+  <li>test pour entrer à nouveau dans le corps de la boucle. (FAUX: 2&lt;2)</li>
+  <li>affichage de $i soit: 2<br /></li>
+</ol>]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.0000000</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>false</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>none</answernumbering>
+    <correctfeedback format="html">
+      <text></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text></text>
+    </incorrectfeedback>
+    <answer fraction="-40" format="html">
+      <text>3</text>
+      <feedback format="html">
+        <text>Oui.</text>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text>2</text>
+      <feedback format="html">
+        <text>Oui.</text>
+      </feedback>
+    </answer>
+    <answer fraction="-40" format="html">
+      <text>4</text>
+      <feedback format="html">
+        <text><![CDATA[Non. <br />]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="-40" format="html">
+      <text>0</text>
+      <feedback format="html">
+        <text>Non.</text>
+      </feedback>
+    </answer>
+    <answer fraction="-40" format="html">
+      <text>Le programme boucle à l'infini...</text>
+      <feedback format="html">
+        <text>Non.</text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- question: 154  -->
+  <question type="multichoice">
+    <name>
+      <text>structure répétitive (6)</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[Soit le code suivant :<br /><br style="font-family: courier new,courier,monospace;" /><span style="font-family: courier new,courier,monospace;">&lt;?php</span><br style="font-family: courier new,courier,monospace;" /><span style="font-family: courier new,courier,monospace;"> $j=9;</span><br style="font-family: courier new,courier,monospace;" /><span style="font-family: courier new,courier,monospace;"> for($i=10; $i &gt; $j; $i--){</span><br style="font-family: courier new,courier,monospace;" />
+<div style="margin-left: 40px; font-family: courier new,courier,monospace;">$j-- ;<br /> </div>
+<div style="margin-left: 40px; font-family: courier new,courier,monospace;"><span style="font-style: italic; color: rgb(0, 102, 0);">//traitement</span><br /> </div><span style="font-family: courier new,courier,monospace;"> }</span><br style="font-family: courier new,courier,monospace;" /><span style="font-family: courier new,courier,monospace;"> echo $j;</span><br /> ?&gt;<br />Déterminer parmi les propositions suivantes les réponses correctes.<br />]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[Déroulement du programme:<br />
+<ol>
+  <li>Initialisation de $j à 9<br /></li>
+  <li>Initialisation de $i à 10<br /></li>
+  <li>test pour entrer dans le corps de la boucle. (10&gt;9 c'est VRAI)<br /></li>
+  <li>entrée dans le corps de la boucle $j-- =&gt; $j vaut 8<br /></li>
+  <li>$i décrémenté de 1. $i vaut alors 9<br /></li>
+  <li>test pour entrer à nouveau dans le corps de la boucle. (VRAI: 9&gt;8)</li>
+  <li>Algorithmiquement, le programme continue à &quot;l'infini&quot; ...<br /></li>
+</ol>]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.0000000</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>false</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>none</answernumbering>
+    <correctfeedback format="html">
+      <text></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text></text>
+    </incorrectfeedback>
+    <answer fraction="100" format="html">
+      <text>Le programme boucle logiquement à l'infini...</text>
+      <feedback format="html">
+        <text>Oui.</text>
+      </feedback>
+    </answer>
+    <answer fraction="-40" format="html">
+      <text>A l'exécution, la valeur 10 est affichée</text>
+      <feedback format="html">
+        <text>Non.</text>
+      </feedback>
+    </answer>
+    <answer fraction="-40" format="html">
+      <text>A l'exécution, la valeur 9 est affichée</text>
+      <feedback format="html">
+        <text><![CDATA[Non. <br />]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="-40" format="html">
+      <text>A l'exécution, la valeur 0 est affichée</text>
+      <feedback format="html">
+        <text>Non.</text>
+      </feedback>
+    </answer>
+    <answer fraction="-40" format="html">
+      <text>A l'exécution, la valeur -10 est affichée</text>
+      <feedback format="html">
+        <text>Non.</text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- question: 109  -->
+  <question type="multichoice">
+    <name>
+      <text>structure répétitive (6)</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[Soit le code suivant :<br /><br style="font-family: courier new,courier,monospace;" /><span style="font-family: courier new,courier,monospace;">&lt;?php</span><br style="font-family: courier new,courier,monospace;" /><span style="font-family: courier new,courier,monospace;"> $j=9;</span><br style="font-family: courier new,courier,monospace;" /><span style="font-family: courier new,courier,monospace;"> for($i=10; $i &gt; $j; $i--){</span><br style="font-family: courier new,courier,monospace;" />
+<div style="margin-left: 40px; font-family: courier new,courier,monospace;">$j-- ;<br /> </div>
+<div style="margin-left: 40px; font-family: courier new,courier,monospace;"><span style="font-style: italic; color: rgb(0, 102, 0);">//traitement</span><br /> </div><span style="font-family: courier new,courier,monospace;"> }</span><br style="font-family: courier new,courier,monospace;" /><span style="font-family: courier new,courier,monospace;"> echo $j;</span><br /> ?&gt;<br />Déterminer parmi les propositions suivantes les réponses correctes.<br />]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[Déroulement du programme:<br />
+<ol>
+  <li>Initialisation de $j à 9<br /></li>
+  <li>Initialisation de $i à 10<br /></li>
+  <li>test pour entrer dans le corps de la boucle. (10&gt;9 c'est VRAI)<br /></li>
+  <li>entrée dans le corps de la boucle $j-- =&gt; $j vaut 8<br /></li>
+  <li>$i décrémenté de 1. $i vaut alors 9<br /></li>
+  <li>test pour entrer à nouveau dans le corps de la boucle. (VRAI: 9&gt;8)</li>
+  <li>Algorithmiquement, le programme continue à &quot;l'infini&quot; ...<br /></li>
+</ol>]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.0000000</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>false</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>none</answernumbering>
+    <correctfeedback format="html">
+      <text></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text></text>
+    </incorrectfeedback>
+    <answer fraction="100" format="html">
+      <text>Le programme boucle logiquement à l'infini...</text>
+      <feedback format="html">
+        <text>Oui.</text>
+      </feedback>
+    </answer>
+    <answer fraction="-40" format="html">
+      <text>A l'exécution, la valeur 10 est affichée</text>
+      <feedback format="html">
+        <text>Non.</text>
+      </feedback>
+    </answer>
+    <answer fraction="-40" format="html">
+      <text>A l'exécution, la valeur 9 est affichée</text>
+      <feedback format="html">
+        <text><![CDATA[Non. <br />]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="-40" format="html">
+      <text>A l'exécution, la valeur 0 est affichée</text>
+      <feedback format="html">
+        <text>Non.</text>
+      </feedback>
+    </answer>
+    <answer fraction="-40" format="html">
+      <text>A l'exécution, la valeur -10 est affichée</text>
+      <feedback format="html">
+        <text>Non.</text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- question: 153  -->
+  <question type="multichoice">
+    <name>
+      <text>structure répétitive (7)</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<span style="font-family: trebuchet ms,verdana,arial,helvetica,sans-serif;"></span><span style="font-family: trebuchet ms,verdana,arial,helvetica,sans-serif;">Soit le code php suivant:<br><br>&lt;?php<br>$cpt =1;<br>$choix = readline("pour jouer: tapez la lettre O sinon Tapez N :") ;<br><span style="font-style: italic;"><br></span>while( $choix == 'O' &amp;&amp; $cpt &lt; 4 ) {<br></span>
+<div style="margin-left: 40px;"><span style="font-family: trebuchet ms,verdana,arial,helvetica,sans-serif;"> echo "Lancé de dé numéro $cpt \n";</span><br><span style="font-family: trebuchet ms,verdana,arial,helvetica,sans-serif;"></span></div>
+<div style="margin-left: 40px;"><span style="font-family: trebuchet ms,verdana,arial,helvetica,sans-serif;"> $choix = readline("pour jouer: tapez la lettre O sinon Tapez N :") ;</span><br><span style="font-family: trebuchet ms,verdana,arial,helvetica,sans-serif;"></span></div>
+<div style="margin-left: 40px;"><span style="font-family: trebuchet ms,verdana,arial,helvetica,sans-serif;"> $cpt++;</span><br><span style="font-family: trebuchet ms,verdana,arial,helvetica,sans-serif;"></span></div><span style="font-family: trebuchet ms,verdana,arial,helvetica,sans-serif;">}<br>?&gt;<br><br>Parmi les propositions suivantes, choisissez la ou les bonnes réponses.<br></span><span style="font-family: courier new,courier,monospace;"></span>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>1.0000000</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>false</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <correctfeedback format="html">
+      <text></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text></text>
+    </incorrectfeedback>
+    <answer fraction="50" format="html">
+      <text>le corps de la boucle peut ne pas être éxécuté.</text>
+      <feedback format="html">
+        <text>VRAI si l'utilisateur tape N lors de la première invitation à saisir.</text>
+      </feedback>
+    </answer>
+    <answer fraction="-40" format="html">
+      <text>La boucle peut être exécutée indéfiniment.</text>
+      <feedback format="html">
+        <text>Non. Le compteur limitera le nombre d'itération à 3.</text>
+      </feedback>
+    </answer>
+    <answer fraction="50" format="html">
+      <text>A la fin du programme $cpt vaut 4.</text>
+      <feedback format="html">
+        <text>Oui.</text>
+      </feedback>
+    </answer>
+    <answer fraction="-40" format="html">
+      <text>A la fin du programme $cpt vaut 3.</text>
+      <feedback format="html">
+        <text>Non.</text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- question: 110  -->
+  <question type="multichoice">
+    <name>
+      <text>structure répétitive (7)</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<font size="2"><span style="font-family: trebuchet ms,verdana,arial,helvetica,sans-serif;"></span></font><font size="2"><span style="font-family: trebuchet ms,verdana,arial,helvetica,sans-serif;">Soit le code php suivant:<br /><br />&lt;?php<br />$cpt =1;<br />$choix = readline(&quot;pour jouer: tapez la lettre O sinon Tapez N :&quot;) ;<br /><span style="font-style: italic;">/* Remarque readline permet de lire une valeur saisie au clavier. <br /> * Équivaut à la fonction lire()<br />*/<br /></span>while( $choix == 'O' &amp;&amp; $cpt &lt; 4 ) {<br /></span></font>
+<div style="margin-left: 40px;"><font size="2"><span style="font-family: trebuchet ms,verdana,arial,helvetica,sans-serif;"> echo &quot;Lancé de dé numéro $cpt \n&quot;;</span></font><br /><font size="2"><span style="font-family: trebuchet ms,verdana,arial,helvetica,sans-serif;"></span></font></div>
+<div style="margin-left: 40px;"><font size="2"><span style="font-family: trebuchet ms,verdana,arial,helvetica,sans-serif;"> $choix = readline(&quot;pour jouer: tapez la lettre O sinon Tapez N :&quot;) ;</span></font><br /><font size="2"><span style="font-family: trebuchet ms,verdana,arial,helvetica,sans-serif;"></span></font></div>
+<div style="margin-left: 40px;"><font size="2"><span style="font-family: trebuchet ms,verdana,arial,helvetica,sans-serif;"> $cpt++;</span></font><br /><font size="2"><span style="font-family: trebuchet ms,verdana,arial,helvetica,sans-serif;"></span></font></div><font size="2"><span style="font-family: trebuchet ms,verdana,arial,helvetica,sans-serif;">}<br />?&gt;<br /><br />Parmi les propositions suivantes, choisissez la ou les bonnes réponses.<br /></span></font><font size="2"><span style="font-family: courier new,courier,monospace;"></span></font>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>1.0000000</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>false</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <correctfeedback format="html">
+      <text></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text></text>
+    </incorrectfeedback>
+    <answer fraction="50" format="html">
+      <text>le corps de la boucle peut ne pas être éxécuté.</text>
+      <feedback format="html">
+        <text>VRAI si l'utilisateur tape N lors de la première invitation à saisir.</text>
+      </feedback>
+    </answer>
+    <answer fraction="-40" format="html">
+      <text>La boucle peut être exécutée indéfiniment.</text>
+      <feedback format="html">
+        <text>Non. Le compteur limitera le nombre d'itération à 3.</text>
+      </feedback>
+    </answer>
+    <answer fraction="50" format="html">
+      <text>A la fin du programme $cpt vaut 4.</text>
+      <feedback format="html">
+        <text>Oui.</text>
+      </feedback>
+    </answer>
+    <answer fraction="-40" format="html">
+      <text>A la fin du programme $cpt vaut 3.</text>
+      <feedback format="html">
+        <text>Non.</text>
+      </feedback>
+    </answer>
+    <answer fraction="-40" format="html">
+      <text>On connaît à l'avance le nombre d'itérations : 3.</text>
+      <feedback format="html">
+        <text>Non. Si l'utilisateur tape N dès la seconde invitation, on sort de la boucle.</text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- question: 269  -->
+  <question type="multichoice">
+    <name>
+      <text>structure répétitive(8)</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[Déterminer la ou les boucles dont le corps ne sera jamais exécuté :<br>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text>Une boucle s'exécute TANT que la condition est VRAI, si la condition est FAUX on sort de la boucle</text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3000000</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>false</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>none</answernumbering>
+    <correctfeedback format="html">
+      <text></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text></text>
+    </incorrectfeedback>
+    <answer fraction="50" format="html">
+      <text><![CDATA[for ($a = 10 ; $a &lt; 5 ; $a++){echo $a;}]]></text>
+      <feedback format="html">
+        <text><![CDATA[$a a pour valeur 10 donc la condition $a&lt;5 est FAUX , la boucle ne s'exécute pas]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="-33.33333" format="html">
+      <text><![CDATA[for ( $a = 0 ; $a &lt;= 5 ; $a++){echo $a++;}]]></text>
+      <feedback format="html">
+        <text><![CDATA[$a a pour valeur 0 donc la condition $a&lt;=5 est VRAI , la boucle s'exécute]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="-33.33333" format="html">
+      <text><![CDATA[for ( $a = 0 ; $a &lt; 5 ; $a++){echo $b++;}]]></text>
+      <feedback format="html">
+        <text><![CDATA[$a a pour valeur 0 donc la condition $a&lt;5 est VRAI , la boucle s'exécute]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="-33.33333" format="html">
+      <text>for ( $a = 10 ; $a == 10 ; $a++){echo $a;}</text>
+      <feedback format="html">
+        <text>$a a pour valeur 10 donc la condition $a==10 est VRAI , la boucle s'exécute</text>
+      </feedback>
+    </answer>
+    <answer fraction="50" format="html">
+      <text><![CDATA[for ( $a = -2; $a &gt; 5; $a++){echo $a;}]]></text>
+      <feedback format="html">
+        <text><![CDATA[$a a pour valeur -2 donc la condition $a&gt;5 est FAUX , la boucle ne s'exécute pas]]></text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- question: 111  -->
+  <question type="multichoice">
+    <name>
+      <text>structure répétitive(8)</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[Déterminer la ou les boucles dont le corps ne sera jamais exécuté :<br />]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text>Une boucle s'exécute TANT que la condition est VRAI, si la condition est FAUX on sort de la boucle</text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3000000</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>false</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>none</answernumbering>
+    <correctfeedback format="html">
+      <text></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text></text>
+    </incorrectfeedback>
+    <answer fraction="50" format="html">
+      <text><![CDATA[for ($a=10;$a<5;$a++){echo $a;}]]></text>
+      <feedback format="html">
+        <text><![CDATA[$a a pour valeur 10 donc la condition $a&lt;5 est FAUX , la boucle ne s'exécute pas]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="-33.33333" format="html">
+      <text><![CDATA[for ($a=0;$a<=5;$a++){echo $a++;}]]></text>
+      <feedback format="html">
+        <text><![CDATA[$a a pour valeur 0 donc la condition $a&lt;=5 est VRAI , la boucle s'exécute]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="-33.33333" format="html">
+      <text><![CDATA[for ($a=0;$a<5;$a++){echo $b++;}]]></text>
+      <feedback format="html">
+        <text><![CDATA[$a a pour valeur 0 donc la condition $a&lt;5 est VRAI , la boucle s'exécute]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="-33.33333" format="html">
+      <text>for ($a=10;$a==10;$a++){echo $a;}</text>
+      <feedback format="html">
+        <text>$a a pour valeur 10 donc la condition $a==10 est VRAI , la boucle s'exécute</text>
+      </feedback>
+    </answer>
+    <answer fraction="50" format="html">
+      <text><![CDATA[for ($a=-2;$a>5;$a++){echo $a;}]]></text>
+      <feedback format="html">
+        <text><![CDATA[$a a pour valeur -2 donc la condition $a&gt;5 est FAUX , la boucle ne s'exécute pas]]></text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- question: 112  -->
+  <question type="multichoice">
+    <name>
+      <text>structure répétitive(9)</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[Soit le code suivant :<br /><br style="font-family: courier new,courier,monospace;" /><span style="font-family: courier new,courier,monospace;">&lt;?php</span><br style="font-family: courier new,courier,monospace;" /><span style="font-family: courier new,courier,monospace;">for($i=0;$i&gt;=10;$i++){</span><br style="font-family: courier new,courier,monospace;" />
+<div style="margin-left: 40px;"><span style="font-family: courier new,courier,monospace;"> echo 'bonjour',</span><br style="font-family: courier new,courier,monospace;" /></div><span style="font-family: courier new,courier,monospace;">}</span><br style="font-family: courier new,courier,monospace;" /><span style="font-family: courier new,courier,monospace;">?&gt;</span><br />Déterminez parmi les propositions ci-dessous, celles qui sont vraies :<br />]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[Déroulement du programme:<br />1 - Initialisation de $i à 0<br />2 - test pour entrer dans le corps de la boucle. (0&gt;=10 c'est FAUX)<br />on sort de la boucle, donc le mot bonjour ne va jamais s'afficher]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.0000000</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>false</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <correctfeedback format="html">
+      <text></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text></text>
+    </incorrectfeedback>
+    <answer fraction="70" format="html">
+      <text><![CDATA[le mot "bonjour" va s'afficher : aucune fois]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="-33.33333" format="html">
+      <text><![CDATA[le mot "bonjour" va s'afficher : 10 fois]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="-33.33333" format="html">
+      <text><![CDATA[le mot "bonjour" va s'afficher : 9 fois]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="-33.33333" format="html">
+      <text><![CDATA[le mot "bonjour" va s'afficher : un nombre infini]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="30" format="html">
+      <text>on sort d'une boucle lorsque la condition n'est pas remplie</text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- question: 152  -->
+  <question type="multichoice">
+    <name>
+      <text>tableau(1)</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[Soit le code suivant :<br /><span style="font-family: courier new,courier,monospace;">&lt;?php</span><br style="font-family: courier new,courier,monospace;" /><span style="font-family: courier new,courier,monospace;">$tabPays=array('france','italie','allemagne', 'espagne');</span><br style="font-family: courier new,courier,monospace;" /><span style="font-family: courier new,courier,monospace;">$tabPays[]='islande';</span><br style="font-family: courier new,courier,monospace;" /><span style="font-family: courier new,courier,monospace;">echo $tabPays[4];</span><br style="font-family: courier new,courier,monospace;" /><span style="font-family: courier new,courier,monospace;">?&gt;</span><br />Déterminez, parmi les propositions ci-dessous, celles qui sont vraies :<br />]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[l'instruction $tabPays[]='islande', va ajouter &quot;islande&quot; à la fin du tableau, donc en 5e position, par défaut les indices d'un tableau commencent à 0, donc le pays se trouvant à l'indice 4 est l'islande. La boucle foreach permet de parcourir ce tableau, dans ce cas les clés sont les indices numériques.]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.0000000</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>false</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <correctfeedback format="html">
+      <text></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text></text>
+    </incorrectfeedback>
+    <answer fraction="70" format="html">
+      <text>le code va afficher : islande</text>
+      <feedback format="html">
+        <text>OUI, l'islande va figurer à la 5e position dans le tableau donc à l'indice 4</text>
+      </feedback>
+    </answer>
+    <answer fraction="-25" format="html">
+      <text>le code va afficher : espagne</text>
+      <feedback format="html">
+        <text>NON, l'espagne figure à la 4e position dans le tableau donc à l'indice 3</text>
+      </feedback>
+    </answer>
+    <answer fraction="-25" format="html">
+      <text>le code va afficher : tous les pays</text>
+      <feedback format="html">
+        <text>NON, pour afficher tous les éléments du tableau, il faut parcourir ce tableau à l'aide d'une boucle et afficher tous les indices</text>
+      </feedback>
+    </answer>
+    <answer fraction="-25" format="html">
+      <text>le code n'affiche rien</text>
+      <feedback format="html">
+        <text>NON, il affiche le pays se trouvant en 5e position dans le tableau et ce dernier existe</text>
+      </feedback>
+    </answer>
+    <answer fraction="-25" format="html">
+      <text>le code va afficher : array</text>
+      <feedback format="html">
+        <text>NON, on ne demande pas d'afficher le tableau mais un élément du tableau</text>
+      </feedback>
+    </answer>
+    <answer fraction="30" format="html">
+      <text>on affiche le dernier élément</text>
+      <feedback format="html">
+        <text><![CDATA[En effet, il y a 5 éléments, et l'indice du dernier est 4<br />]]></text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- question: 140  -->
+  <question type="multichoice">
+    <name>
+      <text>tableau assoc</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[Soit la déclaration du tableau :<br> <span style="font-family: courier new,courier,monospace;">&lt;?php</span><br style="font-family: courier new,courier,monospace;">
+<div style="margin-left: 40px; font-family: courier new,courier,monospace;">$tabChomage=array('France'=&gt;10,'Espagne'=&gt;12,'Finlande'=&gt;5); <br>foreach($tabChomage as $cle=&gt;$val){<br>
+  <div style="margin-left: 40px;">echo "$val&nbsp; ";<br></div>} <br></div>
+<div style="margin-left: 40px; font-family: courier new,courier,monospace;"><br></div><span style="font-family: courier new,courier,monospace;">?&gt; </span><br>Déterminez, parmi les propositions ci-dessous, celles qui sont vraies:<br>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[Le type tableau de PHP est un type collection de couples (clé, valeur), à une valeur de clé ne correspond <span style="text-decoration: underline;">au plus</span> qu'une et une seule valeur. La clé dans cet exemple est le nom du pays et la valeur le taux de chomage <br>]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.0000000</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>false</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>none</answernumbering>
+    <correctfeedback format="html">
+      <text></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text></text>
+    </incorrectfeedback>
+    <answer fraction="50" format="html">
+      <text><![CDATA[Le programme affiche : 10 12&nbsp; 5]]></text>
+      <feedback format="html">
+        <text><![CDATA[OUI , on demande d'afficher la valeur de chaque élément du tableau<br>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="-33.33333" format="html">
+      <text><![CDATA[echo $tabChomage[0]; va afficher "France"]]></text>
+      <feedback format="html">
+        <text><![CDATA[NON, France ne se trouve pas à l'indice 0 du tableau, dans un tableau associatif les indices numériques sont remplacés par des clés<br>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="50" format="html">
+      <text>echo $tabChomage['Finlande']; va afficher 5</text>
+      <feedback format="html">
+        <text><![CDATA[OUI, la valeur associée à la clé Finlande est bien 5<br>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="-33.33333" format="html">
+      <text>ce code va afficher le nom et le taux de chomage de tous les pays se trouvant dans le tableau</text>
+      <feedback format="html">
+        <text><![CDATA[NON, l'instruction foreach($tabChomage as $val) parcourt le tableau, on va affecter à la variable $val la valeur de chaque clé du tableau <br>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="-33.33333" format="html">
+      <text><![CDATA[echo $tabChomage['10'] ; affiche "France"]]></text>
+      <feedback format="html">
+        <text><![CDATA[Non, dans ce tableau il n'y a aucune clé se nommant 10, <br>]]></text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- question: 151  -->
+  <question type="multichoice">
+    <name>
+      <text>utilisation de fonction (0)</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[Voici l'en-tête d'une fonction :<br /> <span style="font-family: courier new,courier,monospace;">function CalculDepenses($nombre, $valeur)</span><br /> Quelles sont les instructions correctes pour faire appel à cette fonction ?]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[La <b>sensibilité à la <a title="Casse (typographie)" href="http://fr.wikipedia.org/wiki/Casse_%28typographie%29">casse</a></b> (traduction de l'anglais <i>case sensitivity</i>) est une notion informatique qui signifie qu'un mot change de sens selon que les lettres qui le composent sont en <a title="Capitale et majuscule" href="http://fr.wikipedia.org/wiki/Capitale_et_majuscule">capitales</a> ou en <a title="Bas-de-casse" href="http://fr.wikipedia.org/wiki/Bas-de-casse">bas-de-casse</a>. Et PHP comme la plupart des langages informatiques est sensible à la casse.]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.0000000</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>false</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <correctfeedback format="html">
+      <text></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text></text>
+    </incorrectfeedback>
+    <answer fraction="75" format="html">
+      <text>CalculDepenses(5, 1.25);</text>
+      <feedback format="html">
+        <text>la fonction attend effectivement 2 paramètres</text>
+      </feedback>
+    </answer>
+    <answer fraction="-25" format="html">
+      <text>CalculDepenses(23 . 5);</text>
+      <feedback format="html">
+        <text>la fonction attend 2 paramètres, il n'y a qu'un seul paramètre</text>
+      </feedback>
+    </answer>
+    <answer fraction="-25" format="html">
+      <text>CalculDepenses(10, 1,5);</text>
+      <feedback format="html">
+        <text>la fonction attend 2 paramètres, il n'y a 3 paramètres</text>
+      </feedback>
+    </answer>
+    <answer fraction="-25" format="html">
+      <text>calculDepenses(5, 1.25);</text>
+      <feedback format="html">
+        <text><![CDATA[la fonction se nomme CalculDepenses et non calculDepenses, PHP comme la plupart des langages de programmation est sensible à la &quot;casse&quot;]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="-25" format="html">
+      <text>Calculdepenses(5, 1.25);</text>
+      <feedback format="html">
+        <text><![CDATA[la fonction se nomme CalculDepenses et non Calculdepenses, PHP comme la plupart des langages de programmation est sensible à la &quot;casse&quot;]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="25" format="html">
+      <text>CalculDepenses('5', '8');</text>
+      <feedback format="html">
+        <text><![CDATA[la fonction attend effectivement 2 paramètres, PHP n'est pas un langage &quot;typé&quot;, c'est à dire que le type de la variable n'a pas à être défini, vous pouvez donc envoyer des paramètres numériques avec des quotes]]></text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- question: 125  -->
+  <question type="multichoice">
+    <name>
+      <text>utilisation de fonction (3)</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[Voici la fonction: <span style="font-style: italic;">indiceElementDansTableau</span>:<br>-<span style="text-decoration: underline;"> Sa signature</span>: <br><span style="font-weight: bold;">int</span> indiceElementDansTableau( <span style="font-weight: bold;">array</span> $tab , <span style="font-weight: bold;">string</span> $aiguille )<br><br>-<span style="text-decoration: underline;">Son entête php</span>: <br><span style="font-weight: bold; font-style: italic;">function</span> indiceElementDansTableau( $tab , $aiguille )<br> <br><br>- <span style="text-decoration: underline;">Sa documentation</span>:<br>cherche l'élément $aiguille dans le tableau $tab et renvoie la position de l'élément s'il le trouve (commence à 0) et -1 sinon.<br><br>- <span style="text-decoration: underline;">Un exemple de test</span>: (la fonction est implantée et accessible)<br><span style="font-family: courier new,courier,monospace;">&lt;?php</span><br style="font-family: courier new,courier,monospace;">
+<div style="margin-left: 40px; font-family: courier new,courier,monospace;">$tableau = array ('A' , 'C' , 'Z' ); <br>$v = 'Z';<br></div>
+<div style="margin-left: 40px; font-family: courier new,courier,monospace;">$pos = indiceElementDansTableau( $tableau , $v );<br></div>
+<div style="margin-left: 40px; font-family: courier new,courier,monospace;">echo $pos;<br></div><span style="font-family: courier new,courier,monospace;">?&gt;</span>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[Ce programme (exemple) appelle la fonction qui retourne la position de l'élément s'il est contenu dans le tableau ou -1 sinon. Ce programme affichera 2.<br><br>]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.0000000</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>false</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <correctfeedback format="html">
+      <text></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text></text>
+    </incorrectfeedback>
+    <answer fraction="80" format="html">
+      <text>l'exécution du programme affiche : 2</text>
+      <feedback format="html">
+        <text>VRAI:</text>
+      </feedback>
+    </answer>
+    <answer fraction="-20" format="html">
+      <text><![CDATA[le script affiche une erreur car la fonction attend une variable $aiguille et non $V<br>]]></text>
+      <feedback format="html">
+        <text><![CDATA[FAUX: $aiguille est simplement le nom à la variable dans la fonction, la fonction attend simplement une variable de type chaîne de caractère<br>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="20" format="html">
+      <text>$aiguille est une variable propre à la fonction.</text>
+      <feedback format="html">
+        <text>VRAI: Son rôle est de recevoir en copie une valeur.</text>
+      </feedback>
+    </answer>
+    <answer fraction="-30" format="html">
+      <text>l'exécution du programme affiche : true</text>
+      <feedback format="html">
+        <text>FAUX: cette fonction retourne la position sous forme d'entier.</text>
+      </feedback>
+    </answer>
+    <answer fraction="-60" format="html">
+      <text>Ce programme ne peut être éxécuté car la variable passée à l'appel ($tableau) n'a pas le même nom que celui de l'entête de la fonction ($tab)</text>
+      <feedback format="html">
+        <text>FAUX: Il peuvent avoir le même nom ou un nom différent. L'espace mémoire alloué à la fonction (dans la pile) n'est pas accessible du reste du programme.</text>
+      </feedback>
+    </answer>
+    <answer fraction="-10" format="html">
+      <text>l'exécution du programme affiche : 3</text>
+      <feedback format="html">
+        <text>FAUX: lire la documentation ;)</text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- question: 139  -->
+  <question type="multichoice">
+    <name>
+      <text>utilisation de fonction (4)</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<span style="font-weight: bold; text-decoration: underline;">Voici la fonction</span>: <span style="font-style: italic;">estDansTableau</span>:<br><br>-<span style="text-decoration: underline;"> Sa signature</span>: <br><span style="font-weight: bold; color: rgb(0, 0, 153);">boolean</span> estDansTableau( <span style="font-weight: bold; color: rgb(0, 0, 153);">array</span> $tab , <span style="font-weight: bold; color: rgb(0, 0, 153);">string</span> $aiguille )<br><br>-<span style="text-decoration: underline;">Son entête php</span>: <br><span style="font-weight: bold; font-style: italic;">function</span> estDansTableau( $tab , $aiguille )<br> <br><br>- <span style="text-decoration: underline;">Sa documentation</span>:<br>Cherche l'élément $aiguille dans le tableau $tab et renvoie TRUE si la valeur de $aiguille se trouve dans le tableau, FALSE sinon.<br><br>- <span style="text-decoration: underline; font-weight: bold;">Un développeur l'utilise dans le code ci-dessous</span>: (hypothèse: la fonction est implantée et accessible depuis le code)<br><br><span style="font-family: courier new,courier,monospace;">&lt;?php</span><br style="font-family: courier new,courier,monospace;">
+<div style="margin-left: 40px; font-family: courier new,courier,monospace;">$estdedans = FALSE; <br></div>
+<div style="margin-left: 40px; font-family: courier new,courier,monospace;">$tableau = array ('A' , 'C' , 'Z' );<br></div>
+<div style="margin-left: 40px; font-family: courier new,courier,monospace;">$estdedans = estDansTableau( $tableau , 'C' );</div><div style="margin-left: 40px; font-family: courier new,courier,monospace;"><br>if ( $estdedans )&nbsp;</div><div style="margin-left: 40px; font-family: courier new,courier,monospace;">&nbsp; &nbsp; echo " Trouvé " ; <br>else&nbsp;</div><div style="margin-left: 40px; font-family: courier new,courier,monospace;">&nbsp; &nbsp; echo "Non trouvé";<br></div><span style="font-family: courier new,courier,monospace;">?&gt;</span><br>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[Ce programme (exemple) appelle la fonction qui retourne TRUE si l'élément est contenu dans le tableau, FALSE sinon. <br><br><br>]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.0000000</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>false</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <correctfeedback format="html">
+      <text></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text></text>
+    </incorrectfeedback>
+    <answer fraction="-33.33333" format="html">
+      <text>l'exécution du programme affiche : Non trouvé.</text>
+      <feedback format="html">
+        <text><![CDATA[<br>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="-33.33333" format="html">
+      <text>La valeur de retour de la fonction n'est pas utilisée.</text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="66.66667" format="html">
+      <text>l'exécution du programme affiche : trouvé.</text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="-33.33333" format="html">
+      <text>La fonction n'est pas exécutée.</text>
+      <feedback format="html">
+        <text>FAUX: cette fonction est exécutée</text>
+      </feedback>
+    </answer>
+    <answer fraction="-33.33333" format="html">
+      <text>Ce programme ne peut être éxécuté car à l'appel, on passe directement une valeur 'C'.</text>
+      <feedback format="html">
+        <text>FAUX: Lors d'un passage par valeur, on peut passer directement une valeur lors de l'appel.</text>
+      </feedback>
+    </answer>
+    <answer fraction="33.33333" format="html">
+      <text><![CDATA[<p>if ( $estdedans ) est équivalent à if( $estdedans == TRUE)</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>Vrai</p>]]></text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- question: 126  -->
+  <question type="multichoice">
+    <name>
+      <text>utilisation de fonction (4)</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<span style="font-weight: bold; text-decoration: underline;">Voici la fonction</span>: <span style="font-style: italic;">estDansTableau</span>:<br /><br />-<span style="text-decoration: underline;"> Sa signature</span>: <br /><span style="font-weight: bold; color: rgb(0, 0, 153);">boolean</span> estDansTableau( <span style="font-weight: bold; color: rgb(0, 0, 153);">array</span> $tab , <span style="font-weight: bold; color: rgb(0, 0, 153);">string</span> $aiguille )<br /><br />-<span style="text-decoration: underline;">Son entête php</span>: <br /><span style="font-weight: bold; font-style: italic;">function</span> estDansTableau( $tab , $aiguille )<br /> <br /><br />- <span style="text-decoration: underline;">Sa documentation</span>:<br />Cherche l'élément $aiguille dans le tableau $tab et renvoie TRUE si la valeur de $aiguille se trouve dans le tableau, FALSE sinon.<br /><br />- <span style="text-decoration: underline; font-weight: bold;">Un développeur l'utilise dans le code ci-dessous</span>: (hypothèse: la fonction est implantée et accessible depuis le code)<br /><br /><span style="font-family: courier new,courier,monospace;">&lt;?php</span><br style="font-family: courier new,courier,monospace;" />
+<div style="margin-left: 40px; font-family: courier new,courier,monospace;">$estdedans = FALSE; <br /></div>
+<div style="margin-left: 40px; font-family: courier new,courier,monospace;">$tableau = array ('A' , 'C' , 'Z' );<br /></div>
+<div style="margin-left: 40px; font-family: courier new,courier,monospace;">indiceElementDansTableau( $tableau , 'C' );<br />if ( $estdedans ) echo &quot; Trouvé &quot; ; <br />else echo &quot;Non trouvé&quot;;<br /></div><span style="font-family: courier new,courier,monospace;">?&gt;</span><br />]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[Ce programme (exemple) appelle la fonction qui retourne TRUE si l'élément est contenu dans le tableau, FALSE sinon. <br />Toutefois, ce programme affichera &quot;Non trouvé&quot; car sa valeur de retour n'est pas utilisée.<br /><br />]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.0000000</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>false</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <correctfeedback format="html">
+      <text></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text></text>
+    </incorrectfeedback>
+    <answer fraction="70" format="html">
+      <text>l'exécution du programme affiche : Non trouvé.</text>
+      <feedback format="html">
+        <text><![CDATA[VRAI: Car $estdedans vaut FALSE, il n'a pas été valorisé par la valeur retour de la fonction.<br />]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="30" format="html">
+      <text>La valeur de retour de la fonction n'est pas utilisée.</text>
+      <feedback format="html">
+        <text>VRAI:</text>
+      </feedback>
+    </answer>
+    <answer fraction="-33.33333" format="html">
+      <text>l'exécution du programme affiche : trouvé.</text>
+      <feedback format="html">
+        <text>FAUX: Car $estdedans vaut FALSE, cette variable n'a pas été valorisée par la valeur retour de la fonction.</text>
+      </feedback>
+    </answer>
+    <answer fraction="-33.33333" format="html">
+      <text>La fonction n'est pas exécutée.</text>
+      <feedback format="html">
+        <text>FAUX: cette fonction est exécutée, mais sa valeur n'est pas utilisée.</text>
+      </feedback>
+    </answer>
+    <answer fraction="-33.33333" format="html">
+      <text>Ce programme ne peut être éxécuté car à l'appel, on passe directement une valeur 'C'.</text>
+      <feedback format="html">
+        <text>FAUX: Lors d'un passage par valeur, on peut passer directement une valeur lors de l'appel.</text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- question: 127  -->
+  <question type="multichoice">
+    <name>
+      <text>utilisation de fonction (5)</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<span style="font-weight: bold; text-decoration: underline;">Voici la fonction</span>: <span style="font-style: italic;">whatCanIGet</span>:<br /><br />-<span style="text-decoration: underline;"> Sa signature</span>: <br /><span style="font-weight: bold; color: rgb(0, 0, 153);">array</span> <span style="font-style: italic;">whatCanIGet</span>( <span style="font-weight: bold; color: rgb(0, 0, 153);">array</span> $tab <span style="font-weight: bold; color: rgb(0, 0, 153);"></span> )<br /><br />-<span style="text-decoration: underline;">Son entête php et son corps</span>: <br /><span style="font-weight: bold; font-style: italic; font-family: courier new,courier,monospace;">function</span><span style="font-family: courier new,courier,monospace;"> </span><span style="font-style: italic; font-family: courier new,courier,monospace;">whatCanIGet</span><span style="font-family: courier new,courier,monospace;">( $tab ){</span><br style="font-family: courier new,courier,monospace;" />
+<div style="margin-left: 40px; font-family: courier new,courier,monospace;">$nb = sizeof( $tab);<br /></div>
+<div style="margin-left: 40px; font-family: courier new,courier,monospace;">for( $i=1 ; $i &lt;= $nb ) ; $i++ ){<br />
+  <div style="margin-left: 40px;">$tabretour [ ($nb - $i) ] = $tab [ $i-1];<br /></div>}<br />return $tabretour;<br /></div><span style="font-family: courier new,courier,monospace;">}</span><br style="font-family: courier new,courier,monospace;" /> <br /><span style="text-decoration: underline;">Remarques</span>:<br />La fonction <span style="font-weight: bold;">sizezof</span> retourne le nombre d'éléments d'un tableau.<br /><br />]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[Cette fonction retourne un tableau construit à partir des éléments du tableau passé en paramètre. Le tableau passé en paramètre est lu dans l'ordre inverse, chaque élément lu est copié dans le tableau qui sera retourné.<br />]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.0000000</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>false</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>none</answernumbering>
+    <correctfeedback format="html">
+      <text></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text></text>
+    </incorrectfeedback>
+    <answer fraction="60" format="html">
+      <text>Cette fonction retourne un tableau contenant une copie des éléments du tableau passé en paramètre dans l'ordre inverse.</text>
+      <feedback format="html">
+        <text>VRAI:</text>
+      </feedback>
+    </answer>
+    <answer fraction="-20" format="html">
+      <text>Cette fonction renvoie une copie du tableau passé en paramètre sans le premier élément de ce tableau($tab).</text>
+      <feedback format="html">
+        <text>FAUX.</text>
+      </feedback>
+    </answer>
+    <answer fraction="-20" format="html">
+      <text>Cette fonction retourne l'avant dernier élément du tableau passé en paramètre.</text>
+      <feedback format="html">
+        <text><![CDATA[FAUX: ($i-1) sert d'indice de parcours du tableau passé en paramètre. L'état de $i commençant à la première itération à 1 et se terminant à la dernière à taille du tableau, il est nécessaire de décaler de 1 pour faire correspondre $i, à chacune des valeurs de l'indice du tableau passé en paramètre. <br />]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="-20" format="html">
+      <text>Cette fonction modifie le tableau passé en paramètre, il ne contiendra plus les mêmes valeurs après éxécution de cette fonction.</text>
+      <feedback format="html">
+        <text>FAUX. Le tableau n'est pas passé par référence, mais par copie. Il ne sera pas modifié.</text>
+      </feedback>
+    </answer>
+    <answer fraction="-20" format="html">
+      <text>Cette fonction renvoie une copie du tableau passé en paramètre sans le dernier élément de ce tableau ($tab).</text>
+      <feedback format="html">
+        <text>FAUX.</text>
+      </feedback>
+    </answer>
+    <answer fraction="40" format="html">
+      <text>Au sein de la fonction, après la dernière itération de la boucle for, $i vaudra ($nb+1)</text>
+      <feedback format="html">
+        <text><![CDATA[VRAI. C'est la condition d'arrêt de la boucle, puisque l'évaluation du test ($i &lt;= $nb) qui permet de sortir de la boucle doit valoir FAUX.]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="-20" format="html">
+      <text>Cette fonction renvoie une copie du tableau passé en paramètre sans le premier ni le dernier élément de ce tableau ($tab).</text>
+      <feedback format="html">
+        <text>FAUX.</text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- question: 128  -->
+  <question type="multichoice">
+    <name>
+      <text>valeur et variable (1)</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[Voici un bloc d'instructions contenant 2 instructions :<br /><span style="font-family: courier new,courier,monospace;">&lt;?php</span><br style="font-family: courier new,courier,monospace;" /><span style="font-family: courier new,courier,monospace;"> $x = 2;</span> <span style="font-family: courier new,courier,monospace;">// <span style="font-style: italic;">instruction 1</span></span><br style="font-family: courier new,courier,monospace;" /><span style="font-family: courier new,courier,monospace;"> $y = $x;</span><span style="font-family: courier new,courier,monospace;"> // <span style="font-style: italic;">instruction 2</span></span><br style="font-family: courier new,courier,monospace;" /><span style="font-family: courier new,courier,monospace;">?&gt;</span><br />Déterminer quelles sont les affirmations justes énumérées ci-dessous :<br />]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[Une variable dénote tantôt une <span style="text-decoration: underline;">zone mémoire</span> à affecter ou une <span style="text-decoration: underline;">interprétation </span>de cette zone selon qu'elle est placé à <span style="font-weight: bold;">gauche</span> ou à <span style="font-weight: bold;">droite</span> de l'opérateur d'affectation.]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.0000000</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>false</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>none</answernumbering>
+    <correctfeedback format="html">
+      <text></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text></text>
+    </incorrectfeedback>
+    <answer fraction="-50" format="html">
+      <text>L'instruction 2 est une comparaison</text>
+      <feedback format="html">
+        <text>Le symbole '=' dénote dans nombre de langages (PHP, C, Java...), une opération d'affectation.</text>
+      </feedback>
+    </answer>
+    <answer fraction="30" format="html">
+      <text>L'instruction 1 est une affectation</text>
+      <feedback format="html">
+        <text>Le symbole '=' dénote dans nombre de langages (PHP, C, Java...), une opération d'affectation.</text>
+      </feedback>
+    </answer>
+    <answer fraction="-25" format="html">
+      <text>Ces 2 instructions n'impactent pas (ne modifient pas l'état de) la mémoire</text>
+      <feedback format="html">
+        <text>Faux, l'affectation agit directement sur l'état de la mémoire.</text>
+      </feedback>
+    </answer>
+    <answer fraction="-25" format="html">
+      <text>L'instruction 2 est erronée, car $y n'a pas de valeur</text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="50" format="html">
+      <text>Une fois l'instruction 2 réalisée, les variables $x et $y ont même valeur.</text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="-25" format="html">
+      <text>Le programme affiche l'état des variables $x et $y</text>
+      <feedback format="html">
+        <text><![CDATA[Seul l'état de la mémoire est impacté, ici aucune donnée n'est transmise sur le canal de sortie.<br />]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="20" format="html">
+      <text>L'instruction 1 est exécutée avant l'instruction 2</text>
+      <feedback format="html">
+        <text><![CDATA[La séquence est la structure de contrôle par défaut du flux d'exécution.<br />
+<div style="text-align: center;"> </div>]]></text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- question: 129  -->
+  <question type="multichoice">
+    <name>
+      <text>valeur et variable (2)</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[Voici un bloc d'instructions contenant 3 instructions :<br /><span style="font-family: courier new,courier,monospace;">&lt;?php</span><br style="font-family: courier new,courier,monospace;" /><span style="font-family: courier new,courier,monospace;"> $x = TRUE;</span> <span style="font-family: courier new,courier,monospace;">// <span style="font-style: italic;">instruction 1</span></span><br style="font-family: courier new,courier,monospace;" /><span style="font-family: courier new,courier,monospace;"> $y = FALSE;</span><span style="font-family: courier new,courier,monospace;"> // <span style="font-style: italic;">instruction 2</span></span><br /><span style="font-family: courier new,courier,monospace;"></span><span style="font-family: courier new,courier,monospace;">$z = TRUE || $y ;</span><span style="font-family: courier new,courier,monospace;"> // <span style="font-style: italic;">instruction 3</span></span><br style="font-family: courier new,courier,monospace;" /> <span style="font-family: courier new,courier,monospace;"></span><span style="font-family: courier new,courier,monospace;">?&gt;</span><br />Déterminer quelles sont les affirmations justes énumérées ci-dessous :]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.1000000</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>false</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>none</answernumbering>
+    <correctfeedback format="html">
+      <text></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text></text>
+    </incorrectfeedback>
+    <answer fraction="0" format="html">
+      <text>La variable $z est de type string</text>
+      <feedback format="html">
+        <text>Généralement, en php, le type d'une variable n'est pas déclaré par le programmeur. Il est décidé au moment de l'exécution par PHP, en fonction du contexte dans lequel la variable est utilisée. La réponse est donc non, le type de la variable $z est booléen car il résulte de l'évaluation de l'expression booléenne à droite de l'opérateur d'affectation.</text>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text>Une fois la troisième instruction exécutée, $z vaut TRUE</text>
+      <feedback format="html">
+        <text>l'évaluation de l'expression booléenne (TRUE ou FALSE) vaut TRUE.</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>Une fois l'instruction 3 exécutée, $z vaut la chaîne de caractères: 'TRUE || FALSE'</text>
+      <feedback format="html">
+        <text><![CDATA[Non, le terme à droite de l'affection n'est pas une chaîne de caractère dans laquelle $y serait &quot;remplacée par sa valeur&quot;.]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>Seules, les deux premières variables sont de type booléen.</text>
+      <feedback format="html">
+        <text>Non. Le type d'une variable n'est pas déclaré par le programmeur. Il est décidé au moment de l'exécution par PHP, en fonction du contexte dans lequel la variable est utilisée. La réponse est donc non, le type de la variable $z est aussi booléen car il résulte de l'évaluation de l'expression booléenne à droite de l'opérateur d'affectation.</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>Une fois l'instruction 3 exécutée, $z vaut la chaîne de caractères: 'TRUE || $y'</text>
+      <feedback format="html">
+        <text>Non, l'expression est booléenne, le résultat de son évaluation est booléen.</text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- question: 130  -->
+  <question type="multichoice">
+    <name>
+      <text>valeur et variable (3)</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[Voici un bloc d'instructions contenant 3 instructions :<br /><span style="font-family: courier new,courier,monospace;">&lt;?php</span><br style="font-family: courier new,courier,monospace;" /><span style="font-family: courier new,courier,monospace;"> $x = 3;</span> <span style="font-family: courier new,courier,monospace;">// <span style="font-style: italic;">instruction 1</span></span><br style="font-family: courier new,courier,monospace;" /><span style="font-family: courier new,courier,monospace;"> $y = (3 == $x)</span><span style="font-family: courier new,courier,monospace;"> ; // <span style="font-style: italic;">instruction 2</span></span><br /><span style="font-family: courier new,courier,monospace;"></span><span style="font-family: courier new,courier,monospace;">$z = ( !($x) ) ;</span><span style="font-family: courier new,courier,monospace;"> // <span style="font-style: italic;">instruction 3</span></span><br style="font-family: courier new,courier,monospace;" /> <span style="font-family: courier new,courier,monospace;"></span><span style="font-family: courier new,courier,monospace;">?&gt;</span><br />Déterminer quelles sont les affirmations justes énumérées ci-dessous :]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.0000000</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>false</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>none</answernumbering>
+    <correctfeedback format="html">
+      <text></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text></text>
+    </incorrectfeedback>
+    <answer fraction="-20" format="html">
+      <text>Le code génère une erreur à l'éxécution.</text>
+      <feedback format="html">
+        <text><![CDATA[Non, il s'agit pour l'instruction 1, d'une affectation d'un entier à une variable $x.<br />Quant aux suivantes, il s'agit de l'évaluation d'expressions booléennes que l'on affecte à des variables.<br />]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="-10" format="html">
+      <text>Une fois la troisième instruction exécutée, $z vaut -3</text>
+      <feedback format="html">
+        <text><![CDATA[Non. L'expression booléenne évaluée est : la négation de ( 3 est-il égale à 3 ? ) . Ce qui donne pour valeur: FALSE qui est affectée à $z. <br />]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="-10" format="html">
+      <text>Une fois la troisième instruction exécutée, $z vaut 3</text>
+      <feedback format="html">
+        <text>Non. L'expression booléenne évaluée est : la négation de ( 3 est-il égale à 3 ? ) . Ce qui donne pour valeur: FALSE qui est affectée à $z.</text>
+      </feedback>
+    </answer>
+    <answer fraction="-50" format="html">
+      <text>la première variable est $x de type booléen.</text>
+      <feedback format="html">
+        <text><![CDATA[Non. Le type d'une variable n'est pas déclaré par le programmeur. Il est décidé au moment de l'exécution par PHP, en fonction du contexte dans lequel la variable est utilisée. La réponse est donc non, le type de la variable $x est: int (entier).<br />]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text>Une fois la troisième instruction exécutée, $z vaut FALSE</text>
+      <feedback format="html">
+        <text><![CDATA[Non. L'expression booléenne évaluée est : la négation(non) de ( 3 est-il égale à 3? ) . <br />Ce qui donne pour valeur: non de ( vrai ) donc faux. $z vaudra FALSE.<br />]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>Une fois la troisième instruction exécutée, $z vaut TRUE</text>
+      <feedback format="html">
+        <text><![CDATA[Non. L'expression booléenne évaluée est : la négation de ( 3 est-il égale à 3 ? ) . Ce qui donne pour valeur: FALSE qui est affectée à $z. Même s'il s'agit bien d'un booléen, le caractère ! &quot;inverse&quot; la valeur booléenne.]]></text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- question: 150  -->
+  <question type="multichoice">
+    <name>
+      <text>valeur et variable (3)</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[Voici un bloc d'instructions contenant 3 instructions :<br /><span style="font-family: courier new,courier,monospace;">&lt;?php</span><br style="font-family: courier new,courier,monospace;" /><span style="font-family: courier new,courier,monospace;"> $x = 3;</span> <span style="font-family: courier new,courier,monospace;">// <span style="font-style: italic;">instruction 1</span></span><br style="font-family: courier new,courier,monospace;" /><span style="font-family: courier new,courier,monospace;"> $y = (3 == $x)</span><span style="font-family: courier new,courier,monospace;"> ; // <span style="font-style: italic;">instruction 2</span></span><br /><span style="font-family: courier new,courier,monospace;"></span><span style="font-family: courier new,courier,monospace;">$z = ( !($x) ) ;</span><span style="font-family: courier new,courier,monospace;"> // <span style="font-style: italic;">instruction 3</span></span><br style="font-family: courier new,courier,monospace;" /> <span style="font-family: courier new,courier,monospace;"></span><span style="font-family: courier new,courier,monospace;">?&gt;</span><br />Déterminer quelles sont les affirmations justes énumérées ci-dessous :]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.0000000</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>false</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>none</answernumbering>
+    <correctfeedback format="html">
+      <text></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text></text>
+    </incorrectfeedback>
+    <answer fraction="-20" format="html">
+      <text>Le code génère une erreur à l'éxécution.</text>
+      <feedback format="html">
+        <text><![CDATA[Non, il s'agit pour l'instruction 1, d'une affectation d'un entier à une variable $x.<br />Quant aux suivantes, il s'agit de l'évaluation d'expressions booléennes que l'on affecte à des variables.<br />]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="-10" format="html">
+      <text>Une fois la troisième instruction exécutée, $z vaut -3</text>
+      <feedback format="html">
+        <text><![CDATA[Non. L'expression booléenne évaluée est : la négation de ( 3 est-il égale à 3 ? ) . Ce qui donne pour valeur: FALSE qui est affectée à $z. <br />]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="-10" format="html">
+      <text>Une fois la troisième instruction exécutée, $z vaut 3</text>
+      <feedback format="html">
+        <text>Non. L'expression booléenne évaluée est : la négation de ( 3 est-il égale à 3 ? ) . Ce qui donne pour valeur: FALSE qui est affectée à $z.</text>
+      </feedback>
+    </answer>
+    <answer fraction="-50" format="html">
+      <text>la première variable est $x de type booléen.</text>
+      <feedback format="html">
+        <text><![CDATA[Non. Le type d'une variable n'est pas déclaré par le programmeur. Il est décidé au moment de l'exécution par PHP, en fonction du contexte dans lequel la variable est utilisée. La réponse est donc non, le type de la variable $x est: int (entier).<br />]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text>Une fois la troisième instruction exécutée, $z vaut FALSE</text>
+      <feedback format="html">
+        <text><![CDATA[Non. L'expression booléenne évaluée est : la négation(non) de ( 3 est-il égale à 3? ) . <br />Ce qui donne pour valeur: non de ( vrai ) donc faux. $z vaudra FALSE.<br />]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>Une fois la troisième instruction exécutée, $z vaut TRUE</text>
+      <feedback format="html">
+        <text><![CDATA[Non. L'expression booléenne évaluée est : la négation de ( 3 est-il égale à 3 ? ) . Ce qui donne pour valeur: FALSE qui est affectée à $z. Même s'il s'agit bien d'un booléen, le caractère ! &quot;inverse&quot; la valeur booléenne.]]></text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- question: 149  -->
+  <question type="multichoice">
+    <name>
+      <text>variable</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[Voici une expression : <br />
+<div style="margin-left: 40px;"><br /><span style="font-family: courier new,courier,monospace;">1==1</span><br /><br /></div>Parmi les différentes propositions, sélectionner celles que<br />vous considérer comme justes.<br /><br />]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[C'est une expression dont la valeur est prise dans l'ensemble {true, false}<br />c'est donc une expression booléenne.]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.1000000</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>false</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>none</answernumbering>
+    <correctfeedback format="html">
+      <text></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text></text>
+    </incorrectfeedback>
+    <answer fraction="50" format="html">
+      <text>C'est une expression booléenne</text>
+      <feedback format="html">
+        <text><![CDATA[<style type="text/css"> &amp;amp;lt;!-- @page { margin: 2cm } P { margin-bottom: 0.21cm } --&amp;amp;gt; </style>
+<p>Une expression est qualifiée de <em>booléenne</em> si sa valeur ne peut être que soit vrai (true) soit faux (false), exclusivement. Elle tient son nom du mathématicien et logicien anglais Georges Bool (1815-1864).</p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="-33.33333" format="html">
+      <text>C'est une expression coréenne</text>
+      <feedback format="html">
+        <text>Heu, là vous vous trompez de ligue...</text>
+      </feedback>
+    </answer>
+    <answer fraction="-100" format="html">
+      <text>C'est une affectation</text>
+      <feedback format="html">
+        <text><![CDATA[Ne pas confondre l'opérateur d'affectation (<span style="font-family: courier new,courier,monospace;">=</span>) avec l'opérateur booléen de test d'égalité (<span style="font-family: courier new,courier,monospace;">==</span>). (de plus la partie gauche n'est pas assignable) <br />]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="25" format="html">
+      <text>C'est une comparaison entre deux constantes littérales de même valeur</text>
+      <feedback format="html">
+        <text><![CDATA[Les valeurs placées &quot;en dur&quot; dans le code sont appelées <span style="font-weight: bold;">constantes littérales</span>, dans l'exemple <span style="font-weight: bold;">1</span> est une constante littérale de type entier, et vaut... un.]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="-25" format="html">
+      <text>Il est interdit de comparer une constante avec elle-même</text>
+      <feedback format="html">
+        <text>Ce n'est pas interdit, juste inutile !</text>
+      </feedback>
+    </answer>
+    <answer fraction="25" format="html">
+      <text>La valeur de l'expression sera toujours évaluées à TRUE</text>
+      <feedback format="html">
+        <text>Fort heureusement !</text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- question: 131  -->
+  <question type="multichoice">
+    <name>
+      <text>variable et affectations (0)</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<span style="font-family: courier new,courier,monospace;">&lt;?php</span><br style="font-family: courier new,courier,monospace;" /><span style="font-family: courier new,courier,monospace;"> $prixHT=100;</span><br style="font-family: courier new,courier,monospace;" /><span style="font-family: courier new,courier,monospace;"> $fraisTransport=10;</span><br style="font-family: courier new,courier,monospace;" /><span style="font-family: courier new,courier,monospace;"> $tva=20;</span><br style="font-family: courier new,courier,monospace;" /><span style="font-family: courier new,courier,monospace;"> $total=$prixHT+$fraisTransport+$TVA;</span><br style="font-family: courier new,courier,monospace;" /><span style="font-family: courier new,courier,monospace;">echo $total;</span><br style="font-family: courier new,courier,monospace;" /><span style="font-family: courier new,courier,monospace;">echo ' ' . $prixHT . ' ' . $TVA;</span><br style="font-family: courier new,courier,monospace;" /><span style="font-family: courier new,courier,monospace;">?&gt;</span><br />A l'exécution, ce programme enverra sur la sortie standard (la console ici) :<br />]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[Les langages de programmation sont souvent sensibles à la casse des caractères.<br />C'est le cas de PHP. Selon la configuration du système, les variables utilisées mais non renseignées peuvent ne pas générer d'avertissement !<br />]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.0000000</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>false</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>none</answernumbering>
+    <correctfeedback format="html">
+      <text></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text></text>
+    </incorrectfeedback>
+    <answer fraction="-50" format="html">
+      <text>100 100 20</text>
+      <feedback format="html">
+        <text>La variable $TVA n'existe pas !</text>
+      </feedback>
+    </answer>
+    <answer fraction="-50" format="html">
+      <text>130 100 20</text>
+      <feedback format="html">
+        <text>La variable $TVA n'existe pas !</text>
+      </feedback>
+    </answer>
+    <answer fraction="-50" format="html">
+      <text>120 100 20</text>
+      <feedback format="html">
+        <text>La variable $TVA n'existe pas !</text>
+      </feedback>
+    </answer>
+    <answer fraction="60" format="html">
+      <text>110 100</text>
+      <feedback format="html">
+        <text>La variable $TVA n'existe pas ! sa valeur est interprétée comme valeur neutre pour l'addition ici.</text>
+      </feedback>
+    </answer>
+    <answer fraction="40" format="html">
+      <text>seulement deux valeurs numériques</text>
+      <feedback format="html">
+        <text>Par défaut, la valeur FALSE n'a pas de représentation en PHP.</text>
+      </feedback>
+    </answer>
+    <answer fraction="-40" format="html">
+      <text>trois valeurs numériques</text>
+      <feedback format="html">
+        <text>Par défaut, la valeur FALSE (ou zéro) n'a pas de représentation en PHP !</text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- question: 132  -->
+  <question type="multichoice">
+    <name>
+      <text>variable et affectations (1)</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[Soit le code suivant :<br /><span style="font-family: courier new,courier,monospace;">&lt;?php</span><br style="font-family: courier new,courier,monospace;" /><span style="font-family: courier new,courier,monospace;"> $x = 2;</span><br style="font-family: courier new,courier,monospace;" /><span style="font-family: courier new,courier,monospace;"> $y = 3;</span><br style="font-family: courier new,courier,monospace;" /><span style="font-family: courier new,courier,monospace;"> $x = $y;</span><br style="font-family: courier new,courier,monospace;" /><span style="font-family: courier new,courier,monospace;"> $y = $x;</span><br style="font-family: courier new,courier,monospace;" /><span style="font-family: courier new,courier,monospace;"> echo $x . ' =?= ' . ($y + 1);</span><br style="font-family: courier new,courier,monospace;" /><span style="font-family: courier new,courier,monospace;">?&gt;</span><br />Déterminez parmi les propositions ci-dessous, celles qui sont vraies :<br />]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text>La séquence est la structure de contrôle par défaut du flux d'exécution.</text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.1000000</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>false</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>none</answernumbering>
+    <correctfeedback format="html">
+      <text></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text></text>
+    </incorrectfeedback>
+    <answer fraction="-40" format="html">
+      <text>La valeur d'une variable est la valeur cumulée de toutes ses affections.</text>
+      <feedback format="html">
+        <text><![CDATA[L'opération d'affectation <span style="font-weight: bold;">écrase (remplace) toujours</span> la valeur précédente.<br />]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="-30" format="html">
+      <text>La valeur d'une variable dépend toujours de la valeur obtenue lors de sa première affection.</text>
+      <feedback format="html">
+        <text>L'initialisation d'une variable n'est pas systématiquement nécessaire !</text>
+      </feedback>
+    </answer>
+    <answer fraction="60" format="html">
+      <text>La valeur d'une variable dépend toujours de la valeur obtenue lors de sa dernière affection.</text>
+      <feedback format="html">
+        <text>Vrai, même dans les langages objet, où une variable est de type référence (sa valeur est un pointeur vers un objet en mémoire)</text>
+      </feedback>
+    </answer>
+    <answer fraction="40" format="html">
+      <text>A un instant t, une variable a une et une seule valeur.</text>
+      <feedback format="html">
+        <text>Vrai, même pour les tableaux où une variable de type tableau pointe toujours sur un et un seul tableau en mémoire.</text>
+      </feedback>
+    </answer>
+    <answer fraction="-50" format="html">
+      <text>l'exécution du programme génère la sortie : 3 =?= 3</text>
+      <feedback format="html">
+        <text><![CDATA[Une variable, à un instant t, n'a toujours qu'une et une seule valeur, qui dépend de sa derrière affectation dans le bloc de la séquence auquel elle appartient.<br />]]></text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- question: 133  -->
+  <question type="multichoice">
+    <name>
+      <text>variables et affectations (2)</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[Soit le code suivant :<br /><span style="font-family: courier new,courier,monospace;">&lt;?php</span><br style="font-family: courier new,courier,monospace;" /><span style="font-family: courier new,courier,monospace;"> $x = 4;</span><br style="font-family: courier new,courier,monospace;" /><span style="font-family: courier new,courier,monospace;"> $y = 3;</span><br style="font-family: courier new,courier,monospace;" /><span style="font-family: courier new,courier,monospace;"> $x = $y++;</span><span style="font-family: courier new,courier,monospace;"></span><br style="font-family: courier new,courier,monospace;" /><span style="font-family: courier new,courier,monospace;"> echo ($x + $y);</span><br style="font-family: courier new,courier,monospace;" /><span style="font-family: courier new,courier,monospace;">?&gt;</span><br />Déterminez parmi les propositions ci-dessous, celles qui sont vraies :<br />]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[L'exécution du programme affiche sur la sortie 7.<br />
+<ol>
+  <li>$x reçoit 4</li>
+  <li>$y reçoit 3</li>
+  <li>Deux temps:<br /></li>
+  <ol>
+    <li>$x reçoit la valeur de $y soit 3<br /></li>
+    <li>$y est incrémenté de 1 qui vaudra alors 4 mais <span style="font-weight: bold; text-decoration: underline;">après exécution de l'affectation.</span><br /></li>
+  </ol>
+  <li>affiche 7 . </li>
+  <ol>
+    <li>Évaluation de la somme de $x et $y , (3+4) soit 7.</li>
+    <li>Affichage du résultat de l'évaluation : 7.<br /></li>
+  </ol>
+</ol>]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.0000000</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>false</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>none</answernumbering>
+    <correctfeedback format="html">
+      <text></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text></text>
+    </incorrectfeedback>
+    <answer fraction="60" format="html">
+      <text>l'exécution du programme affiche : 7</text>
+      <feedback format="html">
+        <text>OUI.</text>
+      </feedback>
+    </answer>
+    <answer fraction="-20" format="html">
+      <text>l'exécution du programme affiche : 8</text>
+      <feedback format="html">
+        <text>NON.</text>
+      </feedback>
+    </answer>
+    <answer fraction="-10" format="html">
+      <text>Aprés exécution de l'instruction ($x = $y++;) $x vaut 4.</text>
+      <feedback format="html">
+        <text>Non</text>
+      </feedback>
+    </answer>
+    <answer fraction="30" format="html">
+      <text>Aprés exécution de l'instruction ($x = $y++;) $y vaut 4.</text>
+      <feedback format="html">
+        <text>Oui.</text>
+      </feedback>
+    </answer>
+    <answer fraction="-60" format="html">
+      <text>l'exécution du programme affiche la chaîne de caractère: '$x + $y'</text>
+      <feedback format="html">
+        <text><![CDATA[Non. La dernière instruction réalise la somme du contenu de deux variables de type <span style="font-style: italic;">entier</span> avant d'en afficher le résultat. Le typage des variables se faisant dynamiquement au moment de l'affectation selon le type le plus probable de la valeur rencontrée.]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="10" format="html">
+      <text>Aprés exécution de l'instruction ($x = $y++;) $x vaut 3.</text>
+      <feedback format="html">
+        <text>Oui, l'incrémentation de $y se fait après l'affectation.</text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- question: 134  -->
+  <question type="multichoice">
+    <name>
+      <text>variables et affectations (3)</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[Soit le code suivant :<br /><span style="font-family: courier new,courier,monospace;">&lt;?php<br />$x = 7;<br />$y = 2;<br />$y = ($x += $y);<br />echo $y;<br />?&gt;</span><span style="font-family: courier new,courier,monospace;"></span><br />Déterminez parmi les propositions ci-dessous, celles qui sont vraies :<br />]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[L'exécution du programme affiche sur la sortie la chaîne de caractère lulu.<br />
+<ol>
+  <li>$x reçoit <span style="font-weight: bold;">7</span></li>
+  <li>$y reçoit<span style="font-weight: bold;"> 2<br /></span></li>
+  <li>deux temps:<br /></li>
+  <ol>
+    <li>$x et concaténé avec la valeur y: $x<span style="font-weight: bold;"> </span>vaut<span style="font-weight: bold;"> 9</span><br /></li>
+    <li>$y reçoit la valeur de $x : <span style="font-weight: bold;">9</span><br /></li>
+  </ol>
+  <li>Affichage de la valeur de la variable $y : <span style="font-weight: bold;">9</span><br /></li>
+  <ol>&nbsp;
+  </ol>
+</ol>]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>1.0000000</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>false</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <correctfeedback format="html">
+      <text></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text></text>
+    </incorrectfeedback>
+    <answer fraction="-30" format="html">
+      <text>Le code de ce programme génère une erreur à l'exécution.</text>
+      <feedback format="html">
+        <text><![CDATA[Non. Le code de ce programme est valide.<br />]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="-20" format="html">
+      <text>l'exécution du programme affiche : TRUE</text>
+      <feedback format="html">
+        <text>Non. $y prend le type entier.</text>
+      </feedback>
+    </answer>
+    <answer fraction="-20" format="html">
+      <text>Aprés exécution de l'instruction ( $y = ($x+=$y); ) $x vaut 7</text>
+      <feedback format="html">
+        <text>Non.</text>
+      </feedback>
+    </answer>
+    <answer fraction="50" format="html">
+      <text>l'exécution du programme affiche : 9</text>
+      <feedback format="html">
+        <text>Oui.</text>
+      </feedback>
+    </answer>
+    <answer fraction="50" format="html">
+      <text>Aprés exécution de l'instruction ( $y = ($x+=$y); ) $x vaut 9</text>
+      <feedback format="html">
+        <text><![CDATA[Oui. <br />]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="-20" format="html">
+      <text>l'exécution du programme affiche : 7</text>
+      <feedback format="html">
+        <text>Non:</text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- question: 135  -->
+  <question type="multichoice">
+    <name>
+      <text>variables et affectations (4)</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[Soit le code suivant :<br /><span style="font-family: courier new,courier,monospace;">&lt;?php<br />$x = 'lu';<br />$y = ($x .= $x);<br />echo $y;<br />?&gt;</span><span style="font-family: courier new,courier,monospace;"></span><br />Déterminez parmi les propositions ci-dessous, celles qui sont vraies :<br />]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[L'exécution du programme affiche sur la sortie la chaîne de caractère lulu.<br />
+<ol>
+  <li>$x reçoit <span style="font-weight: bold;">lu</span><br /></li>
+  <li>deux temps:<br /></li>
+  <ol>
+    <li>$x et concaténé avec sa valeur avec concaténation: <span style="font-weight: bold;">lulu</span><br /></li>
+    <li>$y reçoit la valeur <span style="font-weight: bold;">lulu</span><br /></li>
+  </ol>
+  <li>Affichage de la valeur de la variable $y : <span style="font-weight: bold;">lulu</span><br /></li>
+  <ol>&nbsp;
+  </ol>
+</ol>]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>1.0000000</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>false</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <correctfeedback format="html">
+      <text></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text></text>
+    </incorrectfeedback>
+    <answer fraction="-40" format="html">
+      <text>Le code de ce programme génère une erreur à l'éxécution.</text>
+      <feedback format="html">
+        <text>Non.</text>
+      </feedback>
+    </answer>
+    <answer fraction="60" format="html">
+      <text>L'exécution du programme affiche : lulu</text>
+      <feedback format="html">
+        <text>Oui.</text>
+      </feedback>
+    </answer>
+    <answer fraction="-30" format="html">
+      <text>Aprés exécution de l'instruction ( $y = ($x.=$x); ) $x vaut lu.</text>
+      <feedback format="html">
+        <text>Non</text>
+      </feedback>
+    </answer>
+    <answer fraction="-30" format="html">
+      <text>L'exécution du programme affiche : ul</text>
+      <feedback format="html">
+        <text>Non.</text>
+      </feedback>
+    </answer>
+    <answer fraction="40" format="html">
+      <text>Une fois initialisée, $y est de type chaîne de caractères.</text>
+      <feedback format="html">
+        <text><![CDATA[Oui. <br />]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="-20" format="html">
+      <text>l'exécution du programme affiche : TRUE</text>
+      <feedback format="html">
+        <text>Non:</text>
+      </feedback>
+    </answer>
+  </question>
+
+</quiz>

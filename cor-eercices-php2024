@@ -1,0 +1,318 @@
+= Correction exercices PHP
+// Activation de la numérotaion des sections :
+:sectnums:
+//
+// Attributs du sommaire :
+:toc: left
+:toclevels: 5
+:toc-title: Sommaire
+//
+// Localisation des images :
+:imagesdir: ./assets/images
+//
+// Option d'affichage des codes sources :
+:source-highlighter: rouge
+:pygments-style: manni
+:pygments-linenums-mode: inline
+
+
+
+== tarif réduit
+
+[source,php]
+----
+<?php
+
+ $age = readline ( " Entrez votre age : \n") ;
+
+ if ($age < 18 or $age > 65)
+    echo ("tarif reduit \n");
+ else
+    echo ("tarif normal \n") ;
+?>
+----
+
+== Départements
+
+[source,php]
+----
+<?php
+
+ do {
+    $dep = readline("Entrer votre département \n") ;
+ } while ($dep < 1 or $dep > 99 );
+
+ $lesDepartements = [75,77,78,91,92,93,94];
+
+ if (in_array($dep, $lesDepartements))
+    echo "vous habitez en Île-De-France \n" ;
+else
+    echo "vous n'habitez pas en Île-De-France \n" ;
+?>
+----
+
+== produit
+
+[source,php]
+----
+<?php
+
+ $nombre1 = readline( "entrer un premier nombre : ");
+ $nombre2 = readline( "entrer un second nombre : ");
+
+ if (($nombre1 > 0 AND $nombre2 > 0) OR ($nombre1 < 0 AND $nombre2 < 0))
+    echo ("resultat positif \n");
+
+ else
+    echo ("resultat négatif \n");
+?>
+
+----
+
+== racine carrée
+
+[source,php]
+----
+<?php
+
+ $a = readline( "entrer un premier nombre : ");
+ $b = readline( "entrer un second nombre : ");
+
+ if ($a >= 0 && $b >= 0) {
+        $produit = $a * $b;
+        $racineCarree = sqrt($produit);
+        echo "La racine carrée du produit de $a par $b est : $racineCarree";
+ } else {
+        echo "Erreur : Les nombres doivent être positifs.";
+    }
+?>
+
+----
+
+==  bissextile
+
+[source,php]
+----
+<?php
+
+ $annee = readline( "entrer une année : ");
+ 
+ if (($annee % 4 == 0 && $annee % 100 != 0) || ($annee % 400 == 0)) {
+        echo "année bixestile \n" ;
+  } 
+  else {
+        echo "année non bixestile \n" ;
+  } 
+    
+?>
+----
+
+== compteur
+
+[source,php]
+----
+<?php
+
+ $fin = readline( "entrer un nombre : ");
+ 
+ for ( $i = 1; $i <= $fin ; $i++ ){
+    echo "$i \n" ;
+ }
+    
+?>
+----
+
+== pair ou impair
+
+
+[source,php]
+----
+<?php
+
+ $nb = readline( "entrer un nombre : ");
+
+ if ( $nb % 2 == 0 )
+    echo "nombre pair \n" ;
+ else
+    echo "nombre impair \n" ;
+ 
+ for ( $i = $nb; $i <= ($nb + 20) ; $i+=2 ){
+    echo "$i \n" ;
+ }
+    
+?>
+----
+
+==  multiple
+
+[source,php]
+----
+<?php
+ $nb = readline("entrer un nombre  : ");
+ $fin = readline("afficher les multiples jusqu'à : ");
+ 
+ for ($i = $nb; $i <= $fin ; $i +=$nb){
+     echo "$i \n";
+ }
+ 
+?>
+----
+
+== aléatoire
+
+[source,php]
+----
+<?php
+
+ $val = rand (0,50);
+ echo "$val \n"; //affichage de la valeur pour tester le programme
+ $essai = 0 ;
+
+ do{
+
+    $valSaisie = readline ("Trouver le nombre aléatoire compris entre 0 et 50 : \n");
+    $essai++ ;
+    
+    if ($valSaisie > $val )
+        echo " trop grand \n";
+    elseif ($valSaisie < $val )
+        echo " trop petit \n";
+
+ }while ($valSaisie != $val and $essai < 7);
+ 
+ if ( $essai == 7)
+    echo "perdu \n";
+ else
+    echo( "Gagne ! Au bout de $essai essai(s). \n");
+?>
+----
+
+== fonction 1 : longueur phrase
+
+[source,php]
+----
+<?php
+
+ $phrase = readline("entrer une phrase :");
+ 
+ if (strlen($phrase) < 20 )
+    echo " phrase courte \n";
+ elseif (strlen($phrase) < 50 )
+    echo " phrase de longueur moyenne \n";
+ else
+    echo " phrase longue \n";
+
+?>
+----
+
+== fonction 2 : mot
+
+[source,php]
+----
+<?php
+
+ $mot = readline("entrer un mot :");
+ $dernierIndice = strlen($mot) - 1 ;
+ $longueur = strlen($mot) ;
+
+ echo "la première lettre du mot est $mot[0] \n";
+ echo "la dernière lettre du mot est $mot[$dernierIndice] \n";
+ echo "la longueur du mot est de $longueur \n";
+?>
+----
+
+== fonction 3 : mot
+
+[source,php]
+----
+<?php
+
+ $mot = readline("entrer un mot :");
+ $dernierIndice = strlen($mot) - 1 ;
+ $longueur = strlen($mot) ;
+
+ echo "la première lettre du mot est $mot[0] \n";
+ echo "la dernière lettre du mot est $mot[$dernierIndice] \n";
+ echo "la longueur du mot est de $longueur \n";
+?>
+----
+
+== fonction 4 : nom prénom
+
+[source,php]
+----
+<?php
+
+ $nom = readline("entrer un nom :");
+ $prenom = readline("entrer un prénom :");
+ 
+ $longueurNom = strlen($nom) ;
+ $longueurPrenom = strlen($prenom) ;
+
+ $nomMajuscule = strtoupper($nom) ;
+ $prenomMinuscule = strtolower($prenom);
+ $premiereLettreMajuscule = ucfirst($prenomMinuscule);
+
+ echo "$nomMajuscule ($longueurNom) $premiereLettreMajuscule ($longueurPrenom)  \n";
+ 
+?>
+----
+
+== fonction 5 : phrase coupée
+
+[source,php]
+----
+<?php
+
+ $phrase = readline("entrer une phrase :");
+
+ if (strlen($phrase) > 10) {
+    $phraseCoupee = substr($phrase, 0, 10) . '...';
+    echo "$phraseCoupee \n";
+  } 
+  else {
+    echo "$phrase \n";
+    }
+ 
+?>
+----
+
+== fonction 6 : phrase coupée
+
+[source,php]
+----
+<?php
+
+ $phrase = readline("entrer une phrase :");
+
+ if (strlen($phrase) > 10) {
+    $phraseCoupee = substr($phrase, 0, 10) . '...';
+    echo "$phraseCoupee \n";
+  } 
+  else {
+    echo "$phrase \n";
+    }
+ 
+?>
+----
+
+== fonction 6 : palindrome
+La solution ne fonctionne pas avec les caractères accentués
+[source,php]
+----
+<?php
+
+ $mot = readline("entrer un mot  :");
+ $motInverse = strrev($mot) ;
+ 
+ if ($mot == $motInverse) {
+    echo "$mot est un palindrome \n";
+  } 
+  else {
+    echo "$mot n'est pas un palindrome \n";
+    }
+ 
+?>
+----
+
+

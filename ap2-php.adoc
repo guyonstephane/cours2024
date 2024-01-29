@@ -1,0 +1,298 @@
+= PHP : Activité 2  PHP-MYSQL : Organisation du code
+
+:sectnums:
+:toc: left
+:toclevels: 4
+:toc-title: Sommaire
+:description: Exemple en Python
+:keywords: AsciiDoc Python
+:imagesdir: images
+:sourcedir: ./src/
+:source-highlighter: rouge 
+
+ 
+
+
+
+ifdef::backend-html5[]  
+++++
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+++++
+:html:
+endif::[]
+
+ifndef::html[]
+:source-highlighter: pygments
+:pygments-style: xcode
+endif::[] 
+
+:icons: font
+
+
+
+
+
+== Exemple d'organisation de votre code
+
+Dans votre répertoire public_html, vous devez avoir un dossier *acf2l* ( activité précédente ) 
+
+1. Télécharger l'archive mvc.zip et l'extraire dans votre répertoire *acf2l*. Cette archive contient plusieurs fichiers notamment le script listeSalaries.php et salaries.sql.
+
+2. Avec phpMyAdmin, exécuter le script salaries.sql dans votre base de données *acf2l*. Vous pouvez ensuite tester le script listeSalaries.php en modifiant éventuellement les données de connexion ( login et mot de passe).
+Dans votre base de données *ac2fl*, exécuter le script [red]#salaries.sql# ( annexe 1 ) :
+
+À partir de la table salariés, on souhaite obtenir la vue suivante :
+
+image::sal3.png[]
+
+Nous allons utiliser Boostrap sarter example pour présenter cette vue. À partir de cet example, nous allons créer un ficher header.html et footer.html :
+
+[,html]
+.header.html
+----
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Dropdown
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled">Disabled</a>
+            </li>
+          </ul>
+          <form class="d-flex" role="search">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+----
+
+[,html]
+.footer.html
+----
+<div class="container my-5">
+      <p>Copyright &copy; Mon application 2024</p>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
+----
+
+Ensuite la vue peut être obtenue avec le code suivant :
+
+[,php]
+.listeSalaries.php
+----
+<?php
+  require_once('header.html'); <1>
+
+  $conn = mysqli_connect('localhost','root','sio','salaries'); 
+  if ($conn->connect_error) { 
+	die("Connection failed: " . $conn->connect_error); } <2>
+ 
+      
+  $req1 = "SELECT * FROM salaries ;"; <3>
+  $result1 = mysqli_query($conn,$req1) or die (mysqli_error($conn));
+?>
+<div class="container my-5">
+<table class="table table-hover">
+  <th>id</th><th>nom</th><th>prenom</th><th>date-naissance</th>
+  <th>date-embauche</th><th>salaire</th><th>service</th>
+<?php
+  echo "<tr>";
+  while ( $ligne=mysqli_fetch_array($result1)){
+     echo "<tr>";
+        echo "<td>".$ligne['idsalaries']."</td>";
+        echo "<td>".$ligne['nom']."</td>";
+        echo "<td>".$ligne['prenom']."</td>";
+	      echo "<td>".$ligne['date_naissance']."</td>";
+        echo "<td>".$ligne['date_embauche']."</td>";
+        echo "<td>".$ligne['salaire']."</td>";
+	      echo "<td>".$ligne['service']."</td>";
+     echo "</tr>";
+  }
+?>
+</table>
+<?php
+  $req2 = "SELECT count(*) as nb FROM salaries ;"; <4>
+  $result2 = mysqli_query($conn,$req2) or die (mysqli_error($conn));
+  $ligne=mysqli_fetch_assoc($result2);
+  echo "<p>nombre de salariés : ".$ligne['nb']."</p>";
+
+  $req3 = "SELECT avg(salaire) as moyenne FROM salaries ;"; <5>
+  $result3 = mysqli_query($conn,$req3) or die (mysqli_error($conn));
+  $ligne=mysqli_fetch_assoc($result3);
+  echo "<p>salaire moyen : ".round($ligne['moyenne'])."</p>";
+
+?>
+</div>
+<?php
+  require_once('footer.html');
+?>
+----
+
+Ce code fonctionne mais il est difficile à maintenir et il peut vite devenir incompréhensible, si on souhaite par exemple afficher en plus du nombre de salariés, le salaire minimum, maximum etc..
+Il faut donc essayer de le réorganiser.
+
+
+== Organisation du code
+
+Dans un premier temps, la vue n'a pas à gérer l'accès à la base de données. Si votre site comporte plusieurs vues, vous allez devoir intervenir dans chaque vue en cas de modification des paramètres de connexion. Il est préférable de créer un fichier contenant les paramètres de connexion que l'on va inclure dans chaque vue avec un un require_once : require_once('connexion.php')
+
+[,php]
+.connexionBase.php
+----
+<?php
+    $conn = mysqli_connect('localhost','root','sio','salaries'); 
+    if ($conn->connect_error) { 
+	die("Connection failed: " . $conn->connect_error); }
+	
+	global $conn ; <1>
+?>
+----
+
+<1> Une variable n’est utilisable que dans le « bloc » où elle est définie et ne peut pas être utilisée ailleurs. Par « bloc » on entend : le fichier, une fonction, une classe. Pour pouvoir utiliser la variable $conn dans un autre fichier, on utilise le mot clé global $conn et pour l’appeler depuis un autre fichier, on fait de même.
+
+La vue contient le code xHTML. C'est la seule partie qui doit en contenir. Les requêtes SQL doivent être effectuées ailleurs, la vue doit se contenter d'afficher les résultats.
+Il faut don créer un  nouveau fichier qui va contenir toutes les fonctions qui se chargeront des requêtes SQL.
+Par exemple, si on souhaite afficher le nombre de salariés, on va définir une fonction que le nommera getNbSalaries qui retournera le résultat de la requête suivante :
+
+[,php]
+.fonctions.php
+----
+<?php
+  require_once("connection.php");
+
+  function getNbSalaries(){
+     global $conn ;
+     $req = "SELECT count(*) as nb FROM salaries ;"; <1>
+     $result = mysqli_query($conn,$req) or die (mysqli_error($conn));
+     $ligne=mysqli_fetch_assoc($result);
+     return $ligne['nb'];
+ }
+?>
+----
+
+<1> l'utilisation d'un alias *as nb* permet de rendre le code plus lisible, ainsi la clé *count()* est remplacée par la clé *nb*
+
+Lorsque la requête SQL retourne plusieurs lignes, la fonction devra retourner un tableau contenant toutes les lignes. Par exemple si l'on souhaite afficher la liste et les attributs de tous les salariés
+
+[,php]
+----
+function getAllSalaries(){
+    global $conn;
+    $listeSalaries = array(); <1>
+    $req = 'SELECT * FROM salaries'; 
+ 
+    $result = mysqli_query($conn,$req) or die (mysqli_error($conn));
+    while($ligne = mysqli_fetch_assoc($result)) { <2>
+	 $listeSalaries[]=$ligne; <3>
+    } 
+    return $listeSalaries; 
+  }   
+----
+
+
+<1> On initialise un tableau : [red]#$listeSalaries = array() ;#
+<2> On parcourt chaque ligne du résultat de la requête : 	
+          [red]#$while($ligne = mysqli_fetch_assoc($result))#
+<3> On ajoute au tableau chaque ligne : [red]#$listeSalaries[]=$ligne ;#
+
+
+le fichier [red]#listeSalaries.php# se présentera ainsi : 
+[,php]
+----
+<?php
+     require_once("header.html");
+     require_once("fonctions.php");
+
+     $nbSalaries = getNbSalaries();
+     $listeSalaries = getAllSalaries();
+
+?>
+
+  <div class="container my-5">
+  <table class="table table-hover">
+    <th>id</th> 
+    <th>nom</th>
+    <th>prenom</th>
+    <th>date-naissance</th>
+    <th>date-embauche</th>
+    <th>salaire</th>
+    <th>service</th>
+
+<?php foreach ($listeSalaries as $leSalarie): ?>    
+  <tr>      
+    <td><?php echo $leSalarie['idsalaries']; ?></td> 
+    <td><?php echo $leSalarie['nom']; ?></td>  
+    <td><?php echo $leSalarie['prenom']; ?></td>
+    <td><?php echo $leSalarie['date_naissance']; ?></td> 
+    <td><?php echo $leSalarie['date_embauche']; ?></td> 
+    <td><?php echo $leSalarie['salaire']; ?></td> 
+    <td><?php echo $leSalarie['service']; ?></td>
+  </tr> 
+<?php endforeach; ?>
+</table>
+
+  <p>nombre de salariés :<?php echo $nbSalaries ; ?></p>
+</div>
+
+<?php require_once('footer.html'); ?>
+----
+
+Cette organisation permet d'éviter les problèmes de concaténation et logiquement c'est au code HTML d'inclure du PHP et non l'inverse. 
+
+Notez que pour le foreach , il n'y a pas d'accolades :
+    
+    . l'accolade de début est remplacée par *:*
+    . l'accolade de fin est remplacée par un *endforeach ;*. 
+    . Toutes les structures de contrôles listées ci-dessus ont des syntaxes de fermetures similaires : endif, endfor, endforeach et endwhile
+
+
+
+== travail à faire : 
+
+1. Modifier le script listeSalaries.php pour séparer la vue du traitement des données. Vous allez devoir créer un fichier connexion.php et un ficher fonctions.php qui contiendra toutes les fonctions utiles à la vue.
+
+2. Écrire les fonctions qui vont vous permettre d'ajouter à la vue :
+. le salaire moyen
+. le salaire maximum et minimum
+. le nombre de salariés par service
+
+image::sal4.png[]
+
+3. en vous aidant de l'activité 1, proposez une vue permettant de réaliser toutes les opérations CRUD ( ajout d'un salarié, suppression et mise à jour ) 
+
+image::images/image.png[]
