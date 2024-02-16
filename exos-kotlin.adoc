@@ -1,0 +1,167 @@
+= Kotlin - exercices
+
+:sectnums:
+:toc: left
+:toclevels: 4
+:toc-title: Sommaire
+:description: Exemple en Python
+:keywords: AsciiDoc Python
+:imagesdir: ./images/
+:sourcedir: ./src/
+:source-highlighter: rouge 
+
+ 
+
+
+
+ifdef::backend-html5[]  
+++++
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+++++
+:html:
+endif::[]
+
+ifndef::html[]
+:source-highlighter: pygments
+:pygments-style: xcode
+endif::[] 
+
+:icons: font
+
+
+
+== Variables et expressions conditionnelles
+
+a) Bonjour... qui ?
+
+Écrire le programme Bonjour.kt qui demande à l'utilisateur de saisir son nom et qui affiche
+un message personnalisé ( « bonjour durand »). 
+
+b) Élémentaire mon cher
+
+Écrire un programme qui lit deux entiers et qui affiche leur somme, leur différence, leur produit
+et leur quotient (la division par 0 n'est pas traitée).
+
+
+==== tarif réduit
+
+Écrire un programme qui demande l’âge de l’utilisateur et lui indique s’il a droit au tarif réduit
+(moins de 26 ans).
+
+
+==== produit
+
+Concevoir un programme qui affiche le signe du produit de deux nombres ( positif ou négatif) saisis
+et ceci sans calculer leur produit. Le produit de 2 nombres est positif si les 2 nombres sont positifs ou les 2 nombres sont négatifs sinon il est négatif.
+
+exemple :
+
+ chiffre 1 --> -2 chiffre2 --> 5 ----- produit négatif
+
+ chiffre 1 --> 2 chiffre2 --> 4 ----- produit positif
+ 
+
+==== bissextile
+
+Écrire un programme qui permet de déterminer si une année saisie par l'utilisateur est bissextile. Une année est dite bissextile si c'est un multiple de 4, sauf si c'est un multiple de 100. Toutefois, elle est considérée comme
+bissextile si c'est un multiple de 400.
+
+== Les boucles 
+
+===  Compteur
+
+Ecrire un programme Compteur.php qui permet de compter et d'afficher les nombres de 1 jusqu'à 20.
+
+Améliorer le programme pour faire saisir à l'utilisateur jusqu'à quel chiffre il souhaite que le programme compte.
+
+=== pair ou impair
+
+Ecrire un programme qui demande à l'utilisateur de saisir un chiffre, le programme devra indiquer si ce chiffre est pair ou impair ( utilisé le modulo %) puis afficher les dix nombres pairs ou impairs suivant.
+
+Exemple si l'utilisateur saisie 10,
+
+le programme affichera > nombre pair >10 – 12 - 14 – 16 ......28
+
+===  multiple
+
+Écrire un programme qui affiche les multiples de 5 jusqu'à 50.
+Améliorez votre programme, cette fois il doit afficher les multiples d'un nombre saisi par l'utilisateur jusqu'à un nombre max que l'utilisateur aura aussi choisi.
+
+===  devinette
+
+Écrire un programme qui génère de manière aléatoire un nombre entier compris entre 0 et 100 ( val aleatoire = (0..10).random() // generated random from 0 to 10 included ) et qui invite un joueur à deviner ce nombre en utilisant le moins d'essais possible avec 7 possibilités maximum.
+A chaque essai, le programme répond trop grand, trop petit, gagné en n essais si le nombre et trouvé et perdu si le nombre d'essais a été dépassé.
+
+
+== les collections : tableau et liste
+
+Initialiser un tableau (arrayOf<Int>) de 10 entiers compris entre 1 et 100 choisis au hasard.
+    
+[,kotlin]
+----
+fun main() {
+    var tableau = arrayOf<Int>()
+    for(i in 1..10){
+        tableau += (1..100).random()
+    }
+    println(tableau.contentToString()) <1>
+}
+----
+<1> pour visualiser le contenu du tableau, vous devez utiliser la méthode *contentToString()* sinon vous n'afficherez que la référence en mémoire du tableau exemple : *[Ljava.lang.Integer;@380fb434* +
+
+    
+     
+    1. Ecrire le programme qui affiche la somme, le plus petit et le plus grand des éléments de ce tableau.(trouvez les bonnes méthodes ) 
+    2. Ajoutez la déclaration de 2 tableaux supplémentaires tabPair et tabImpair. Ajoutez le code qui copie les éléments pairs de tab dans tabPair, et les éléments impairs dans tabImpair. 
+    3. Afficher à l'aide d'une boucle *for* le contenu de chaque tableau.
+    4. Refaire le même exercice mais en utilisant les listes
+    
+== Les fonctions 
+
+=== fonction serie
+Ecrire la fonction serie() qui prend comme argument un nombre entier n et qui renvoie un tableau contenant les nombres entiers allant de 1 à n.
+
+Exemple : serie(5)
+
+entrée :  5 +
+sortie : (1, 2, 3, 4, 5)
+
+=== fonction serieInverse()
+
+Ecrire la fonction serieInverse() qui prend comme argument un entier n et qui renvoie un tableau contenant les nombres entiers allant de n à 1.
+
+Exemple : serieInverse(5) +
+entrée 5 +
+sortie : +
+(5, 4, 3, 2, 1)
+
+
+=== pair
+Ecrire la fonction tabPair() qui prend comme argument un tableau n
+de nombres entiers et qui renvoie un tableau ne contenant que les nombres pairs
+
+=== impair
+Ecrire la fonction tabImpair() qui prend comme argument un tableau n de nombres entiers et qui renvoie un tableau ne contenant que les nombres impairs
+
+=== parité
+Ecrire la fonction tabParite() qui prend comme argument un tableau n de nombres entiers et qui renvoie une map ayant 2 clés : la clé  'pair' ne contenant que les nombres pairs et la clé 'impair' ne contenant que les nombres impairs. 
+
+
+=== listeDiviseurs
+Ecrire la fonction listeDiviseurs() qui prend comme argument un nombre entier n et qui renvoie un tableau contenant tous les diviseurs du nombre n.
+
+=== estPremier
+Ecrire la fonction estPremier() qui prend comme argument un nombre entier n et qui renvoie True si n est un nombre premier et False sinon. Vous pouvez utiliser la fonction listeDiviseurs écrite précédemment sachant qu'un nombre premier n'a que 2 diviseurs ( 1 et lui-même ).
+
+=== estParfait
+Ecrire la fonction estParfait() qui prend comme argument un nombre entier n et qui renvoie True si n est un nombre parfait et False sinon. En arithmétique, un nombre parfait est un entier naturel égal à la moitié de la somme de ses diviseurs ou encore à la somme de ses diviseurs stricts. Exemple 6 est un nombre parfait car la somme des ses diviseurs stricts ( 1 + 2 + 3 ) = 6, 28 est également un nombre parfait ( 1 + 2 + 4 + 7 + 14 ) = 28. Les nombres parfaits sont rares, il n’en existe que trois inférieurs à 1000 qui sont 6, 28 et 496. Ensuite vient 8128, puis 33 550 336, vous pouvez donc initialiser un tableau avec ces nombres.
+
+
+=== sommeChriffres
+Écrire la fonction sommeChiffres() qui prend comme argument un nombre entier n et qui renvoie un entier représentant la somme des chiffres qui compose le nombre entier n. Exemple  n -> 125  somme chiffre : ( 1 + 2 + 5 ) = 8. Utiliser le modulo 10 et la fonction intval.
+
+=== nombreAmi
+Écrire la fonction nombreAmi() qui prend comme argument deux nombres entiers et qui renvoie True si ils sont amis et False sinon. Deux nombres seront amis si la somme des chiffres qui composent chaque nombre est identique. Exemple 66 ( 6 + 6 ) = 12 est ami avec 93 ( 9 + 3 ) = 12. Attention la notion mathématique des nombres amicaux est différente.
+
+
+

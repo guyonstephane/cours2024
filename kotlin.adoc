@@ -1,4 +1,4 @@
-= Correction exercices PHP
+= Kotlin 
 // Activation de la numérotaion des sections :
 :sectnums:
 //
@@ -17,57 +17,6 @@
 
 
 
-== tarif réduit
-
-[source,php]
-----
-<?php
-
- $age = readline ( " Entrez votre age : \n") ;
-
- if ($age < 18 or $age > 65)
-    echo ("tarif reduit \n");
- else
-    echo ("tarif normal \n") ;
-?>
-----
-
-== Départements
-
-[source,php]
-----
-<?php
-
- do {
-    $dep = readline("Entrer votre département \n") ;
- } while ($dep < 1 or $dep > 99 );
-
- $lesDepartements = [75,77,78,91,92,93,94];
-
- if (in_array($dep, $lesDepartements))
-    echo "vous habitez en Île-De-France \n" ;
-else
-    echo "vous n'habitez pas en Île-De-France \n" ;
-?>
-----
-
-== produit
-
-[source,php]
-----
-<?php
-
- $nombre1 = readline( "entrer un premier nombre : ");
- $nombre2 = readline( "entrer un second nombre : ");
-
- if (($nombre1 > 0 AND $nombre2 > 0) OR ($nombre1 < 0 AND $nombre2 < 0))
-    echo ("resultat positif \n");
-
- else
-    echo ("resultat négatif \n");
-?>
-
-----
 
 
 == Présentation & Origines

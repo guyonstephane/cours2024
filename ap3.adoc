@@ -93,9 +93,9 @@ Une fois connecté au serveur MySQL avec notre objet PDO, nous allons pouvoir co
 PDO distingue 2 types de requêtes : 
 
     1.  les requêtes de sélection : SELECT *->query($requete)*
-    2. les requêtes de modification - insertion : UPDATE – INSERT – DELETE *->exec($requete)*
+    2. les requêtes de modification - insertion : UPDATE – INSERT – DELETE *->execute($requete)*
     
-La différence entre ces deux méthodes est que *query()* retournera un jeu de résultats sous la forme d'un objet PDOStatement, alors que *exec()* retournera uniquement le nombre de lignes affectées. En d'autres termes, vous utiliserez query() pour des requêtes de sélection (SELECT) et exec() pour des requêtes d'insertion (INSERT), de modification (UPDATE) ou de suppression (DELETE). 
+La différence entre ces deux méthodes est que *query()* retournera un jeu de résultats sous la forme d'un objet PDOStatement, alors que *execute()* retournera uniquement le nombre de lignes affectées. En d'autres termes, vous utiliserez query() pour des requêtes de sélection (SELECT) et exec() pour des requêtes d'insertion (INSERT), de modification (UPDATE) ou de suppression (DELETE). 
 ( ref : http://fmaz.developpez.com/tutoriels/php/comprendre-pdo/)
 
 
@@ -144,7 +144,7 @@ Un autre avantage de PDO est qu'il permet l'utilisation de place holders nommés
 $requete ='DELETE FROM salaries WHERE idsalaries =:id';
 $prep = $pdo->prepare($requete) ;
 $prep->bindValue(':id', 10, PDO::PARAM_INT);
-$prep->exec() ; 
+$prep->execute() ; 
 ----
 
 * Avantages et inconvénients des requêtes préparées :
@@ -218,7 +218,7 @@ function getAllSalaries(){
   require_once('fonctionsPdo.php') ;
   
   $nbSalaries = getNbSalaries();
-  $listeSalaries = getAllSalaries($pdo);
+  $listeSalaries = getAllSalaries();
 ?>
 
 <div class="container my-5">
@@ -253,7 +253,7 @@ function getAllSalaries(){
 
 == Travail à faire
 
-1. Dans votre répertoire *public_html* créer un nouveau dossier *salariesPdo* et y recopier les finchiers de votre répertoire *acf2l-salaries* ( header, footer, connexion, fonctions, listeSalaries )
+1. Dans votre répertoire *public_html* créer un nouveau dossier *salariesPdo* et y recopier les fichiers de votre répertoire *acf2l-salaries* ( header, footer, connexion, fonctions, listeSalaries )
 
 2. Modifier votre code pour utiliser la technologie PDO
 

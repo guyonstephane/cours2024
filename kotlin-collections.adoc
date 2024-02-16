@@ -1,0 +1,297 @@
+= Kotlin :  les collections
+// Activation de la numérotaion des sections :
+:sectnums:
+//
+// Attributs du sommaire :
+:toc: left
+:toclevels: 5
+:toc-title: Sommaire
+//
+// Localisation des images :
+:imagesdir: ./assets/images
+//
+// Option d'affichage des codes sources :
+:source-highlighter: rouge
+:pygments-style: manni
+:pygments-linenums-mode: inline
+
+
+
+
+
+== Arrays Kotlin
+Dans Kotlin, un array est une collection de données. Vous pouvez construire un array avec arrayOf(). La première de ces fonctions est simple :
+
+[source,kotlin]
+----
+val tabEleves = arrayOf("adriEn","ahmeD","bertrand","éric","oliv","tom")
+
+    tabEleves[1] = "hamed"// on remplace ahmed par hamed
+    println(tabEleves.get(2))// affiche l'indice 2 du tableau 'bertrand'
+    tabEleves.set(2,"alain")
+    println(tabEleves.first())// affiche le premier élément
+    println(tabEleves.last())// affiche le dernier élément
+    println(tabEleves.size)// affiche la taille du tableau
+
+    tabEleves.sort() // classement alphabétique
+
+    for(eleve in tabEleves){ // parcours du tableau
+        println(eleve.uppercase())//affiche les élèves en majuscule
+    }
+    
+    println(tabEleves.contentToString())// [adriEn, alain, hamed, oliv, tom, éric]
+    
+    // affiche tous les élèves dont le nom commence par la lettre A
+    println(tabEleves.filter { it.uppercase().startsWith('A') })
+    //affiche tous les élèves dont le nom commence avant la lettre n
+    println(tabEleves.filter { it.lowercase().first() < 'n' })
+----
+
+
+Si on souhaite limiter l’array à un type, il suffit de l’indiquer dans la fonction.
+[source,kotlin]
+----
+val myArray2 = arrayOf<Int>(10, 20, 30)
+----
+
+[NOTE]
+====
+Les *Arrays* sont immuables et doivent être déclarés en [red]*val* , même si il est possible de les modifier ( ajouter, supprimer des éléments ) en les déclarant en [red]*var* ce n'est pas un bonne pratique car elle est coûteuse en mémoire. Si vous avez des opérations d'ajout, d'insertion, suppression sur un ensemble de données, vous devez utiliser une autre structure que les tableaux, les listes mutales par exemple [red]#mutableListOf#.
+====
+
+=== Exercices 
+
+Initialiser le tableau suivant :
+
+[source,kotlin]
+----
+val planetes = arrayOf("mercure", "Venus", "terre", "Mars", "Jupiter", "saturne", "Uranus", "Neptune")
+----
+
+. Afficher avec 2 méthodes différentes le premier et le dernier élément du tableau
+. Trouver l'index de la planète "terre"
+. Remplacer dans le tableau la planète "terre" par "La Terre"
+. Afficher toutes les planètes qui commencent par la lette M ou m
+. Afficher le nom de toutes les planètes avec la première lettre en Majuscule et les suivantes en minuscues 
+
+
+== Déclarations & affectations sur les collections
+
+Les collections sont utilisées pour stocker et manipuler des groupes d'objets ou de données. Plusieurs types de collections sont disponibles avec Kotlin, notamment:
+
+*  Listes - Collections ordonnées d'éléments permettant des doublons.
+*  Set :  Collections non ordonnées d'éléments uniques.
+* Map  – Collections de paires clé-valeur, où chaque clé est unique.
+
+A la différence des *Array*, les collections pourront être initialisées comme étant immuable ou mutables. C'est la fonction d'initialisation qui va affecter ce caractère à la liste instanciée. Ici le caractère de mutabilité concerne bien les valeurs stockées dans la liste. La mutabilité de la référence quant à elle repose toujours sur les mots clés [red]*var* et [red]*val*. +
+Nous opterons pour des références immuables dans nos prochains exemples.
+
+==== Les listes immuables :  [red]#listOf#
+
+Le proncipe est sensiblement identique à celui d'un [red]#arrayOf#. Voici un exemple de création et d'utilisation d'une liste :
+[source,kotlin]
+----
+val fruits = listOf("cerise", "banane", "orange", "pomme", "papaye")
+ 
+	// Accéder à un élement de la liste
+	println("First fruit: ${fruits[0]}") // affiche l'élément se trouvant à l'indice 0
+	println("Last fruit: ${fruits.last()}") // affiche le dernier élément de la liste
+ 	println("first fruit: ${fruits.first()}") // affiche le premier élément 
+    println(fruits.get(2)) // affiche l'élément se trouvant à l'indice 2
+    
+    
+    //Parcourir la liste
+    for ( fruit in fruits)
+    	println(fruit)
+        
+    //filtrer la liste
+    val filtered = fruits.filter { it.startsWith("p") }
+	println("Filtered list: $filtered")
+----
+
+Dans cet example, nous créons une liste de fruits en utilisant la fonction listOf, qui prend un nombre variable d'éléments et retourne une liste immuable. Nous montrons ensuite comment accéder aux éléments de la liste en utilisant l'indexation ou des fonctions spécifiques aux collections, ensuite nous montrons comment parcourir la boucle et enfin comment utiliser la fonction de filtrage pour créer une nouvelle liste ne contenant que les éléments qui commencent par la lettre « p ».
+
+Les autres types de collection de Kotlin peuvent être utilisés de manière similaire, avec des fonctions et des méthodes spécifiques adaptées aux caractéristiques uniques de chaque type. En utilisant ces types de collection, vous pouvez facilement gérer des groupes de données dans vos programmes.
+
+
+==== Les listes mutables :  [red]#mutableListOf#
+
+Lorsque vous avez des opérations d'ajout, de suppression, d'insertion etc sur une collection vous devez préciser le caractère mutable de la collection dans le cas contraire toutes ces opérations provoqueront des erreurs de compilation.
+
+[source,kotlin]
+----
+val fruits = mutableListOf("cerise", "banane", "orange", "pomme", "papaye")
+ 
+	fruits.add("poire") // ajoute poire à la fin de la liste
+    fruits.removeAt(1) // supprime l'élément à l'index 1 : banane
+    fruits.add(3,"clémentine") // ajoute clémentine à l'index 3
+----
+
+L'affichage du contenu d'une collection peut se faire en passant directement l'identifiant de la liste en argument de la fonction `print()` ou `println()`
+
+[source,kotlin]
+----
+println(fruits)
+----
+
+=== Exercice 
+
+Initialiser un liste mutable (arrayOf<Int>) de 10 entierss compris entre 1 et 100 choisis au hasard.
+    
+[,kotlin]
+----
+fun main() {
+    val entiers = mutableListOf<Int>()
+    for(i in 1..10){
+        entiers.add( (1..100).random())
+    }
+    println(entiers)
+}
+----
+
+1. Ecrire le programme qui affiche la somme, le plus petit et le plus grand des éléments de cette liste d'entiers.(trouvez les bonnes méthodes ) 
+    2. Ajoutez la déclaration de 2 listes supplémentaires listePair et listeImpair. Ajoutez le code qui copie les éléments pairs de la liste d'entiers dans listePair, et les éléments impairs dans listeImpair. 
+    3. Afficher à l'aide d'une boucle *for* le contenu de chaque liste.
+    
+    
+
+
+== Le type Map (tableau associatif en PHP ou dictionnaire en Python)
+
+Le type Map est un tableau associatif, c'est-à-dire que dans un tableau sont stockées des valeurs. Chaque valeur est associée à une clé pour permettre son accès au lieu d'utiliser un numéro d'indice. On distingue comme pour les listes les Maps immuables [red]#mapOf# et les Maps mutables [red]#mutableMapOf# et donc toutes les opérations d'ajout, de suppression, d'insertion etc ne seront pas autorisées dans une [red]#mapOf#. 
+
+[source,kotlin]
+----
+// Création d'un map :
+    val chiffreImmuable = mapOf(0 to "Zero", 1 to "Une", 2 to "Deux", 3 to "Trois")
+    
+    
+     for( chiffre in chiffreImmiable){
+        println(chiffre.key) // affiche les clés
+        println(chiffre.value)// affiche les valeurs
+    }
+----
+
+
+
+
+Exemple de Map mutable :
+
+[source,kotlin]
+----
+val notes = mutableMapOf<String, Int>("Adrien" to 10,"Bertrand"  to 15, "Blin" to 8, "Rib" to 6)
+
+    notes.put("Toto",6)// On ajoute une clé et une valeur
+    notes.set("Adrien",12)//on met à jour la valeur de la clé Adrien
+    notes.remove("Rib")// on supprime la clé "Rib"
+
+    println(notes)
+
+    val notesRattrapage = notes.filter { it.value < 10 && it.value >= 8 }// on filtre les notes < 10 et >= 8
+    println(notesRattrapage)
+----
+On crée une Map mutable en indiquant que la clé sera de type *String* et la valeur de type *Int*
+
+=== Exercice
+
+Soit les instructions Kotlin suivantes :
+[source,kotlin]
+----
+val notes = mutableMapOf<String, MutableList<Int>>("Adrien" to mutableListOf(15,12,10),"Bertrand"  to mutableListOf(12,10))
+
+notes.getOrPut("Toto") { mutableListOf() }.add(8)// ajoute la clé Toto avec une note de 8
+notes.getOrPut("Adrien") { mutableListOf() }.add(6)//ajoute une note de 6 à la clé Adrien
+----
+
+1. Afficher le nom de chaque élève, ses notes et sa moyenne
+2. Afficher uniquement le nom des élèves qui ont une moyenne supérieure ou égale à 10 
+
+
+
+
+
+== Les fonctions qui retourne des tableaux ou des collections.
+
+Les fonctions en Kotlin doivent spécifier leur type de retour. Si la fonction ne retourne aucune valeur, son type de retour est Unit ( None en Python). 
+
+
+. Exemple fonction serie() qui prend comme argument un nombre entier n et qui renvoie une liste contenant les nombres entiers allant de 1 à n.
+
+[source,kotlin]
+----
+fun serie(n : Int): List<Int> {
+
+    val liste = mutableListOf<Int>()
+    for (i in 1..n) {
+        liste.add(i)
+    }
+    return liste
+
+}
+----
+On indique le type de l'argument *Int* et le type de la valeur de retour *List<Int>*
+
+Si on vous avait demandé de retourner un tableau d'entier :
+
+[source,kotlin]
+----
+fun serie(n : Int): Array<Int> {
+
+    val liste = mutableListOf<Int>()
+    for (i in 1..n) {
+        liste.add(i)
+    }
+    return liste.toTypedArray()
+
+}
+----
+
+[NOTE]
+====
+Kotlin dispose de nombreuses méthodes pour passer d'un type tableau à une collection de type liste ou map et inversement.
+====
+
+
+
+=== fonction serieInverse()
+
+Ecrire la fonction serieInverse() qui prend comme argument un entier n et qui renvoie un tableau contenant les nombres entiers allant de n à 1.
+
+Exemple : serieInverse(5) +
+entrée 5 +
+sortie : +
+(5, 4, 3, 2, 1)
+
+
+=== listePair
+Ecrire la fonction tabPair() qui prend comme argument un tableau n
+de nombres entiers et qui renvoie une liste ne contenant que les nombres pairs
+
+=== listeImpair
+Ecrire la fonction tabImpair() qui prend comme argument un tableau n de nombres entiers et qui renvoie un tableau ne contenant que les nombres impairs
+
+
+=== listeDiviseurs
+Ecrire la fonction listeDiviseurs() qui prend comme argument un nombre entier n et qui renvoie une liste contenant tous les diviseurs du nombre n.
+
+=== estPremier
+Ecrire la fonction estPremier() qui prend comme argument un nombre entier n et qui renvoie True si n est un nombre premier et False sinon. Vous pouvez utiliser la fonction listeDiviseurs écrite précédemment sachant qu'un nombre premier n'a que 2 diviseurs ( 1 et lui-même ).
+
+=== estParfait
+Ecrire la fonction estParfait() qui prend comme argument un nombre entier n et qui renvoie True si n est un nombre parfait et False sinon. En arithmétique, un nombre parfait est un entier naturel égal à la moitié de la somme de ses diviseurs ou encore à la somme de ses diviseurs stricts. Exemple 6 est un nombre parfait car la somme des ses diviseurs stricts ( 1 + 2 + 3 ) = 6, 28 est également un nombre parfait ( 1 + 2 + 4 + 7 + 14 ) = 28. Les nombres parfaits sont rares, il n’en existe que trois inférieurs à 1000 qui sont 6, 28 et 496. Ensuite vient 8128, puis 33 550 336, vous pouvez donc initialiser un tableau avec ces nombres.
+
+
+=== sommeChriffres
+Écrire la fonction sommeChiffres() qui prend comme argument un nombre entier n et qui renvoie un entier représentant la somme des chiffres qui compose le nombre entier n. Exemple  n -> 125  somme chiffre : ( 1 + 2 + 5 ) = 8. Utiliser le modulo 10 et la fonction intval.
+
+=== nombreAmi
+Écrire la fonction nombreAmi() qui prend comme argument deux nombres entiers et qui renvoie True si ils sont amis et False sinon. Deux nombres seront amis si la somme des chiffres qui composent chaque nombre est identique. Exemple 66 ( 6 + 6 ) = 12 est ami avec 93 ( 9 + 3 ) = 12. Attention la notion mathématique des nombres amicaux est différente.
+
+
+=== parité
+Ecrire la fonction tabParite() qui prend comme argument un tableau n de nombres entiers et qui renvoie une map ayant 2 clés : la clé  'pair' ne contenant que les nombres pairs et la clé 'impair' ne contenant que les nombres impairs. 
+
+
+
+
+
