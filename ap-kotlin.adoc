@@ -1,0 +1,350 @@
+= Kotlin projet Luminaire - Classes - Interface - Héritage
+
+:sectnums:
+:toc: left
+:toclevels: 4
+:toc-title: Sommaire
+:description: Exemple en Python
+:keywords: AsciiDoc Python
+:imagesdir: .
+:sourcedir: ./src/
+:source-highlighter: rouge 
+
+ 
+
+
+
+ifdef::backend-html5[]  
+++++
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+++++
+:html:
+endif::[]
+
+ifndef::html[]
+:source-highlighter: pygments
+:pygments-style: xcode
+endif::[] 
+
+:icons: font
+
+
+
+== Prérequis
+
+Vous devez avoir une bonne connaissance concernant l'écriture et l'utilisation des Classes avec Kotlin
+
+== Présentation du projet 
+
+Au cours de ce projet on simulera le fonctionnement individuel d’ampoules électriques de différents
+modèles, ainsi que le comportement collectif d’ampoules appartenant à un même luminaire.
+
+Une ampoule électrique répond aux stimuli suivants :
+
+• allumer (éclairage pleine puissance)
+• eteindre
+• intensifier (augmenter la luminosité si elle n’est pas déjà maximale)
+• diminuer (diminuer la luminosité si l’ampoule n’est pas déjà éteinte)
+
+De plus elle est capable de fournir son état :
+niveau d’intensité (d’éteinte à allumée pleine puissance) ou en panne.
+
+Un luminaire est composé de plusieurs ampoules et répond exactement aux mêmes stimuli qu’une
+ampoule électrique isolée.
+
+Un luminaire fournit les informations sur leur état selon les mêmes règles que l’ampoule, à
+l’exception de l’état en panne qui n’est vérifié que si toutes les ampoules qui le composent sont en
+panne.
+
+Pour simplifier les choses on estime qu’une ampoule électrique ne peut tomber en panne que
+lorsqu’elle passe de l’état éteint à un état « allumé », peu importe l’intensité.
+La probabilité qu’une ampoule tombe en panne est fonction de son type. Voici les probabilités,
+hautement fantaisistes, de tomber en panne pour chaque type d’ampoule dans ce projet :
+
+• 1% pour une ampoule à LED
+• 5% pour un tube néon
+• 10% pour une ampoule à incandescence
+Les tubes néons ont la particularité de ne pas pouvoir changer d’intensité : ils sont soit éteints,
+soit allumés.
+
+
+== L'Interface de commande 
+
+Les stimuli auxquels répondent les ampoules et les luminaires sont identiques, de même que
+l’affichage de l’état. On peut considérer que l’on manipule ces éclairages au travers d’une
+interface normalisée qui serait un « interrupteur variateur » avec affichage de l’intensité lumineuse.
+
+Peu importe que l’on veuille allumer éteindre ou faire varier d’intensité une ampoule isolée ou un
+luminaire complet, les actions sont les mêmes, seul le dispositif qui est à l’extrémité change.
+
+Chez vous vous pouvez utiliser une ampoule basse consommation, une ampoule à LED ou une
+ampoule classique, un luminaire ou une ampoule isolée sans avoir à refaire toute l’installation
+électrique ou changer les interrupteurs.
+Cette application utilise une interface très semblable à ce modèle Céliane avec diodes de chez
+Legrand :
+
+image::images/kot1.png[] 
+
+En Kotlin la définition de la commande de manipulation des ampoules est dans l’interface
+Eclairage.kt qui permet d’allumer, éteindre, faire varier l’intensité et afficher l’état :
+
+image::images/kot2.png[] 
+
+[,kotlin]
+.Eclairage.kt
+----
+interface Eclairage {
+    fun allumer()
+    fun eteindre()
+    fun intensifier()
+    fun diminuer()
+    fun etat(): Int
+}
+
+
+----
+
+L’application va utiliser cette interface de commande pour envoyer des ordres au dispositif
+d’éclairage et récupérer son état tout comme vous utiliseriez l’interrupteur Céliane pour piloter un
+éclairage réel.
+
+
+== Notion d'Interface
+
+Parfois, vous voudriez que différentes classes aient un comportement similaire. Par exemple, vous
+voulez que toutes les ampoules aient le même comportement et les mêmes méthodes.
+
+Les interfaces sont un moyen très efficace pour résoudre ce problème.
+
+Une interface est une collection de définitions de méthodes (sans implémentation c'est à dire sans
+écrire les méthodes) et de valeur constantes. C'est une sorte de contrat avec lequel on va dire que
+toutes les classes qui vont implémenter l'interface « Eclairage » devront définir les différentes
+méthodes de cette interface.
+
+Pour que toutes nos ampoules (LED , à incandescence, néon etc) aient un comportement identique,
+on va définir « un contrat » à travers une interface, dans lequel on indiquera les différentes
+méthodes de nos ampoules : allumer, éteindre, faire varier l’intensité ( intensifier ou diminuer) et
+afficher l’état .Pour implémenter une interface, il faut rajouter à la déclaration de la classe concernée *: Eclairagele* ( on lui indique ainsi que la classe implémente l'interface Eclairage). Ensuite, il faut redéfinir dans la classe toutes les méthodes
+déclarées dans l'interface.
+
+[,kotlin]
+.AmpouleIncandescente.kt
+----
+class AmpouleIncandescente: Eclairage {
+   
+}
+----
+
+Un message d'erreur apparaît quand on implémente une Interface, on doit implémenter toutes les méthodes de l'interface ( alt-enter):
+
+image::images/kot3.png[] 
+
+image::images/kot4.png[]
+
+[,kotlin]
+.AmpouleIncandescente.kt
+----
+class AmpouleIncandescente: Eclairage {
+    override fun allumer() {
+        TODO("Not yet implemented")
+    }
+
+    override fun eteindre() {
+        TODO("Not yet implemented")
+    }
+
+    override fun intensifier() {
+        TODO("Not yet implemented")
+    }
+
+    override fun diminuer() {
+        TODO("Not yet implemented")
+    }
+
+    override fun etat(): Int {
+        TODO("Not yet implemented")
+    }
+
+}
+----
+
+
+
+== TRAVAIL À FAIRE :
+
+Le but de l’application est d’allumer 1000 fois un dispositif d’éclairage (ampoule ou luminaire)
+si il ne tombe pas en panne avant. Après chaque allumage à pleine puissance on fait varier
+l’intensité du maximum vers le minimum jusqu’à ce que l’éclairage s’éteigne.
+Pour manipuler les éclairages, vous disposez de la classe Main.kt qui permet d'exécuter un cycle
+de 1000 allumages puis diminution d'intensité sur un objet qui implémente l'interface Eclairage.
+
+Les ampoules et les luminaires ont une méthode toString() déclarée ainsi :
+
+[,kotlin]
+----
+/**
+* @return l'état de l'objet sous la forme d'une chaîne de caractères
+*/
+fun toString(): String
+----
+
+Cette méthode doit retourner de façon claire le nom de la classe et l'état de l'ampoule ou du
+luminaire :
+
+• éteinte,
+• allumée, avec l’intensité
+• en panne.
+
+image::images/kot5.png[]
+
+1. Créer un nouveau projet Kotlin : Luminaire.
+
+2. Créer une interface Eclairage
+
+[,kotlin]
+.Eclairage.kt
+----
+interface Eclairage {
+    fun allumer()
+    fun eteindre()
+    fun intensifier()
+    fun diminuer()
+    fun etat(): Int
+}
+
+
+----
+
+3. Créer une classe AmpouleIncandescente
+
+[,kotlin]
+.AmpouleIncandescente.kt
+----
+class AmpouleIncandescente: Eclairage {
+
+    /**
+     * etat de la lampe : 0 éteinte, 10 allumée pleine intensité
+     */
+    var etat = 0
+
+    /**
+     * Constructeur
+     */
+    fun AmpouleIncandescente() {
+        this.etat = 0
+    }
+
+    /**
+     * Calcule la probabilité qu'une ampoule tombe en panne
+     *
+     * @return 0 l'ampoule fonctionne, -1 l'ampoule est en panne
+     */
+    private fun probaPanne(): Int {
+        val alea = (0..100).random() // generated random from 0 to 10 included
+        return if (alea < 10) {
+            -1
+        } else 0
+    }
+    /**
+     * Allume l'ampoule à pleine puissance, on vérifie que l'ampoule
+     * que l'ampoule fonctionne encore et que la probabilité de panne
+     * ne retourne pas -1
+     */
+    override fun allumer() {
+        if (this.etat != -1 && this.probaPanne() != -1) {
+            this.etat = 10;
+        } else {
+            this.etat = -1;
+        }
+    }
+
+    /**
+     * Eteint l'ampoule, on vérifie que l'ampoule n'est pas en panne
+     * si c'est le cas on passe son état à 0
+     */
+    override fun eteindre() {
+        if (this.etat != -1) {
+            this.etat = 0;
+        }
+
+    }
+    /**
+     * Augmente l'intensité lumineuse de l'ampoule, on vérifie que
+     * l'ampoule n'est pas en panné et que son intensité est < à 10
+     */
+    override fun intensifier() {
+        TODO("Not yet implemented")
+    }
+  /**
+   * Diminuer l'intensité lumineuse de l'ampoule
+   */
+    override fun diminuer() {
+      if ( this.etat > 0) {
+          this.etat--;
+      }
+    }
+    /**
+     * Permet de connaître l'état de l'ampoule
+     *
+     * @return l'état de la lampe 0..10 ou -1 si en panne
+     */
+    override fun etat(): Int = this.etat
+
+    /**
+     * @return l'état de l'objet sous la forme d'une chaîne de caractères
+     */
+    override fun toString(): String {
+        return this.javaClass.name + " : " + this.etat
+    }
+
+}
+----
+
+4. Modifier votre Classe Main.kt
+
+[,kotlin]
+.Main.kt
+----
+fun main() {
+    val eclairage = AmpouleIncandescente();
+    /**
+     * Cycles d'éclairage et d'extinction d'une ampoule
+     */
+    var nbCycles = 0;
+    do{
+        eclairage.allumer();
+        while(eclairage.etat() > 0 ){
+            eclairage.diminuer();
+        }
+        println(eclairage.toString());
+        nbCycles ++;
+    }while (nbCycles < 1000 && eclairage.etat() != -1);
+
+    println("nombre de cycles "+nbCycles);
+}
+
+----
+
+5. Lancer l'application plusieurs fois, analyser et expliquer le code.
+
+6. Sur le modèle de la classe AmpouleIncandescente, créer 2 nouvelles classes :
+.. AmpouleLed.kt
+.. AmpouleTube.kt
+
+La différence entre ces ampoules réside dans la probabilité fantaisiste de panne qui est de :
+
+.. 1% pour une ampoule à LED
+.. 5% pour un tube néon
+.. 10% pour une ampoule à incandescence
+
+Les tubes néons ont la particularité de ne pas pouvoir changer d’intensité : ils sont soit éteints,
+soit allumés.
+Comment allez-vous traitez le fait que les tubes néons ne supportent pas de variation d'intensité ?
+
+
+
+
+
+
+
+

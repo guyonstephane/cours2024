@@ -1,0 +1,127 @@
+= Kotlin - exercices - Classe
+
+:sectnums:
+:toc: left
+:toclevels: 4
+:toc-title: Sommaire
+:description: Exemple en Python
+:keywords: AsciiDoc Python
+:imagesdir: ./images/
+:sourcedir: ./src/
+:source-highlighter: rouge 
+
+ 
+
+
+
+ifdef::backend-html5[]  
+++++
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+++++
+:html:
+endif::[]
+
+ifndef::html[]
+:source-highlighter: pygments
+:pygments-style: xcode
+endif::[] 
+
+:icons: font
+
+
+
+== La classe Personne
+
+Pour réaliser des statistiques, un établissement de santé souhaite pouvoir déterminer l'indice de
+masse corporelle de ses patients. Un patient sera renseigné par un nom, un âge, une taille et un
+poids.
+
+On va donc créer une Classe Personne, dont les attributs seront le nom, la taille et le poids.
+Cette classe aura les méthodes suivantes :
+
+1. determine IMC : L’IMC se calcule avec une formule mathématique simple : +
+IMC = Poids / (Taille * Taille) + 
+le poids exprimé en kilos et la taille en mètre.
+2. Signification IMC :L'IMC peut être utilisé pour les adultes de 20 ans à 65 ans.
+
+image::imc.png[]
+
+*TRAVAIL À FAIRE :* +
+
+1. Écrire la classe Personne
+2. Tester la classe dans un programme en créant quelques objets Personne 
+
+
+
+== La classe Location
+
+Une société de location de véhicules souhaite claculer le prix de la location de ses véhicules. Une Location sera renseigné par le nom du loueur, la catégorie du véhicule, le nombre de km parcourus et le nombre de jours de location.
+
+Définissez la classe Location
+
+1. Déclarez les attributs : + 
+➢ categorie accepte les caractères suivants : E(Economique), C(Confort), L(Luxe)
+2. Implémentez 2 constructeurs
+3. Implémentez les différentes méthodes :
+
+ .. *montantJour* retourne le prix journalier de la location en fonction de la grille tarifaire
+ci-dessous :
+
+image::loc.png[]
+
+
+ .. *montantLocation* retourne le montant de la location pour le nombre de jours de location
+
+ .. *kmSupplementaire* retourne le nombre de km effectués dépassant ceux inclus dans la
+location.
+Pour une location 100 km par jour sont offerts.
+
+ .. *pxKmSupplementaire* retourne le montant engendré par les km supplémentaires
+(0,5€/km * kmSupplementaire)
+
+ .. *montantTotal* retourne le montant total de  la location : montantLocation plus les éventuels kmSupplemetaire.
+
+NOTE: Tester la classe dans un programme en créant quelques objets Location
+
+
+== La classe Compte 
+
+Écrire un programme en Kotlin qui simule la gestion d’un simple compte bancaire. Le compte est créé avec un solde initial. Il est possible de déposer et de retirer des fonds, d’ajouter des intérêts et de connaître le solde actuel. Cela devrait être implémenté dans une classe nommée Account qui comprend:
+
+
+. Un constructeur par défaut qui met le solde initial à zéro.
+. Un constructeur qui accepte une balance initial comme paramètre.
+. Une fonction getBalance qui renvoie le solde actuel.
+. Une méthode deposer pour déposer un montant spécifié en paramètre.
+. Une méthode retirer pour retirer un montant spécifié.
+. Une méthode ajouter_Interet pour ajouter de l’intérêt au compte.
+La méthode  ajouter_Interet  prend le taux d’intérêt comme paramètre et modifie le solde du compte en solde * (1 + taux d’intérêt).
+
+== La classe Employe
+
+Définir une classe Employé caractérisée par les attributs : Matricule, Nom, Prénom, anneeEmbauche, Salaire.
+
+. Définir un constructeur permettant d’initialiser les attributs de la méthode par des valeurs saisies par l’utilisateur.
+
+. Ajouter à la classe la méthode anciennete( ) qui retourne le nombre d’années d’ancienneté de l’employé. Dans un premier temps l'ancienneté sera la différence entre l'année en cours et l'année d'embauche. 
+
+image::annee.png[]
+
+3 .Ajouter à la classe la méthode AugmentationDuSalaire( ) qui augmente le salaire de l’employé en prenant en considération l’ancienneté.
+          Si Ancienneté < 5 ans, alors on ajoute 2%. - Si Ancienneté < 10 ans, alors on ajoute 5%. - Sinon, on ajoute 10%.
+
+4 .Ajouter la méthode afficherEmployé() qui affiche les informations de l’employé comme suit :
+           - Matricule : […]
+
+           - Nom complet : [NOM Prénom]
+
+           - Age : […]
+
+          - Ancienneté : […]
+
+           - Salaire : […]
+
+ Le nom doit être affiché en majuscule. Pour le prénom, la première lettre doit être en majuscule, les autres en minuscule.
+
+5 .Ecrire un programme de test pour la classe Employé.
+

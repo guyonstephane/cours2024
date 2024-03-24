@@ -1,0 +1,200 @@
+= Kotlin :  Correction - les classes
+// Activation de la numérotaion des sections :
+:sectnums:
+//
+// Attributs du sommaire :
+:toc: left
+:toclevels: 5
+:toc-title: Sommaire
+//
+// Localisation des images :
+:imagesdir: ./assets/images
+//
+// Option d'affichage des codes sources :
+:source-highlighter: rouge
+:pygments-style: manni
+:pygments-linenums-mode: inline
+
+
+
+
+
+
+=== Classe Nombre
+
+
+
+[source,kotlin]
+----
+class Nombre {
+
+    var nb: Int = 0
+
+
+
+    /**
+     *  Crée un nouvel objet "Nombre" qui sera initialisé avec la valeur du paramètre nb
+     * @param nb la valeur du nombre
+     */
+    constructor(nb: Int) {
+        this.nb = nb
+    }
+
+
+    /**
+     * Crée un nouvel objet "Nombre" avec une valeur par défaut à 0
+     *
+     */
+    constructor()
+
+    /**
+     *calcul puis retourne la somme des chiffres ( en base 10) qui composent le
+     *nombre
+     */
+    fun sommeChiffres(): Int {
+        var somme = 0
+        var num = nb
+        while (num != 0) {
+            somme += num % 10
+            num /= 10
+        }
+        return somme
+    }
+
+    /**
+     *retourne vrai si l'objet Nombre nb2 passé en paramètre est ami
+     */
+    fun estAmi(nb2: Nombre): Boolean {
+
+        return if (this.sommeChiffres() == nb2.sommeChiffres()) true else false
+
+    }
+
+    fun estPremier(): Boolean{
+        if ( this.diviseurs().size == 2)
+            return true
+        else
+            return false
+
+    }
+    /**
+     *retourne la liste des diviseurs du nombre
+     */
+    fun diviseurs(): List<Int>{
+        val diviseurs = mutableListOf<Int>()
+
+        for (i in 1..this.nb) {
+            if (this.nb % i == 0) {
+                diviseurs.add(i)
+
+            }
+        }
+
+        return diviseurs
+    }
+
+    /**
+     *retourne true si c'est un nombre premier false dans le cas contraire
+     */
+
+    override fun toString(): String {
+        return "Nombre : nb = $nb "
+    }
+
+
+}
+----
+=== Classe : Personne
+
+
+[,kotlin]
+----
+class Personne {
+
+    var nom = ""
+    var taille = 0.0
+    var poids = 0
+
+    constructor()
+
+    constructor(nom: String, taille: Double, poids: Int) {
+        this.nom = nom
+        this.taille = taille
+        this.poids = poids
+    }
+
+
+    fun imc(): Double{
+        return this.poids /(this.taille * this.taille)
+    }
+
+    fun significationImc(): String {
+        var signification = ""
+        if ( this.imc() < 18.5 ){
+            signification = "maigreur"
+        }
+        else if ( this.imc() < 24.9){
+            signification = "normal"
+        }
+        else if (this.imc() < 29.9){
+            signification = "surpoids"
+        }
+        else {
+            signification = "obésité"
+        }
+        return signification
+    }
+
+    override fun toString(): String {
+        return "Personne(nom='$nom', taille=$taille, poids=$poids)"
+    }
+
+
+}
+----
+
+=== Classe Location
+
+
+[source,kotlin]
+----
+class Location {
+    var nom = ""
+    var categorie = 'x'
+    var nbKmParcourus = 0
+    var nbJoursLocation = 0
+
+    constructor()
+    constructor(nom: String, categorie: Char, nbKmParcourus: Int, nbJoursLocation: Int) {
+        this.nom = nom
+        this.categorie = categorie
+        this.nbKmParcourus = nbKmParcourus
+        this.nbJoursLocation = nbJoursLocation
+    }
+
+    fun montantJour() : Int {
+        var montant = 0
+        if ( this.categorie == 'E')
+            montant = 30
+        else if ( this.categorie == 'C')
+            montant = 50
+        else if ( this.categorie == 'L')
+            montant = 70
+
+        return montant
+    }
+
+    fun montantLocation() = this.montantJour() * this.nbJoursLocation
+
+    fun kmSupplementaire(): Double {
+        var km = this.nbKmParcourus - (100.0 * this.nbJoursLocation)
+        return ( if(km > 0.0) km * 0.5 else 0.0)
+    }
+
+    fun montantTotal(): Double = this.montantLocation() + this.kmSupplementaire()
+
+
+
+}
+----
+

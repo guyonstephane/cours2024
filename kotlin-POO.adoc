@@ -1,0 +1,253 @@
+= Kotlin - La programmation orientée objet : POO
+
+:sectnums:
+:toc: left
+:toclevels: 4
+:toc-title: Sommaire
+:description: Exemple en Python
+:keywords: AsciiDoc Python
+:imagesdir: ./images/
+:sourcedir: ./src/
+:source-highlighter: rouge 
+
+ 
+
+
+
+ifdef::backend-html5[]  
+++++
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+++++
+:html:
+endif::[]
+
+ifndef::html[]
+:source-highlighter: pygments
+:pygments-style: xcode
+endif::[] 
+
+:icons: font
+
+
+
+== Différence entre programmation fonctionnelle et orientée objet
+
+
+La différence entre *la programmation fonctionnelle ou procédurale* et la *programmation orientée objet (POO)* réside dans le fait que dans la programmation procédurale, les programmes sont basés sur des fonctions, et les données peuvent être facilement accessibles et modifiables, alors qu’en programmation orientée objet, chaque programme est constitué d’entités appelées objets,qui ne sont pas facilement accessibles et modifiables. Les données figurent dans des Classes ainsi le dévellopeur a le choix de les rendre acessibles ou non.
+
+==== C’est quoi la programmation procédurale?
+
+Dans la *programmation procédurale* le programme est divisé en petites parties appelées *procédures ou fonctions*. Comme son nom l’indique, la programmation procédurale contient une procédure étape par étape à exécuter. Ici, les problèmes sont décomposés en petites parties et ensuite, pour résoudre chaque partie, *une ou plusieurs fonctions* sont utilisées.
+
+image::poo1.png[]
+
+
+
+
+==== C’est quoi la Programmation Orientée Objet (POO)?
+
+Dans la *programmation orientée objet* le programme est divisé en parties appelées *objets*.
+L'approche orientée objet se concentre sur les objets qui composent le système.
+
+Un objet est tout ce qui peut être nommé et décrit. Les objets sont des « choses » qui sont modélisées dans des programmes et, par conséquent, le but d'un programme orienté objet est de représenter le monde réel en code.
+
+En effet, le terme « objet » dans la programmation orientée objet représente une manière spécifique d'organiser le code et peut être défini, techniquement, comme « une entité qui englobe à la fois les données et le comportement ». Cela signifie que toutes les données et toutes les procédures/fonctions d'un système appartiennent à un ou plusieurs objets. Dans la programmation orientée objet, les objets collaborent les uns avec les autres, en envoyant et en recevant des messages. 
+
+Par exemple pour concevoir une voiture, nous avons besoin d'un moteur, d'un chassis, d'une carroserie etc Un moteur est lui-même composé de différents objets, un carburateur, une culasse, un système d'allumage etc et c'est l'assemblage de tous ces objets qui va nous premettre de fabriquer une voiture.
+
+De plus, l'objectif de la programmation orientée objet est de produire un code réutilisable bien conçu ainsi l'objet moteur sera réutilisé dans toutes les voitures.
+
+image::poo2.png[]
+
+
+ 
+
+== Un Objet : c'est quoi ?
+
+Définition +
+“Un objet représente un concept, une idée ou toute entité du monde physique, comme une voiture, une personne ou encore une page d'un livre. Il possède une structure interne et un comportement, et il sait interagir avec ses pairs”. (source : Wikipédia )
+
+=== Les Classes
+[red]#PRÉSENTATION# +
+Une classe permet de définir la structure des éléments qui sera commune à vos objets. On pourra dire qu’une classe fonctionne comme un moule qui donnerait la forme à des gâteaux. Si nous reprenons notre exemple d’une voiture, on  aurait alors une classe qui définirait les attributs (moteur, volant, porte, carburant) ainsi que les méthodes inhérentes (rouler, stationner…) +
+
+[red]#DÉCLARATION D’UNE CLASSE#
+
+[source,kotlin]
+.Voiture.kt
+----
+class Voiture {
+
+ // Attributs
+ // constructeurs
+ // Méthodes  
+
+}
+----
+
+WARNING: le nom de votre classe doit être écrit en “Camel Case” ce qui veut dire qu’il n’y a pas d’espace entre les mots et que la première lettre de chaque mot est écrite en majuscule. Par exemple une classe de gestion de véhicules aura pour nom : GestionVehicule.
+
+=== Les Objets : Les instances d'une classe
+
+[red]#PRÉSENTATION# +
+Instancier une classe est en fait un simple appel à celle-ci. Pour cela il faut utiliser l'un des constructeurs de la Classe.
+
+[source,kotlin]
+----
+fun main() {
+    val v1 = Voiture()
+    val v2 = Voiture()
+
+}
+----
+
+Dans l’exemple ci-dessus nous avons 2 instances différentes de la classe Voiture, nous avons donc créé 2 objets Voiture.
+
+=== Les attributs
+[red]#PRÉSENTATION# +
+Les attributs sont en fait les caractéristiques qui définissent un objet. Prenons l’exemple d’une voiture. Ce qui la caractérise en tant que véhicule ce serait :
+
+. la marque
+. le modèle
+. la vitesse
+. etc
+
+La déclaration d’attributs dans une classe est assez simple à mettre en oeuvre, cependant il faut faire attention à la visibilité de ceux-ci. Il y a trois niveaux de visibilité :
+
+. public (accessible partout même à l’extérieur de la classe)
+. private (accessible à l’intérieur de la classe)
+. protected (cette notion sera abordée lors de l'héritage )
+
+Partant du principe qu'en général les attributs sont *Public*, c'est à dire que l'on peut obtenir ou modifier leurs valeurs, Kotlin simplifie l'écriture d'une classe, le caractère public de l'attribut n'a pas besoin d'être précisé et les traditionnels *getters* : pour obtenir la valeur d'un attribut et *setter* pour la modifier n'ont plus besoin  d'être écrit.
+
+En Kotlin, vous n’aurez pas besoin de les déclarer explicitement. Ils seront "générés" automatiquement grâce aux mots-clés  *val*  et  *var*  indiqués avant chaque nom de propriété dans le constructeur de la classe :
+
+. *val*  : La propriété sera immuable, vous ne pourrez donc pas la modifier. Kotlin générera alors pour vous uniquement un assesseur qui vou permettra d'obtenir la valeur d'un attribut.
+
+. *var*  : La propriété sera muable, vous pourrez la modifier. Kotlin générera alors pour vous un assesseur et un mutateur, ce dernier vous permettra de modifier la valeur d'un attribut.
+
+[source,kotlin]
+.Voiture.kt
+----
+class Voiture {
+
+ var marque: String = ""
+ var modele: String = ""
+ var vitesse: Int = 0
+ // constructeurs
+ // Méthodes  
+
+}
+----
+
+== Les Constructeurs
+
+En Programmation Orientée Objet (POO), un constructeur est une méthode « spéciale » d'une classe qui permet de créer une instance d'un objet (instancier), d'allouer la mémoire nécessaire à l'objet et d'initialiser ses attributs. En général, on définit 2 constructeurs, un constructeur vide qui ne reçoit aucun paramètre, la valeur des différents attributs sera fixée grâce aux "mutateurs" (setters) et un contructeur qui reçoit en paramètre tous les attributs de l'objet.
+
+[source,kotlin]
+.Voiture.kt
+----
+class Voiture {
+
+    var marque: String = ""
+    var modele: String = ""
+    var vitesse: Int = 0
+
+
+    constructor() {
+    }
+
+    constructor(marque: String, modele: String, vitesse: Int) {
+        this.marque = marque
+        this.modele = modele
+        this.vitesse = vitesse 
+    }
+ // Méthodes  
+
+}
+----
+
+
+TIP: Le mot clé *this* nous permet d’utiliser les méthodes et les attributs de notre classe. Cela signifie que nous pouvons, par exemple, appeler une méthode ou un attribut au sein même de la classe actuelle.
+
+
+
+== Les Méthodes
+[red]#PRÉSENTATION# +
+Les méthodes sont en fait les fonctions de notre classe et peuvent avoir des paramètres. Il est commun de nommer les méthodes sous forme de verbe car il s’agit d’actions exécutables dans une classe. A noter qu’il est également préférable d’utiliser systématiquement l’anglais, autant dans le nom des variables que des fonctions et méthodes.
+
+[red]#ACCÉDER AUX MÉTHODES# +
+Pour exécuter une méthode nous allons reprendre la syntaxe d’appel d’une fonction. Par exemple notre voiture peut accelerer, ralentir et retourner sa vitesse.
+
+
+[source,kotlin]
+.Voiture.kt
+----
+class Voiture {
+
+    var marque: String = ""
+    var modele: String = ""
+    var vitesse: Int = 0
+
+
+    constructor() {
+    }
+
+    constructor(marque: String, modele: String, vitesse: Int) {
+        this.marque = marque
+        this.modele = modele
+        this.vitesse = vitesse 
+    }
+    
+    fun accelerer(vitesse: Int) {
+        this.vitesse += vitesse
+    }
+
+    fun ralentir(vitesse: Int) {
+        this.vitesse -= vitesse
+    }
+
+    fun retourneVitesse() : String{
+        return "la vitesse actuelle est de${this.vitesse}"
+    } 
+    
+    override fun toString(): String {
+        return "Voiture(marque='$marque', modele='$modele', vitesse=$vitesse)"
+    }
+
+}
+----
+
+Il s'agit d'un exemple simplifier dans la réalité il faudrait vérifier qu'on ne puisse pas accélérer au delà le vitesse maximale et qu'on ne puisse pas ralentir au delà de la vitesse du véhicule. +
+On a également généré ( clic droit generate toString() )la méthode toString() pour avoir une description textuelle des objets dans le cas contraire, on affichera uniquement les références des objets en mémoire.
+
+== Exercices
+
+=== Classe Voiture
+
+À partir de la classe Voiture, céer 2 objets voiture:
+
+1. Une voiture v1 sans paramètre
+2. Une voiture v2 de marque : Volvo, modèle : V50, vitesse : 0
+3. pour la voiture v1, écrire les instructions permettant de lui donner comme marque : Peugeot et comme modèle : 308.
+4. afficher le nom du modèle de la voiture v2.
+5. augmenter la vitesse de la voiture v1 de 60 et de v2 de 40.
+6. afficher la vitesse des 2 voitures.
+
+=== Classe Nombre 
+
+À partir de la classe Nombre et de la documentation suivante :
+
+image::nombre3.png[]
+image::nombre2.png[]
+
+
+1. Écrire les instructions qui vont permettre de créer 2 objets Nombre. nb1 aura pour valeur 46 et nb2 : 91.
+1. Afiicher pour les 2 nombres, la liste de leurs divisieurs, si il s'agit de nombre premier et si ils sont amis.
+
+=== Écriture de la classe Nombre 
+La classe Nombre n'existe pas nativement dans Kotlin, sur le modèle de la classe Voiture vous allez devoir l'écrire et ensuite la tester.
+
+1. Création de la classe, se placer dans le répertoire *src/main/kotlin* clic droit choisir **new** puis *Kotlin class/file* 
+2. définition de l'attribut nb, écriture des constructeurs et des méthodes.
+3. Test de la classe 

@@ -19,7 +19,7 @@
 
 
 
-== Arrays Kotlin
+== Array Kotlin
 Dans Kotlin, un array est une collection de données. Vous pouvez construire un array avec arrayOf(). La première de ces fonctions est simple :
 
 [source,kotlin]
@@ -136,7 +136,7 @@ println(fruits)
 
 === Exercice 
 
-Initialiser un liste mutable (arrayOf<Int>) de 10 entierss compris entre 1 et 100 choisis au hasard.
+Initialiser un liste mutable (mutableListOf<Int>) de 10 entierss compris entre 1 et 100 choisis au hasard.
     
 [,kotlin]
 ----
@@ -212,7 +212,7 @@ notes.getOrPut("Adrien") { mutableListOf() }.add(6)//ajoute une note de 6 à la 
 
 == Les fonctions qui retourne des tableaux ou des collections.
 
-Les fonctions en Kotlin doivent spécifier leur type de retour. Si la fonction ne retourne aucune valeur, son type de retour est Unit ( None en Python). 
+En Kotlin, toutes les fonctions retournent une valeur, même si aucun type de retour n’est mentionné (le type retourné par défaut sera alors Unit).
 
 
 . Exemple fonction serie() qui prend comme argument un nombre entier n et qui renvoie une liste contenant les nombres entiers allant de 1 à n.

@@ -1,0 +1,373 @@
+= Kotlin :  Correction - les collections
+// Activation de la numérotaion des sections :
+:sectnums:
+//
+// Attributs du sommaire :
+:toc: left
+:toclevels: 5
+:toc-title: Sommaire
+//
+// Localisation des images :
+:imagesdir: ./assets/images
+//
+// Option d'affichage des codes sources :
+:source-highlighter: rouge
+:pygments-style: manni
+:pygments-linenums-mode: inline
+
+
+
+
+
+
+=== Exercice : arrayOf 
+
+Initialiser le tableau suivant :
+
+[source,kotlin]
+----
+val planetes = arrayOf("mercure", "Venus", "terre", "Mars", "Jupiter", "saturne", "Uranus", "Neptune")
+----
+
+. Afficher avec 2 méthodes différentes le premier et le dernier élément du tableau
+. Trouver l'index de la planète "terre"
+. Remplacer dans le tableau la planète "terre" par "La Terre"
+. Afficher toutes les planètes qui commencent par la lette M ou m
+. Afficher le nom de toutes les planètes avec la première lettre en Majuscule et les suivantes en minuscues 
+
+[source,kotlin]
+----
+val planetes = arrayOf("mercure", "Venus", "terre", "Mars", "Jupiter", "saturne", "Uranus", "Neptune")
+
+    //Afficher le premier élément du tableau
+    println(planetes.first())
+    println(planetes[0])
+    println(planetes.get(0))
+    //Afficher le dernier élément du tableau
+    println(planetes.last())
+    println(planetes[planetes.size - 1])
+    println(planetes.get(planetes.size - 1))
+
+    //Trouver l'index de la planète "terre"
+    println(planetes.indexOf("terre"))
+
+    //Afficher toutes les planètes qui commencent par la lette M ou m
+    println(planetes.filter { it.uppercase().startsWith('M') })
+
+    //Afficher le nom de toutes les planètes avec la première lettre en Majuscule et les suivantes en minuscules
+    for(planete in planetes){
+        println(planete.lowercase().capitalize())
+    }
+----
+
+
+
+
+=== mutableListOf
+
+Initialiser un liste mutable (mutableListOf<Int>) de 10 entierss compris entre 1 et 100 choisis au hasard.
+    
+[,kotlin]
+----
+fun main() {
+    val entiers = mutableListOf<Int>()
+    for(i in 1..10){
+        entiers.add( (1..100).random())
+    }
+    println(entiers)
+    
+    
+}
+----
+
+1. Ecrire le programme qui affiche la somme, le plus petit et le plus grand des éléments de cette liste d'entiers.(trouvez les bonnes méthodes ) 
+    2. Ajoutez la déclaration de 2 listes supplémentaires listePair et listeImpair. Ajoutez le code qui copie les éléments pairs de la liste d'entiers dans listePair, et les éléments impairs dans listeImpair. 
+    3. Afficher à l'aide d'une boucle *for* le contenu de chaque liste.
+    
+[,kotlin]
+----
+fun main() {
+   val entiers = mutableListOf<Int>()
+    for(i in 1..10){
+        entiers.add( (1..100).random())
+    }
+    println(entiers)
+    println("La somme des entiers est de ${entiers.sum()}")
+    println("le plus petit des entiers est de ${entiers.min()}")
+    println("le plus grand des entiers est de ${entiers.max()}")
+
+    val entiersPairs = mutableListOf<Int>()
+    val entiersImpairs = mutableListOf<Int>()
+
+    for ( nombre in entiers){
+        if ( nombre % 2 == 0){
+            entiersPairs.add(nombre)
+        }
+        else{
+            entiersImpairs.add(nombre)
+        }
+    }
+    println("liste des nombres pairs ${entiersPairs}")
+    println("liste des nombres impairs ${entiersImpairs}")
+}
+----
+
+== Le type Map (tableau associatif en PHP ou dictionnaire en Python)
+
+Le type Map est un tableau associatif, c'est-à-dire que dans un tableau sont stockées des valeurs. Chaque valeur est associée à une clé pour permettre son accès au lieu d'utiliser un numéro d'indice. On distingue comme pour les listes les Maps immuables [red]#mapOf# et les Maps mutables [red]#mutableMapOf# et donc toutes les opérations d'ajout, de suppression, d'insertion etc ne seront pas autorisées dans une [red]#mapOf#. 
+
+[source,kotlin]
+----
+// Création d'un map :
+    val chiffreImmuable = mapOf(0 to "Zero", 1 to "Une", 2 to "Deux", 3 to "Trois")
+    
+    
+     for( chiffre in chiffreImmiable){
+        println(chiffre.key) // affiche les clés
+        println(chiffre.value)// affiche les valeurs
+    }
+----
+
+
+
+
+Exemple de Map mutable :
+
+[source,kotlin]
+----
+val notes = mutableMapOf<String, Int>("Adrien" to 10,"Bertrand"  to 15, "Blin" to 8, "Rib" to 6)
+
+    notes.put("Toto",6)// On ajoute une clé et une valeur
+    notes.set("Adrien",12)//on met à jour la valeur de la clé Adrien
+    notes.remove("Rib")// on supprime la clé "Rib"
+
+    println(notes)
+
+    val notesRattrapage = notes.filter { it.value < 10 && it.value >= 8 }// on filtre les notes < 10 et >= 8
+    println(notesRattrapage)
+----
+
+=== Exercice : mutableMapOf
+
+1. Afficher le nom de chaque élève, ses notes et sa moyenne
+2. Afficher uniquement le nom des élèves qui ont une moyenne supérieure ou égale à 10 
+
+[source,kotlin]
+----
+val notes = mutableMapOf<String, MutableList<Int>>("Adrien" to mutableListOf(15,12,10),"Bertrand"  to mutableListOf(12,10))
+
+notes.getOrPut("Toto") { mutableListOf() }.add(8)// ajoute la clé Toto avec une note de 8
+notes.getOrPut("Adrien") { mutableListOf() }.add(6)//ajoute une note de 6 à la clé Adrien
+
+for ( eleve in notes){
+        println(eleve.key)
+        val moyenne = eleve.value.sum().toDouble() / eleve.value.size
+        //on affiche tous les élèves et leur moyenne
+        println("moyenne de ${moyenne}")
+    }
+println("moyenne supérieure à 10")
+for ( eleve in notes){
+    val moyenne = eleve.value.sum().toDouble() / eleve.value.size
+    if ( moyenne > 10 ){
+            println("${eleve.key} -----${moyenne} ")
+    }
+}
+
+
+----
+
+
+
+
+
+== Les fonctions qui retourne des tableaux ou des collections.
+
+=== fonction : serie
+. Exemple fonction serie() qui prend comme argument un nombre entier n et qui renvoie une liste contenant les nombres entiers allant de 1 à n.
+
+[source,kotlin]
+----
+fun serie(n : Int): List<Int> {
+
+    val liste = mutableListOf<Int>()
+    for (i in 1..n) {
+        liste.add(i)
+    }
+    return liste
+
+}
+----
+On indique le type de l'argument *Int* et le type de la valeur de retour *List<Int>*
+
+Si on vous avait demandé de retourner un tableau d'entier :
+
+[source,kotlin]
+----
+fun serie(n : Int): Array<Int> {
+
+    val liste = mutableListOf<Int>()
+    for (i in 1..n) {
+        liste.add(i)
+    }
+    return liste.toTypedArray()
+
+}
+----
+
+[NOTE]
+====
+Kotlin dispose de nombreuses méthodes pour passer d'un type tableau à une collection de type liste ou map et inversement.
+====
+
+
+
+=== fonction serieInverse()
+
+Ecrire la fonction serieInverse() qui prend comme argument un entier n et qui renvoie un tableau contenant les nombres entiers allant de n à 1.
+
+Exemple : serieInverse(5) +
+entrée 5 +
+sortie : [5, 4, 3, 2, 1 ]
+
+[source,kotlin]
+----
+fun serieInverse(n : Int): List<Int> {
+
+    val liste = mutableListOf<Int>()
+    for (i in n downTo 1) {
+        liste.add(i)
+    }
+    return liste
+}
+----
+
+Autre solution, vous avez déjà écrit une fonction serie donc vous pouvez demander à la fonction serieInverse de retourner l'inverse de la fonction serie
+
+[source,kotlin]
+----
+fun serieInverse(n : Int): List<Int> = serie(n).reversed()
+----
+
+
+
+
+=== listePair
+Ecrire la fonction tabPair() qui prend comme argument un tableau n
+de nombres entiers et qui renvoie une liste ne contenant que les nombres pairs
+
+[source,kotlin]
+----
+fun listePair(tab : Array<Int>): List<Int> {
+    val listePair = mutableListOf<Int>()
+    for (i in tab){
+        if ( i % 2 == 0)
+            listePair.add(i)
+    }
+    return listePair
+}
+----
+
+
+=== listeImpair
+Ecrire la fonction tabImpair() qui prend comme argument un tableau n de nombres entiers et qui renvoie un tableau ne contenant que les nombres impairs
+
+idem listePair
+
+
+=== listeDiviseurs
+Ecrire la fonction listeDiviseurs() qui prend comme argument un nombre entier n et qui renvoie une liste contenant tous les diviseurs du nombre n.
+
+[source,kotlin]
+----
+fun listeDiviseurs(nombre: Int): List<Int>{
+    var diviseurs = mutableListOf<Int>()
+
+    for (i in 1..nombre) {
+        if (nombre % i == 0) {
+            diviseurs.add(i)
+          }
+    }
+
+    return diviseurs
+}
+----
+
+
+=== estPremier
+Ecrire la fonction estPremier() qui prend comme argument un nombre entier n et qui renvoie True si n est un nombre premier et False sinon. Vous pouvez utiliser la fonction listeDiviseurs écrite précédemment sachant qu'un nombre premier n'a que 2 diviseurs ( 1 et lui-même ).
+
+[source,kotlin]
+----
+fun estPremier(nombre: Int): Boolean = if ( listeDiviseurs(nombre).size == 2) true else false
+
+----
+
+=== estParfait
+Ecrire la fonction estParfait() qui prend comme argument un nombre entier n et qui renvoie True si n est un nombre parfait et False sinon. En arithmétique, un nombre parfait est un entier naturel égal à la moitié de la somme de ses diviseurs ou encore à la somme de ses diviseurs stricts. Exemple 6 est un nombre parfait car la somme des ses diviseurs stricts ( 1 + 2 + 3 ) = 6, 28 est également un nombre parfait ( 1 + 2 + 4 + 7 + 14 ) = 28. Les nombres parfaits sont rares, il n’en existe que trois inférieurs à 1000 qui sont 6, 28 et 496. Ensuite vient 8128, puis 33 550 336, vous pouvez donc initialiser un tableau avec ces nombres.
+
+
+[source,kotlin]
+----
+fun estParfait(nombre: Int): Boolean{
+    val parfait = arrayOf(6,28,496,8128)
+    if ( nombre in parfait){
+        return true
+    }
+    else{
+        return false
+    }
+}
+----
+
+
+=== sommeChriffres
+Écrire la fonction sommeChiffres() qui prend comme argument un nombre entier n et qui renvoie un entier représentant la somme des chiffres qui compose le nombre entier n. Exemple  n -> 125  somme chiffre : ( 1 + 2 + 5 ) = 8. Utiliser le modulo 10, en cumulatant le reste entier de la division par 10, on obtient la somme des chiffres.
+
+[source,kotlin]
+----
+fun sommeChiffres(nombre: Int): Int{
+    var somme = 0
+    var nb = nombre
+    while (nb != 0){
+        somme += nb % 10
+        nb /=  10
+    }
+    return somme
+}
+----
+
+
+=== nombreAmi
+Écrire la fonction nombreAmi() qui prend comme argument deux nombres entiers et qui renvoie True si ils sont amis et False sinon. Deux nombres seront amis si la somme des chiffres qui composent chaque nombre est identique. Exemple 66 ( 6 + 6 ) = 12 est ami avec 93 ( 9 + 3 ) = 12. Attention la notion mathématique des nombres amicaux est différente. Nous allons utiliser la fonction sommeChiffres écrite précédemment
+
+
+[source,kotlin]
+----
+fun nombresAmis(nombre1: Int,nombre2: Int): Boolean = if ( sommeChiffres(nombre2) == sommeChiffres(nombre1)) true else false
+----
+
+
+
+=== parité ( plus difficile )
+Ecrire la fonction tabParite() qui prend comme argument un tableau n de nombres entiers et qui renvoie une map ayant 2 clés : la clé  'pair' ne contenant que les nombres pairs et la clé 'impair' ne contenant que les nombres impairs. 
+
+[source,kotlin]
+----
+fun parite(tab: Array<Int>): MutableMap<String,MutableList<Int>>{
+    val liste = mutableMapOf<String, MutableList<Int>>("pair" to mutableListOf(), "impair" to mutableListOf())
+    for ( nb in tab ){
+        if ( nb % 2 == 0 ){
+            liste.getOrPut("pair") { mutableListOf() }.add(nb)
+        }
+        else {
+            liste.getOrPut("impair") { mutableListOf() }.add(nb)
+        }
+    }
+    return liste
+}
+----
+
+
+
+
+
